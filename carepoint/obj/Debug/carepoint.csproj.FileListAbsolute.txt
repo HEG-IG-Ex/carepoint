@@ -1,0 +1,11 @@
+C:\Users\huniv\source\repos\carepoint\carepoint\bin\Debug\carepoint.exe.config
+C:\Users\huniv\source\repos\carepoint\carepoint\bin\Debug\carepoint.exe
+C:\Users\huniv\source\repos\carepoint\carepoint\bin\Debug\carepoint.pdb
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.csproj.AssemblyReference.cache
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.csproj.SuggestedBindingRedirects.cache
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.home.resources
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.Properties.Resources.resources
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.csproj.GenerateResource.cache
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.csproj.CoreCompileInputs.cache
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.exe
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.pdb
