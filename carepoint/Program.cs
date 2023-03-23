@@ -20,14 +20,26 @@ namespace carepoint
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            if (CurrentUser == null)
+            FrmBoot boot = new FrmBoot();
+            DialogResult result = boot.ShowDialog();
+            if (result == DialogResult.OK)
             {
-                frmLogin login = new frmLogin();
-                DialogResult result = login.ShowDialog();
-                if (result == DialogResult.OK)
+                if (boot.IsLogin)
                 {
-                    Application.Run(new mdiHome());
+                    Form next = new FrmLogin();
+                    result = next.ShowDialog();
+                } 
+                else
+                {
+                    Form next = new FrmRegister(false);
+                    result = next.ShowDialog();
                 }
+            }
+
+
+            if (CurrentUser != null && result == DialogResult.OK)
+            {
+                Application.Run(new FrmHome());
             }
             
         }

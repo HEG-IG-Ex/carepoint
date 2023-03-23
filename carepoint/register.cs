@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace carepoint
 {
-    public partial class frmRegister : Form
+    public partial class FrmRegister : Form
     {
-        public frmRegister()
+        public FrmRegister(Boolean isPatient)
         {
             InitializeComponent();
+
+            this.grpDoctor.Visible = !isPatient;
+            this.grpPatient.Visible = isPatient;
         }
     }
 }

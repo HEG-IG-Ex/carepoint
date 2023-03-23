@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace carepoint
 {
-    public partial class mdiHome : Form
+    public partial class FrmHome : Form
     {
         private int childFormNumber = 0;
 
-        public mdiHome()
+        public FrmHome()
         {
             InitializeComponent();
         }

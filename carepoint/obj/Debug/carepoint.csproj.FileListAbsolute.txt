@@ -8,5 +8,7 @@ C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.csproj.Gener
 C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.csproj.CoreCompileInputs.cache
 C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.exe
 C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.pdb
-C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.mdi_home.resources
-C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.frm_login.resources
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.FrmBoot.resources
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.FrmHome.resources
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.FrmLogin.resources
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.FrmRegister.resources

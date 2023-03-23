@@ -1,6 +1,6 @@
 ﻿namespace carepoint
 {
-    partial class frmLogin
+    partial class FrmLogin
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -32,7 +32,7 @@
             this.txt_username = new System.Windows.Forms.TextBox();
             this.txt_psw = new System.Windows.Forms.TextBox();
             this.lbl_psw = new System.Windows.Forms.Label();
-            this.btn_login = new System.Windows.Forms.Button();
+            this.btnlogin = new System.Windows.Forms.Button();
             this.llb_reset_psw = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_cie_name = new System.Windows.Forms.Label();
@@ -71,15 +71,15 @@
             this.lbl_psw.TabIndex = 3;
             this.lbl_psw.Text = "Password";
             // 
-            // btn_login
+            // btnlogin
             // 
-            this.btn_login.Location = new System.Drawing.Point(176, 344);
-            this.btn_login.Name = "btn_login";
-            this.btn_login.Size = new System.Drawing.Size(128, 56);
-            this.btn_login.TabIndex = 4;
-            this.btn_login.Text = "Login";
-            this.btn_login.UseVisualStyleBackColor = true;
-            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
+            this.btnlogin.Location = new System.Drawing.Point(176, 344);
+            this.btnlogin.Name = "btnlogin";
+            this.btnlogin.Size = new System.Drawing.Size(128, 56);
+            this.btnlogin.TabIndex = 4;
+            this.btnlogin.Text = "Login";
+            this.btnlogin.UseVisualStyleBackColor = true;
+            this.btnlogin.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // llb_reset_psw
             // 
@@ -109,7 +109,7 @@
             this.lbl_cie_name.TabIndex = 7;
             this.lbl_cie_name.Text = "Carepoint";
             // 
-            // frmLogin
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -117,13 +117,13 @@
             this.Controls.Add(this.lbl_cie_name);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.llb_reset_psw);
-            this.Controls.Add(this.btn_login);
+            this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.lbl_psw);
             this.Controls.Add(this.txt_psw);
             this.Controls.Add(this.txt_username);
             this.Controls.Add(this.lbl_username);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "frmLogin";
+            this.Name = "FrmLogin";
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -136,7 +136,7 @@
         private System.Windows.Forms.TextBox txt_username;
         private System.Windows.Forms.TextBox txt_psw;
         private System.Windows.Forms.Label lbl_psw;
-        private System.Windows.Forms.Button btn_login;
+        private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.LinkLabel llb_reset_psw;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_cie_name;
