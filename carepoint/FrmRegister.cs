@@ -19,5 +19,12 @@ namespace carepoint
             this.grpDoctor.Visible = !isPatient;
             this.grpPatient.Visible = isPatient;
         }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Registration Complete !", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
     }
 }

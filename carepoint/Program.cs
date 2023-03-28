@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using carepoint.business;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace carepoint
 {
@@ -17,8 +18,8 @@ namespace carepoint
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
+            System.Windows.Forms.Application.EnableVisualStyles();
+            System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
 
             FrmBoot boot = new FrmBoot();
             DialogResult result = boot.ShowDialog();
@@ -31,15 +32,23 @@ namespace carepoint
                 } 
                 else
                 {
-                    Form next = new FrmRegister(false);
+                    Form next = new FrmRegister(true);
                     result = next.ShowDialog();
+
+                    if(next.DialogResult == DialogResult.OK)
+                    {
+                        next = new FrmLogin();
+                        result = next.ShowDialog();
+                    }
+
                 }
+                
             }
 
 
             if (CurrentUser != null && result == DialogResult.OK)
             {
-                Application.Run(new FrmHome());
+                System.Windows.Forms.Application.Run(new FrmHome());
             }
             
         }

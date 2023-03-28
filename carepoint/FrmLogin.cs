@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace carepoint
 {
@@ -21,10 +22,10 @@ namespace carepoint
         private void btn_login_Click(object sender, EventArgs e)
         {   
 
-            if(!string.IsNullOrWhiteSpace(txt_psw.Text) && 
-                !string.IsNullOrWhiteSpace(txt_username.Text))
+            if(!string.IsNullOrWhiteSpace(txtPsw.Text) && 
+                !string.IsNullOrWhiteSpace(txtUsername.Text))
             {
-                Program.CurrentUser = new User(txt_psw.Text, txt_username.Text);
+                Program.CurrentUser = new User(txtPsw.Text, txtUsername.Text);
             }
 
             if(Program.CurrentUser != null)
@@ -35,9 +36,16 @@ namespace carepoint
             } else
             {
                 MessageBox.Show("Login Error", "Username OR Password incorrect", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.txt_username.Clear();
-                this.txt_psw.Clear();
+                this.txtUsername.Clear();
+                this.txtPsw.Clear();
             }
+        }
+
+        private void llbResetPsw_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            string resetMail = Interaction.InputBox("Please enter your email", "Reset email", "");
+            MessageBox.Show("Temporary password sent to " + resetMail, "Reset Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }
