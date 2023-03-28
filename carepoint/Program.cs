@@ -11,6 +11,7 @@ namespace carepoint
     internal static class Program
     {
         public static User CurrentUser;
+        public static FrmMdi container;
 
         /// <summary>
         /// Point d'entrée principal de l'application.
@@ -48,7 +49,8 @@ namespace carepoint
 
             if (CurrentUser != null && result == DialogResult.OK)
             {
-                System.Windows.Forms.Application.Run(new FrmHome());
+                container = new FrmMdi();
+                System.Windows.Forms.Application.Run(container);
             }
             
         }

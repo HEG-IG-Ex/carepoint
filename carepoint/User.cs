@@ -8,10 +8,10 @@ namespace carepoint.business
 {
     internal class User
     {
-        private string username { get; set; }
-        private string psw { get; set; }
+        public string username { get; private set; }
+        public string psw { get; private set; }
 
-        private string role { get; set; }
+        public string role { get; private set; }
 
         public User(string username, string psw)
         {
