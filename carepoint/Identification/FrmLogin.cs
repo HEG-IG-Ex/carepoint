@@ -25,7 +25,20 @@ namespace carepoint
             if(!string.IsNullOrWhiteSpace(txtPsw.Text) && 
                 !string.IsNullOrWhiteSpace(txtUsername.Text))
             {
-                Program.CurrentUser = new User(txtPsw.Text, txtUsername.Text);
+                switch (txtUsername.Text)
+                {
+                    case "admin":
+                        Program.CurrentUser = new User(txtPsw.Text, txtUsername.Text, Role.Admin);
+                        break;
+
+                    case "doctor":
+                        Program.CurrentUser = new User(txtPsw.Text, txtUsername.Text, Role.Doctor);
+                        break;
+
+                    default:
+                        Program.CurrentUser = new User(txtPsw.Text, txtUsername.Text, Role.Patient);
+                        break;
+                }               
             }
 
             if(Program.CurrentUser != null)

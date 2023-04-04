@@ -58,31 +58,31 @@
             // lblCieName
             // 
             this.lblCieName.AutoSize = true;
-            this.lblCieName.Location = new System.Drawing.Point(88, 12);
-            this.lblCieName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCieName.Location = new System.Drawing.Point(176, 23);
+            this.lblCieName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCieName.Name = "lblCieName";
-            this.lblCieName.Size = new System.Drawing.Size(52, 13);
-            this.lblCieName.TabIndex = 14;
+            this.lblCieName.Size = new System.Drawing.Size(105, 25);
+            this.lblCieName.TabIndex = 0;
             this.lblCieName.Text = "Carepoint";
             // 
             // lblDivider
             // 
             this.lblDivider.BackColor = System.Drawing.Color.Black;
-            this.lblDivider.Location = new System.Drawing.Point(-4, 37);
-            this.lblDivider.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDivider.Location = new System.Drawing.Point(-8, 71);
+            this.lblDivider.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDivider.Name = "lblDivider";
-            this.lblDivider.Size = new System.Drawing.Size(250, 1);
-            this.lblDivider.TabIndex = 13;
+            this.lblDivider.Size = new System.Drawing.Size(500, 2);
+            this.lblDivider.TabIndex = 1;
             this.lblDivider.Text = "label1";
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(80, 562);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegister.Location = new System.Drawing.Point(160, 1077);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(64, 29);
-            this.btnRegister.TabIndex = 12;
-            this.btnRegister.Text = "Register";
+            this.btnRegister.Size = new System.Drawing.Size(128, 56);
+            this.btnRegister.TabIndex = 5;
+            this.btnRegister.Text = "&Register";
             this.btnRegister.UseVisualStyleBackColor = true;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
@@ -90,33 +90,33 @@
             // 
             this.grpPatient.Controls.Add(this.cboInsurance);
             this.grpPatient.Controls.Add(this.lblInsurance);
-            this.grpPatient.Location = new System.Drawing.Point(20, 328);
-            this.grpPatient.Margin = new System.Windows.Forms.Padding(2);
+            this.grpPatient.Location = new System.Drawing.Point(40, 631);
+            this.grpPatient.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpPatient.Name = "grpPatient";
-            this.grpPatient.Padding = new System.Windows.Forms.Padding(2);
-            this.grpPatient.Size = new System.Drawing.Size(192, 92);
-            this.grpPatient.TabIndex = 23;
+            this.grpPatient.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpPatient.Size = new System.Drawing.Size(384, 177);
+            this.grpPatient.TabIndex = 3;
             this.grpPatient.TabStop = false;
             this.grpPatient.Visible = false;
             // 
             // cboInsurance
             // 
             this.cboInsurance.FormattingEnabled = true;
-            this.cboInsurance.Location = new System.Drawing.Point(21, 48);
-            this.cboInsurance.Margin = new System.Windows.Forms.Padding(2);
+            this.cboInsurance.Location = new System.Drawing.Point(42, 92);
+            this.cboInsurance.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboInsurance.Name = "cboInsurance";
-            this.cboInsurance.Size = new System.Drawing.Size(152, 21);
-            this.cboInsurance.TabIndex = 24;
+            this.cboInsurance.Size = new System.Drawing.Size(300, 33);
+            this.cboInsurance.TabIndex = 1;
             // 
             // lblInsurance
             // 
             this.lblInsurance.AutoSize = true;
-            this.lblInsurance.Location = new System.Drawing.Point(21, 26);
-            this.lblInsurance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblInsurance.Location = new System.Drawing.Point(42, 50);
+            this.lblInsurance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInsurance.Name = "lblInsurance";
-            this.lblInsurance.Size = new System.Drawing.Size(54, 13);
-            this.lblInsurance.TabIndex = 23;
-            this.lblInsurance.Text = "Insurance";
+            this.lblInsurance.Size = new System.Drawing.Size(106, 25);
+            this.lblInsurance.TabIndex = 0;
+            this.lblInsurance.Text = "&Insurance";
             // 
             // grpContact
             // 
@@ -130,105 +130,103 @@
             this.grpContact.Controls.Add(this.txtFirstname);
             this.grpContact.Controls.Add(this.txtUsername);
             this.grpContact.Controls.Add(this.lblUsername);
-            this.grpContact.Location = new System.Drawing.Point(20, 46);
-            this.grpContact.Margin = new System.Windows.Forms.Padding(2);
+            this.grpContact.Location = new System.Drawing.Point(40, 88);
+            this.grpContact.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpContact.Name = "grpContact";
-            this.grpContact.Padding = new System.Windows.Forms.Padding(2);
-            this.grpContact.Size = new System.Drawing.Size(192, 270);
-            this.grpContact.TabIndex = 24;
+            this.grpContact.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpContact.Size = new System.Drawing.Size(384, 519);
+            this.grpContact.TabIndex = 2;
             this.grpContact.TabStop = false;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(22, 234);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Location = new System.Drawing.Point(44, 450);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(152, 20);
-            this.txtEmail.TabIndex = 30;
+            this.txtEmail.Size = new System.Drawing.Size(300, 31);
+            this.txtEmail.TabIndex = 9;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(22, 212);
-            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblEmail.Location = new System.Drawing.Point(44, 408);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
-            this.lblEmail.TabIndex = 29;
-            this.lblEmail.Text = "E-mail";
+            this.lblEmail.Size = new System.Drawing.Size(72, 25);
+            this.lblEmail.TabIndex = 8;
+            this.lblEmail.Text = "&E-mail";
             // 
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(21, 164);
-            this.lblPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPhone.Location = new System.Drawing.Point(42, 315);
+            this.lblPhone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(38, 13);
-            this.lblPhone.TabIndex = 28;
-            this.lblPhone.Text = "Phone";
+            this.lblPhone.Size = new System.Drawing.Size(74, 25);
+            this.lblPhone.TabIndex = 6;
+            this.lblPhone.Text = "&Phone";
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(21, 186);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhone.Location = new System.Drawing.Point(42, 358);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(152, 20);
-            this.txtPhone.TabIndex = 27;
-            this.txtPhone.UseSystemPasswordChar = true;
+            this.txtPhone.Size = new System.Drawing.Size(300, 31);
+            this.txtPhone.TabIndex = 7;
             // 
             // txtLastname
             // 
-            this.txtLastname.Location = new System.Drawing.Point(21, 138);
-            this.txtLastname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtLastname.Location = new System.Drawing.Point(42, 265);
+            this.txtLastname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(152, 20);
-            this.txtLastname.TabIndex = 26;
+            this.txtLastname.Size = new System.Drawing.Size(300, 31);
+            this.txtLastname.TabIndex = 5;
             // 
             // lblLastname
             // 
             this.lblLastname.AutoSize = true;
-            this.lblLastname.Location = new System.Drawing.Point(21, 116);
-            this.lblLastname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLastname.Location = new System.Drawing.Point(42, 223);
+            this.lblLastname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLastname.Name = "lblLastname";
-            this.lblLastname.Size = new System.Drawing.Size(53, 13);
-            this.lblLastname.TabIndex = 25;
-            this.lblLastname.Text = "Lastname";
+            this.lblLastname.Size = new System.Drawing.Size(106, 25);
+            this.lblLastname.TabIndex = 4;
+            this.lblLastname.Text = "&Lastname";
             // 
             // lblFirstname
             // 
             this.lblFirstname.AutoSize = true;
-            this.lblFirstname.Location = new System.Drawing.Point(21, 68);
-            this.lblFirstname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFirstname.Location = new System.Drawing.Point(42, 131);
+            this.lblFirstname.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFirstname.Name = "lblFirstname";
-            this.lblFirstname.Size = new System.Drawing.Size(52, 13);
-            this.lblFirstname.TabIndex = 24;
-            this.lblFirstname.Text = "Firstname";
+            this.lblFirstname.Size = new System.Drawing.Size(107, 25);
+            this.lblFirstname.TabIndex = 2;
+            this.lblFirstname.Text = "&Firstname";
             // 
             // txtFirstname
             // 
-            this.txtFirstname.Location = new System.Drawing.Point(21, 90);
-            this.txtFirstname.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFirstname.Location = new System.Drawing.Point(42, 173);
+            this.txtFirstname.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(152, 20);
-            this.txtFirstname.TabIndex = 23;
-            this.txtFirstname.UseSystemPasswordChar = true;
+            this.txtFirstname.Size = new System.Drawing.Size(300, 31);
+            this.txtFirstname.TabIndex = 3;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(21, 43);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
+            this.txtUsername.Location = new System.Drawing.Point(42, 83);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(152, 20);
-            this.txtUsername.TabIndex = 22;
+            this.txtUsername.Size = new System.Drawing.Size(300, 31);
+            this.txtUsername.TabIndex = 1;
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.Location = new System.Drawing.Point(21, 20);
-            this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblUsername.Location = new System.Drawing.Point(42, 38);
+            this.lblUsername.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(55, 13);
-            this.lblUsername.TabIndex = 21;
-            this.lblUsername.Text = "Username";
+            this.lblUsername.Size = new System.Drawing.Size(110, 25);
+            this.lblUsername.TabIndex = 0;
+            this.lblUsername.Text = "&Username";
             // 
             // grpDoctor
             // 
@@ -236,12 +234,12 @@
             this.grpDoctor.Controls.Add(this.cklSpecialties);
             this.grpDoctor.Controls.Add(this.textBox1);
             this.grpDoctor.Controls.Add(this.lblFlatFee);
-            this.grpDoctor.Location = new System.Drawing.Point(20, 328);
-            this.grpDoctor.Margin = new System.Windows.Forms.Padding(2);
+            this.grpDoctor.Location = new System.Drawing.Point(40, 631);
+            this.grpDoctor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grpDoctor.Name = "grpDoctor";
-            this.grpDoctor.Padding = new System.Windows.Forms.Padding(2);
-            this.grpDoctor.Size = new System.Drawing.Size(192, 216);
-            this.grpDoctor.TabIndex = 33;
+            this.grpDoctor.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpDoctor.Size = new System.Drawing.Size(384, 415);
+            this.grpDoctor.TabIndex = 4;
             this.grpDoctor.TabStop = false;
             this.grpDoctor.Visible = false;
             // 
@@ -249,55 +247,56 @@
             // 
             this.lblSpecialties.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
             this.lblSpecialties.AutoSize = true;
-            this.lblSpecialties.Location = new System.Drawing.Point(20, 75);
-            this.lblSpecialties.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblSpecialties.Location = new System.Drawing.Point(40, 144);
+            this.lblSpecialties.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSpecialties.Name = "lblSpecialties";
-            this.lblSpecialties.Size = new System.Drawing.Size(58, 13);
-            this.lblSpecialties.TabIndex = 34;
-            this.lblSpecialties.Text = "Specialties";
+            this.lblSpecialties.Size = new System.Drawing.Size(117, 25);
+            this.lblSpecialties.TabIndex = 2;
+            this.lblSpecialties.Text = "&Specialties";
             // 
             // cklSpecialties
             // 
             this.cklSpecialties.FormattingEnabled = true;
-            this.cklSpecialties.Location = new System.Drawing.Point(20, 100);
-            this.cklSpecialties.Margin = new System.Windows.Forms.Padding(2);
+            this.cklSpecialties.Location = new System.Drawing.Point(40, 192);
+            this.cklSpecialties.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cklSpecialties.Name = "cklSpecialties";
-            this.cklSpecialties.Size = new System.Drawing.Size(154, 94);
-            this.cklSpecialties.TabIndex = 33;
+            this.cklSpecialties.Size = new System.Drawing.Size(304, 172);
+            this.cklSpecialties.TabIndex = 3;
             // 
             // textBox1
             // 
             this.textBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
-            this.textBox1.Location = new System.Drawing.Point(21, 49);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.textBox1.Location = new System.Drawing.Point(42, 94);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 20);
-            this.textBox1.TabIndex = 32;
+            this.textBox1.Size = new System.Drawing.Size(300, 31);
+            this.textBox1.TabIndex = 1;
             // 
             // lblFlatFee
             // 
             this.lblFlatFee.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
             this.lblFlatFee.AutoSize = true;
-            this.lblFlatFee.Location = new System.Drawing.Point(21, 27);
-            this.lblFlatFee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFlatFee.Location = new System.Drawing.Point(42, 52);
+            this.lblFlatFee.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFlatFee.Name = "lblFlatFee";
-            this.lblFlatFee.Size = new System.Drawing.Size(125, 13);
-            this.lblFlatFee.TabIndex = 31;
-            this.lblFlatFee.Text = "Flat Fee per Appointment";
+            this.lblFlatFee.Size = new System.Drawing.Size(254, 25);
+            this.lblFlatFee.TabIndex = 0;
+            this.lblFlatFee.Text = "Flat Fee per &Appointment";
             // 
             // FrmRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AcceptButton = this.btnRegister;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(237, 600);
-            this.Controls.Add(this.grpDoctor);
+            this.ClientSize = new System.Drawing.Size(474, 1160);
             this.Controls.Add(this.grpContact);
             this.Controls.Add(this.grpPatient);
             this.Controls.Add(this.lblCieName);
             this.Controls.Add(this.lblDivider);
             this.Controls.Add(this.btnRegister);
+            this.Controls.Add(this.grpDoctor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmRegister";
             this.Text = "Register";
             this.grpPatient.ResumeLayout(false);

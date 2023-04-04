@@ -47,6 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAvailabilities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAvailabilities.Designer.cs">
+      <DependentUpon>FrmAvailabilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAppointment.Designer.cs">
+      <DependentUpon>FrmAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,10 +77,10 @@
     <Compile Include="Identification\FrmBoot.Designer.cs">
       <DependentUpon>FrmBoot.cs</DependentUpon>
     </Compile>
-    <Compile Include="PatientSide\FrmSearch.cs">
+    <Compile Include="FrmSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PatientSide\FrmSearch.Designer.cs">
+    <Compile Include="FrmSearch.Designer.cs">
       <DependentUpon>FrmSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
@@ -86,6 +98,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAppointment.resx">
+      <DependentUpon>FrmAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAvailabilities.resx">
+      <DependentUpon>FrmAvailabilities.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,7 +116,7 @@
     <EmbeddedResource Include="Identification\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PatientSide\FrmSearch.resx">
+    <EmbeddedResource Include="FrmSearch.resx">
       <DependentUpon>FrmSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

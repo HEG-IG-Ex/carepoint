@@ -14,3 +14,5 @@ C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.FrmRegister.
 C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.FrmDashboard.resources
 C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.FrmMdi.resources
 C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.PatientSide.FrmSearch.resources
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.FrmAppointment.resources
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.FrmAvailabilities.resources
