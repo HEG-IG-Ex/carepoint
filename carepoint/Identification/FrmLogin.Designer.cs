@@ -54,7 +54,7 @@
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(168, 15);
-            this.txtUsername.TabIndex = 3;
+            this.txtUsername.TabIndex = 1;
             // 
             // txtPsw
             // 
@@ -65,7 +65,7 @@
             this.txtPsw.Margin = new System.Windows.Forms.Padding(2);
             this.txtPsw.Name = "txtPsw";
             this.txtPsw.Size = new System.Drawing.Size(168, 15);
-            this.txtPsw.TabIndex = 5;
+            this.txtPsw.TabIndex = 3;
             this.txtPsw.UseSystemPasswordChar = true;
             // 
             // btnLogin
@@ -79,7 +79,7 @@
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(176, 33);
-            this.btnLogin.TabIndex = 7;
+            this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "&Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btn_login_Click);
@@ -93,7 +93,7 @@
             this.llbResetPsw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.llbResetPsw.Name = "llbResetPsw";
             this.llbResetPsw.Size = new System.Drawing.Size(111, 13);
-            this.llbResetPsw.TabIndex = 6;
+            this.llbResetPsw.TabIndex = 5;
             this.llbResetPsw.TabStop = true;
             this.llbResetPsw.Text = "&Forgot password ?";
             this.llbResetPsw.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbResetPsw_LinkClicked);
@@ -107,7 +107,7 @@
             this.lblCompany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(145, 30);
-            this.lblCompany.TabIndex = 9;
+            this.lblCompany.TabIndex = 0;
             this.lblCompany.Text = "Carepoint";
             // 
             // pnlUsername
@@ -117,7 +117,7 @@
             this.pnlUsername.Location = new System.Drawing.Point(36, 216);
             this.pnlUsername.Name = "pnlUsername";
             this.pnlUsername.Size = new System.Drawing.Size(200, 2);
-            this.pnlUsername.TabIndex = 11;
+            this.pnlUsername.TabIndex = 2;
             // 
             // pnlPassword
             // 
@@ -126,7 +126,7 @@
             this.pnlPassword.Location = new System.Drawing.Point(36, 272);
             this.pnlPassword.Name = "pnlPassword";
             this.pnlPassword.Size = new System.Drawing.Size(200, 2);
-            this.pnlPassword.TabIndex = 13;
+            this.pnlPassword.TabIndex = 4;
             // 
             // picPassword
             // 
@@ -166,7 +166,7 @@
             this.lblExit.Location = new System.Drawing.Point(122, 368);
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(28, 13);
-            this.lblExit.TabIndex = 14;
+            this.lblExit.TabIndex = 7;
             this.lblExit.Text = "Exit";
             this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 

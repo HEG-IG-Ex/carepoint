@@ -47,7 +47,7 @@
             this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(176, 33);
-            this.btnLogin.TabIndex = 2;
+            this.btnLogin.TabIndex = 1;
             this.btnLogin.Text = "&Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -63,7 +63,7 @@
             this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(176, 33);
-            this.btnRegister.TabIndex = 3;
+            this.btnRegister.TabIndex = 2;
             this.btnRegister.Text = "&Register";
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
@@ -77,7 +77,7 @@
             this.lblCompany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(145, 30);
-            this.lblCompany.TabIndex = 11;
+            this.lblCompany.TabIndex = 0;
             this.lblCompany.Text = "Carepoint";
             // 
             // picLogo

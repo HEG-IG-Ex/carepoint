@@ -72,6 +72,5 @@ namespace carepoint
             btnPrescription.Visible = !isEnable;
             btnInvoice.Visible = !isEnable;
         }
-
     }
 }

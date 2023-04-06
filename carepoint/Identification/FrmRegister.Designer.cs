@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRegister));
             this.grpContact = new System.Windows.Forms.GroupBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlEmail = new System.Windows.Forms.Panel();
+            this.pnlPhone = new System.Windows.Forms.Panel();
+            this.pnlLastname = new System.Windows.Forms.Panel();
+            this.pnlFirstname = new System.Windows.Forms.Panel();
+            this.pnlUsername = new System.Windows.Forms.Panel();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@
             this.lblFlatFee = new System.Windows.Forms.Label();
             this.lblCompany = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.pnlFees = new System.Windows.Forms.Panel();
             this.txtFees = new System.Windows.Forms.TextBox();
             this.grpPatient = new System.Windows.Forms.GroupBox();
             this.cboInsurance = new System.Windows.Forms.ComboBox();
@@ -63,11 +63,11 @@
             // 
             // grpContact
             // 
-            this.grpContact.Controls.Add(this.panel5);
-            this.grpContact.Controls.Add(this.panel4);
-            this.grpContact.Controls.Add(this.panel3);
-            this.grpContact.Controls.Add(this.panel2);
-            this.grpContact.Controls.Add(this.panel1);
+            this.grpContact.Controls.Add(this.pnlEmail);
+            this.grpContact.Controls.Add(this.pnlPhone);
+            this.grpContact.Controls.Add(this.pnlLastname);
+            this.grpContact.Controls.Add(this.pnlFirstname);
+            this.grpContact.Controls.Add(this.pnlUsername);
             this.grpContact.Controls.Add(this.txtEmail);
             this.grpContact.Controls.Add(this.lblEmail);
             this.grpContact.Controls.Add(this.lblPhone);
@@ -86,45 +86,45 @@
             this.grpContact.TabIndex = 2;
             this.grpContact.TabStop = false;
             // 
-            // panel5
+            // pnlEmail
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.panel5.Location = new System.Drawing.Point(20, 264);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(160, 2);
-            this.panel5.TabIndex = 14;
+            this.pnlEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.pnlEmail.Location = new System.Drawing.Point(20, 264);
+            this.pnlEmail.Name = "pnlEmail";
+            this.pnlEmail.Size = new System.Drawing.Size(160, 2);
+            this.pnlEmail.TabIndex = 14;
             // 
-            // panel4
+            // pnlPhone
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.panel4.Location = new System.Drawing.Point(20, 216);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(160, 2);
-            this.panel4.TabIndex = 13;
+            this.pnlPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.pnlPhone.Location = new System.Drawing.Point(20, 216);
+            this.pnlPhone.Name = "pnlPhone";
+            this.pnlPhone.Size = new System.Drawing.Size(160, 2);
+            this.pnlPhone.TabIndex = 11;
             // 
-            // panel3
+            // pnlLastname
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.panel3.Location = new System.Drawing.Point(20, 157);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(160, 2);
-            this.panel3.TabIndex = 12;
+            this.pnlLastname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.pnlLastname.Location = new System.Drawing.Point(20, 157);
+            this.pnlLastname.Name = "pnlLastname";
+            this.pnlLastname.Size = new System.Drawing.Size(160, 2);
+            this.pnlLastname.TabIndex = 8;
             // 
-            // panel2
+            // pnlFirstname
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.panel2.Location = new System.Drawing.Point(20, 111);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(160, 2);
-            this.panel2.TabIndex = 11;
+            this.pnlFirstname.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.pnlFirstname.Location = new System.Drawing.Point(20, 111);
+            this.pnlFirstname.Name = "pnlFirstname";
+            this.pnlFirstname.Size = new System.Drawing.Size(160, 2);
+            this.pnlFirstname.TabIndex = 5;
             // 
-            // panel1
+            // pnlUsername
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.panel1.Location = new System.Drawing.Point(20, 65);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(160, 2);
-            this.panel1.TabIndex = 10;
+            this.pnlUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.pnlUsername.Location = new System.Drawing.Point(20, 65);
+            this.pnlUsername.Name = "pnlUsername";
+            this.pnlUsername.Size = new System.Drawing.Size(160, 2);
+            this.pnlUsername.TabIndex = 2;
             // 
             // txtEmail
             // 
@@ -134,7 +134,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(152, 13);
-            this.txtEmail.TabIndex = 9;
+            this.txtEmail.TabIndex = 13;
             // 
             // lblEmail
             // 
@@ -145,7 +145,7 @@
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(49, 15);
-            this.lblEmail.TabIndex = 8;
+            this.lblEmail.TabIndex = 12;
             this.lblEmail.Text = "&E-mail";
             // 
             // lblPhone
@@ -157,7 +157,7 @@
             this.lblPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(48, 15);
-            this.lblPhone.TabIndex = 6;
+            this.lblPhone.TabIndex = 9;
             this.lblPhone.Text = "&Phone";
             // 
             // txtPhone
@@ -168,7 +168,7 @@
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(152, 13);
-            this.txtPhone.TabIndex = 7;
+            this.txtPhone.TabIndex = 10;
             // 
             // txtLastname
             // 
@@ -178,7 +178,7 @@
             this.txtLastname.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(152, 13);
-            this.txtLastname.TabIndex = 5;
+            this.txtLastname.TabIndex = 7;
             // 
             // lblLastname
             // 
@@ -189,7 +189,7 @@
             this.lblLastname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLastname.Name = "lblLastname";
             this.lblLastname.Size = new System.Drawing.Size(70, 15);
-            this.lblLastname.TabIndex = 4;
+            this.lblLastname.TabIndex = 6;
             this.lblLastname.Text = "&Lastname";
             // 
             // lblFirstname
@@ -201,7 +201,7 @@
             this.lblFirstname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFirstname.Name = "lblFirstname";
             this.lblFirstname.Size = new System.Drawing.Size(71, 15);
-            this.lblFirstname.TabIndex = 2;
+            this.lblFirstname.TabIndex = 3;
             this.lblFirstname.Text = "&Firstname";
             // 
             // txtFirstname
@@ -212,7 +212,7 @@
             this.txtFirstname.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstname.Name = "txtFirstname";
             this.txtFirstname.Size = new System.Drawing.Size(152, 13);
-            this.txtFirstname.TabIndex = 3;
+            this.txtFirstname.TabIndex = 4;
             // 
             // txtUsername
             // 
@@ -238,7 +238,7 @@
             // 
             // grpDoctor
             // 
-            this.grpDoctor.Controls.Add(this.panel6);
+            this.grpDoctor.Controls.Add(this.pnlFees);
             this.grpDoctor.Controls.Add(this.txtFees);
             this.grpDoctor.Controls.Add(this.lblSpecialties);
             this.grpDoctor.Controls.Add(this.cklSpecialties);
@@ -262,7 +262,7 @@
             this.lblSpecialties.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSpecialties.Name = "lblSpecialties";
             this.lblSpecialties.Size = new System.Drawing.Size(78, 15);
-            this.lblSpecialties.TabIndex = 2;
+            this.lblSpecialties.TabIndex = 0;
             this.lblSpecialties.Text = "&Specialties";
             // 
             // cklSpecialties
@@ -272,7 +272,7 @@
             this.cklSpecialties.Margin = new System.Windows.Forms.Padding(2);
             this.cklSpecialties.Name = "cklSpecialties";
             this.cklSpecialties.Size = new System.Drawing.Size(154, 79);
-            this.cklSpecialties.TabIndex = 3;
+            this.cklSpecialties.TabIndex = 1;
             // 
             // lblFlatFee
             // 
@@ -284,7 +284,7 @@
             this.lblFlatFee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFlatFee.Name = "lblFlatFee";
             this.lblFlatFee.Size = new System.Drawing.Size(168, 15);
-            this.lblFlatFee.TabIndex = 0;
+            this.lblFlatFee.TabIndex = 2;
             this.lblFlatFee.Text = "Flat Fee per &Appointment";
             // 
             // lblCompany
@@ -296,7 +296,7 @@
             this.lblCompany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(145, 30);
-            this.lblCompany.TabIndex = 10;
+            this.lblCompany.TabIndex = 0;
             this.lblCompany.Text = "Carepoint";
             // 
             // btnRegister
@@ -315,13 +315,13 @@
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // panel6
+            // pnlFees
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.panel6.Location = new System.Drawing.Point(24, 70);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(160, 2);
-            this.panel6.TabIndex = 16;
+            this.pnlFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.pnlFees.Location = new System.Drawing.Point(24, 70);
+            this.pnlFees.Name = "pnlFees";
+            this.pnlFees.Size = new System.Drawing.Size(160, 2);
+            this.pnlFees.TabIndex = 4;
             // 
             // txtFees
             // 
@@ -331,7 +331,7 @@
             this.txtFees.Margin = new System.Windows.Forms.Padding(2);
             this.txtFees.Name = "txtFees";
             this.txtFees.Size = new System.Drawing.Size(152, 13);
-            this.txtFees.TabIndex = 15;
+            this.txtFees.TabIndex = 3;
             // 
             // grpPatient
             // 
@@ -342,7 +342,7 @@
             this.grpPatient.Name = "grpPatient";
             this.grpPatient.Padding = new System.Windows.Forms.Padding(2);
             this.grpPatient.Size = new System.Drawing.Size(192, 92);
-            this.grpPatient.TabIndex = 13;
+            this.grpPatient.TabIndex = 3;
             this.grpPatient.TabStop = false;
             // 
             // cboInsurance
@@ -410,14 +410,14 @@
         private System.Windows.Forms.Label lblSpecialties;
         private System.Windows.Forms.CheckedListBox cklSpecialties;
         private System.Windows.Forms.Label lblFlatFee;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlEmail;
+        private System.Windows.Forms.Panel pnlPhone;
+        private System.Windows.Forms.Panel pnlLastname;
+        private System.Windows.Forms.Panel pnlFirstname;
+        private System.Windows.Forms.Panel pnlUsername;
         private System.Windows.Forms.Label lblCompany;
         private System.Windows.Forms.Button btnRegister;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel pnlFees;
         private System.Windows.Forms.TextBox txtFees;
         private System.Windows.Forms.GroupBox grpPatient;
         private System.Windows.Forms.ComboBox cboInsurance;
