@@ -28,79 +28,97 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCieName = new System.Windows.Forms.Label();
-            this.lblDivider = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBoot));
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnRegister = new System.Windows.Forms.Button();
+            this.lblCompany = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblCieName
-            // 
-            this.lblCieName.AutoSize = true;
-            this.lblCieName.Location = new System.Drawing.Point(184, 23);
-            this.lblCieName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCieName.Name = "lblCieName";
-            this.lblCieName.Size = new System.Drawing.Size(105, 25);
-            this.lblCieName.TabIndex = 0;
-            this.lblCieName.Text = "Carepoint";
-            // 
-            // lblDivider
-            // 
-            this.lblDivider.BackColor = System.Drawing.Color.Black;
-            this.lblDivider.Location = new System.Drawing.Point(0, 71);
-            this.lblDivider.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDivider.Name = "lblDivider";
-            this.lblDivider.Size = new System.Drawing.Size(500, 2);
-            this.lblDivider.TabIndex = 1;
-            this.lblDivider.Text = "label1";
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(176, 112);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.btnLogin.FlatAppearance.BorderSize = 0;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogin.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.White;
+            this.btnLogin.Location = new System.Drawing.Point(30, 200);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(128, 56);
+            this.btnLogin.Size = new System.Drawing.Size(176, 33);
             this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "&Login";
-            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // btnRegister
             // 
-            this.btnRegister.Location = new System.Drawing.Point(176, 208);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.btnRegister.FlatAppearance.BorderSize = 0;
+            this.btnRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegister.Font = new System.Drawing.Font("Bauhaus 93", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegister.ForeColor = System.Drawing.Color.White;
+            this.btnRegister.Location = new System.Drawing.Point(30, 250);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(128, 56);
+            this.btnRegister.Size = new System.Drawing.Size(176, 33);
             this.btnRegister.TabIndex = 3;
             this.btnRegister.Text = "&Register";
-            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // lblCompany
+            // 
+            this.lblCompany.AutoSize = true;
+            this.lblCompany.Font = new System.Drawing.Font("Bauhaus 93", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.lblCompany.Location = new System.Drawing.Point(46, 145);
+            this.lblCompany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblCompany.Name = "lblCompany";
+            this.lblCompany.Size = new System.Drawing.Size(145, 30);
+            this.lblCompany.TabIndex = 11;
+            this.lblCompany.Text = "Carepoint";
+            // 
+            // picLogo
+            // 
+            this.picLogo.Image = global::carepoint.Properties.Resources.doctor;
+            this.picLogo.Location = new System.Drawing.Point(73, 41);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(90, 90);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picLogo.TabIndex = 10;
+            this.picLogo.TabStop = false;
             // 
             // FrmBoot
             // 
             this.AcceptButton = this.btnLogin;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 302);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(237, 321);
+            this.Controls.Add(this.lblCompany);
+            this.Controls.Add(this.picLogo);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.lblCieName);
-            this.Controls.Add(this.lblDivider);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmBoot";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Boot";
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label lblCieName;
-        private System.Windows.Forms.Label lblDivider;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnRegister;
+        private System.Windows.Forms.Label lblCompany;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }

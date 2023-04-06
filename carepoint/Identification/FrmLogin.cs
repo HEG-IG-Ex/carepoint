@@ -60,5 +60,10 @@ namespace carepoint
             MessageBox.Show("Temporary password sent to " + resetMail, "Reset Password", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        private void lblExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

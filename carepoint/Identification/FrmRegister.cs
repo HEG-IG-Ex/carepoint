@@ -20,6 +20,7 @@ namespace carepoint
             this.grpPatient.Visible = isPatient;
         }
 
+
         private void btnRegister_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Registration Complete !", "Registration", MessageBoxButtons.OK, MessageBoxIcon.Information);

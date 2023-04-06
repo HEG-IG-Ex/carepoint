@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSearch));
             this.rdoDoctor = new System.Windows.Forms.RadioButton();
             this.rdoSpecialty = new System.Windows.Forms.RadioButton();
             this.grpSearchCriteria = new System.Windows.Forms.GroupBox();
@@ -45,10 +46,10 @@
             // rdoDoctor
             // 
             this.rdoDoctor.AutoSize = true;
-            this.rdoDoctor.Location = new System.Drawing.Point(24, 23);
-            this.rdoDoctor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoDoctor.Location = new System.Drawing.Point(12, 12);
+            this.rdoDoctor.Margin = new System.Windows.Forms.Padding(2);
             this.rdoDoctor.Name = "rdoDoctor";
-            this.rdoDoctor.Size = new System.Drawing.Size(106, 29);
+            this.rdoDoctor.Size = new System.Drawing.Size(57, 17);
             this.rdoDoctor.TabIndex = 0;
             this.rdoDoctor.TabStop = true;
             this.rdoDoctor.Text = "&Doctor";
@@ -57,10 +58,10 @@
             // rdoSpecialty
             // 
             this.rdoSpecialty.AutoSize = true;
-            this.rdoSpecialty.Location = new System.Drawing.Point(200, 23);
-            this.rdoSpecialty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoSpecialty.Location = new System.Drawing.Point(100, 12);
+            this.rdoSpecialty.Margin = new System.Windows.Forms.Padding(2);
             this.rdoSpecialty.Name = "rdoSpecialty";
-            this.rdoSpecialty.Size = new System.Drawing.Size(131, 29);
+            this.rdoSpecialty.Size = new System.Drawing.Size(68, 17);
             this.rdoSpecialty.TabIndex = 1;
             this.rdoSpecialty.TabStop = true;
             this.rdoSpecialty.Text = "&Specialty";
@@ -70,62 +71,62 @@
             // 
             this.grpSearchCriteria.Controls.Add(this.rdoSpecialty);
             this.grpSearchCriteria.Controls.Add(this.rdoDoctor);
-            this.grpSearchCriteria.Location = new System.Drawing.Point(24, 81);
-            this.grpSearchCriteria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpSearchCriteria.Location = new System.Drawing.Point(12, 42);
+            this.grpSearchCriteria.Margin = new System.Windows.Forms.Padding(2);
             this.grpSearchCriteria.Name = "grpSearchCriteria";
-            this.grpSearchCriteria.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.grpSearchCriteria.Size = new System.Drawing.Size(368, 71);
+            this.grpSearchCriteria.Padding = new System.Windows.Forms.Padding(2);
+            this.grpSearchCriteria.Size = new System.Drawing.Size(184, 37);
             this.grpSearchCriteria.TabIndex = 1;
             this.grpSearchCriteria.TabStop = false;
             // 
             // lblSearchBy
             // 
             this.lblSearchBy.AutoSize = true;
-            this.lblSearchBy.Location = new System.Drawing.Point(24, 48);
-            this.lblSearchBy.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSearchBy.Location = new System.Drawing.Point(12, 25);
+            this.lblSearchBy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSearchBy.Name = "lblSearchBy";
-            this.lblSearchBy.Size = new System.Drawing.Size(109, 25);
+            this.lblSearchBy.Size = new System.Drawing.Size(55, 13);
             this.lblSearchBy.TabIndex = 0;
             this.lblSearchBy.Text = "Search by";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(32, 223);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Location = new System.Drawing.Point(16, 116);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(360, 33);
+            this.comboBox1.Size = new System.Drawing.Size(182, 21);
             this.comboBox1.TabIndex = 3;
             // 
             // cboSearchCriteria
             // 
             this.cboSearchCriteria.AutoSize = true;
             this.cboSearchCriteria.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.cboSearchCriteria.Location = new System.Drawing.Point(32, 192);
-            this.cboSearchCriteria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.cboSearchCriteria.Location = new System.Drawing.Point(16, 100);
+            this.cboSearchCriteria.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cboSearchCriteria.Name = "cboSearchCriteria";
-            this.cboSearchCriteria.Size = new System.Drawing.Size(109, 25);
+            this.cboSearchCriteria.Size = new System.Drawing.Size(55, 13);
             this.cboSearchCriteria.TabIndex = 2;
             this.cboSearchCriteria.Text = "Searc&h by";
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(32, 352);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 183);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(360, 248);
+            this.dataGridView1.Size = new System.Drawing.Size(180, 129);
             this.dataGridView1.TabIndex = 5;
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(136, 633);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Location = new System.Drawing.Point(68, 329);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(152, 40);
+            this.btnCancel.Size = new System.Drawing.Size(76, 21);
             this.btnCancel.TabIndex = 7;
             this.btnCancel.Text = "Cance&l";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -135,20 +136,20 @@
             // 
             this.lblAvailability.AutoSize = true;
             this.lblAvailability.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblAvailability.Location = new System.Drawing.Point(32, 319);
-            this.lblAvailability.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblAvailability.Location = new System.Drawing.Point(16, 166);
+            this.lblAvailability.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAvailability.Name = "lblAvailability";
-            this.lblAvailability.Size = new System.Drawing.Size(132, 25);
+            this.lblAvailability.Size = new System.Drawing.Size(64, 13);
             this.lblAvailability.TabIndex = 4;
             this.lblAvailability.Text = "&Availabilities";
             // 
             // btnBook
             // 
             this.btnBook.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnBook.Location = new System.Drawing.Point(288, 308);
-            this.btnBook.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBook.Location = new System.Drawing.Point(144, 160);
+            this.btnBook.Margin = new System.Windows.Forms.Padding(2);
             this.btnBook.Name = "btnBook";
-            this.btnBook.Size = new System.Drawing.Size(104, 40);
+            this.btnBook.Size = new System.Drawing.Size(52, 21);
             this.btnBook.TabIndex = 6;
             this.btnBook.Text = "&Book !";
             this.btnBook.UseVisualStyleBackColor = true;
@@ -156,10 +157,11 @@
             // 
             // FrmSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(424, 698);
+            this.ClientSize = new System.Drawing.Size(212, 363);
             this.Controls.Add(this.btnBook);
             this.Controls.Add(this.lblAvailability);
             this.Controls.Add(this.btnCancel);
@@ -169,7 +171,8 @@
             this.Controls.Add(this.lblSearchBy);
             this.Controls.Add(this.grpSearchCriteria);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmSearch";

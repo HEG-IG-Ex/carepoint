@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAvailabilities));
             this.lblMon = new System.Windows.Forms.Label();
             this.rdoMonPres = new System.Windows.Forms.RadioButton();
             this.rdoMonAbs = new System.Windows.Forms.RadioButton();
@@ -430,6 +431,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(425, 290);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -442,6 +444,7 @@
             this.Controls.Add(this.lblAm);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblPresent);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmAvailabilities";
             this.Text = "Availabilities";
             this.grpMonday.ResumeLayout(false);
