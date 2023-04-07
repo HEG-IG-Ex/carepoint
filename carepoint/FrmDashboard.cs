@@ -34,7 +34,9 @@ namespace carepoint
             createCancelColumn();
 
 
-            lblWelcome.Text = "Welcome " + Program.CurrentUser.username.ToUpper() + "!";
+            lblUsername.Text = Program.CurrentUser.username.ToUpper();
+
+            setTooltip();
 
             //ToolStripMenuItem menuItem = MainMenu.Items[mnItm] as ToolStripMenuItem;
 
@@ -42,7 +44,7 @@ namespace carepoint
             headersNextApp = new List<string>() { "id", "Date", "Hour", "Doctor", "Description", "Cancel"};
             headersPastApp = new List<string>() { "id", "Date", "Hour", "Doctor", "Description", "Invoice", "Prescription" };
 
-            
+            picBook.Visible = (Program.CurrentUser.role == Role.Patient);            
         }
 
         static public FrmDashboard getInstance()
@@ -120,13 +122,6 @@ namespace carepoint
 
         }
 
-        private void btnBook_Click(object sender, EventArgs e)
-        {
-            FrmSearch search = new FrmSearch();
-            //search.MdiParent = Program.container;
-            search.ShowDialog();
-        }
-
         private void dgvNextApp_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
@@ -143,6 +138,36 @@ namespace carepoint
                     }
                 }
             }
+        }
+
+        private void setTooltip()
+        {
+            // Create the ToolTip and associate with the Form container.
+            System.Windows.Forms.ToolTip toolTip1 = new System.Windows.Forms.ToolTip();
+
+            // Set up the delays for the ToolTip.
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
+            // Force the ToolTip text to be displayed whether or not the form is active.
+            toolTip1.ShowAlways = true;
+
+            // Set up the ToolTip text for the Button and Checkbox.
+            toolTip1.SetToolTip(this.picBook, "Book a new appointment");
+            //toolTip1.SetToolTip(this.checkBox1, "My checkBox1");
+        }
+
+        private void picBook_Click(object sender, EventArgs e)
+        {
+            FrmSearch search = new FrmSearch();
+            //search.MdiParent = Program.container;
+            search.ShowDialog();
+        }
+
+        private void tsmiOpen_Click(object sender, EventArgs e)
+        {
+            FrmAppointment appointment = new FrmAppointment();
+            appointment.ShowDialog();
         }
     }
 }

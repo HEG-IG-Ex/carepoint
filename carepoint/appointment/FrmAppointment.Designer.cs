@@ -38,22 +38,36 @@
             this.lblDoctor = new System.Windows.Forms.Label();
             this.lblSpecialty = new System.Windows.Forms.Label();
             this.lblSpecializedIn = new System.Windows.Forms.Label();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnCloseApp = new System.Windows.Forms.Button();
             this.lblDivider = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
-            this.cklServices = new System.Windows.Forms.CheckedListBox();
-            this.cklMedications = new System.Windows.Forms.CheckedListBox();
             this.lblServices = new System.Windows.Forms.Label();
             this.lblMedications = new System.Windows.Forms.Label();
-            this.btnPrescription = new System.Windows.Forms.Button();
-            this.btnInvoice = new System.Windows.Forms.Button();
-            this.txtSearchServices = new System.Windows.Forms.TextBox();
-            this.txtSearchMedications = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.btnReopen = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
+            this.lblServiceDivider = new System.Windows.Forms.Label();
+            this.lblMedDivider = new System.Windows.Forms.Label();
+            this.lsbServices = new System.Windows.Forms.ListBox();
+            this.lsbMedications = new System.Windows.Forms.ListBox();
+            this.cboServices = new System.Windows.Forms.ComboBox();
+            this.cboMedications = new System.Windows.Forms.ComboBox();
+            this.picSearchMedication = new System.Windows.Forms.PictureBox();
+            this.picSearchService = new System.Windows.Forms.PictureBox();
+            this.picAddMed = new System.Windows.Forms.PictureBox();
+            this.picAddService = new System.Windows.Forms.PictureBox();
+            this.picPrescription = new System.Windows.Forms.PictureBox();
+            this.picInvoice = new System.Windows.Forms.PictureBox();
+            this.picCancelled = new System.Windows.Forms.PictureBox();
+            this.picClosed = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearchMedication)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearchService)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAddMed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAddService)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPrescription)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInvoice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCancelled)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClosed)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAppOf
@@ -72,7 +86,7 @@
             // 
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDate.ForeColor = System.Drawing.Color.Black;
+            this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
             this.lblDate.Location = new System.Drawing.Point(171, 28);
             this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
@@ -96,7 +110,7 @@
             // 
             this.lblHours.AutoSize = true;
             this.lblHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHours.ForeColor = System.Drawing.Color.Black;
+            this.lblHours.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
             this.lblHours.Location = new System.Drawing.Point(309, 28);
             this.lblHours.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHours.Name = "lblHours";
@@ -108,13 +122,15 @@
             // 
             this.lblStatus.AutoSize = true;
             this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStatus.ForeColor = System.Drawing.Color.Black;
-            this.lblStatus.Location = new System.Drawing.Point(491, 28);
+            this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
+            this.lblStatus.Location = new System.Drawing.Point(509, 24);
             this.lblStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(75, 15);
+            this.lblStatus.Padding = new System.Windows.Forms.Padding(3);
+            this.lblStatus.Size = new System.Drawing.Size(81, 21);
             this.lblStatus.TabIndex = 4;
             this.lblStatus.Text = "<STATUS>";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblWith
             // 
@@ -132,7 +148,7 @@
             // 
             this.lblDoctor.AutoSize = true;
             this.lblDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoctor.ForeColor = System.Drawing.Color.Black;
+            this.lblDoctor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
             this.lblDoctor.Location = new System.Drawing.Point(85, 74);
             this.lblDoctor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDoctor.Name = "lblDoctor";
@@ -144,7 +160,7 @@
             // 
             this.lblSpecialty.AutoSize = true;
             this.lblSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecialty.ForeColor = System.Drawing.Color.Black;
+            this.lblSpecialty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
             this.lblSpecialty.Location = new System.Drawing.Point(320, 74);
             this.lblSpecialty.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSpecialty.Name = "lblSpecialty";
@@ -160,45 +176,13 @@
             this.lblSpecializedIn.Location = new System.Drawing.Point(203, 74);
             this.lblSpecializedIn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSpecializedIn.Name = "lblSpecializedIn";
-            this.lblSpecializedIn.Size = new System.Drawing.Size(96, 15);
+            this.lblSpecializedIn.Size = new System.Drawing.Size(90, 15);
             this.lblSpecializedIn.TabIndex = 7;
-            this.lblSpecializedIn.Text = "specialized in";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(544, 65);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(64, 28);
-            this.btnCancel.TabIndex = 10;
-            this.btnCancel.Text = "Cance&l";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnCloseApp
-            // 
-            this.btnCloseApp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.btnCloseApp.FlatAppearance.BorderSize = 0;
-            this.btnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseApp.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCloseApp.ForeColor = System.Drawing.Color.White;
-            this.btnCloseApp.Location = new System.Drawing.Point(469, 65);
-            this.btnCloseApp.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnCloseApp.Name = "btnCloseApp";
-            this.btnCloseApp.Size = new System.Drawing.Size(64, 28);
-            this.btnCloseApp.TabIndex = 9;
-            this.btnCloseApp.Text = "&Close";
-            this.btnCloseApp.UseVisualStyleBackColor = false;
-            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
+            this.lblSpecializedIn.Text = "consulted for";
             // 
             // lblDivider
             // 
-            this.lblDivider.BackColor = System.Drawing.Color.Black;
+            this.lblDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.lblDivider.Location = new System.Drawing.Point(-11, 120);
             this.lblDivider.Name = "lblDivider";
             this.lblDivider.Size = new System.Drawing.Size(651, 1);
@@ -219,6 +203,8 @@
             // 
             // txtDescription
             // 
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.txtDescription.Location = new System.Drawing.Point(21, 175);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDescription.Multiline = true;
@@ -226,30 +212,12 @@
             this.txtDescription.Size = new System.Drawing.Size(596, 101);
             this.txtDescription.TabIndex = 13;
             // 
-            // cklServices
-            // 
-            this.cklServices.FormattingEnabled = true;
-            this.cklServices.Location = new System.Drawing.Point(21, 369);
-            this.cklServices.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cklServices.Name = "cklServices";
-            this.cklServices.Size = new System.Drawing.Size(287, 100);
-            this.cklServices.TabIndex = 16;
-            // 
-            // cklMedications
-            // 
-            this.cklMedications.FormattingEnabled = true;
-            this.cklMedications.Location = new System.Drawing.Point(331, 369);
-            this.cklMedications.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cklMedications.Name = "cklMedications";
-            this.cklMedications.Size = new System.Drawing.Size(287, 100);
-            this.cklMedications.TabIndex = 20;
-            // 
             // lblServices
             // 
             this.lblServices.AutoSize = true;
             this.lblServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblServices.Location = new System.Drawing.Point(21, 314);
+            this.lblServices.Location = new System.Drawing.Point(24, 312);
             this.lblServices.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblServices.Name = "lblServices";
             this.lblServices.Size = new System.Drawing.Size(61, 15);
@@ -261,60 +229,12 @@
             this.lblMedications.AutoSize = true;
             this.lblMedications.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMedications.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblMedications.Location = new System.Drawing.Point(341, 314);
+            this.lblMedications.Location = new System.Drawing.Point(336, 312);
             this.lblMedications.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMedications.Name = "lblMedications";
             this.lblMedications.Size = new System.Drawing.Size(85, 15);
             this.lblMedications.TabIndex = 18;
             this.lblMedications.Text = "&Medications";
-            // 
-            // btnPrescription
-            // 
-            this.btnPrescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.btnPrescription.FlatAppearance.BorderSize = 0;
-            this.btnPrescription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrescription.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrescription.ForeColor = System.Drawing.Color.White;
-            this.btnPrescription.Location = new System.Drawing.Point(533, 305);
-            this.btnPrescription.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnPrescription.Name = "btnPrescription";
-            this.btnPrescription.Size = new System.Drawing.Size(85, 28);
-            this.btnPrescription.TabIndex = 21;
-            this.btnPrescription.Text = "&Prescrition";
-            this.btnPrescription.UseVisualStyleBackColor = false;
-            this.btnPrescription.Visible = false;
-            // 
-            // btnInvoice
-            // 
-            this.btnInvoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.btnInvoice.FlatAppearance.BorderSize = 0;
-            this.btnInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInvoice.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInvoice.ForeColor = System.Drawing.Color.White;
-            this.btnInvoice.Location = new System.Drawing.Point(213, 305);
-            this.btnInvoice.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnInvoice.Name = "btnInvoice";
-            this.btnInvoice.Size = new System.Drawing.Size(85, 28);
-            this.btnInvoice.TabIndex = 17;
-            this.btnInvoice.Text = "&Invoice";
-            this.btnInvoice.UseVisualStyleBackColor = false;
-            this.btnInvoice.Visible = false;
-            // 
-            // txtSearchServices
-            // 
-            this.txtSearchServices.Location = new System.Drawing.Point(21, 342);
-            this.txtSearchServices.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtSearchServices.Name = "txtSearchServices";
-            this.txtSearchServices.Size = new System.Drawing.Size(287, 21);
-            this.txtSearchServices.TabIndex = 15;
-            // 
-            // txtSearchMedications
-            // 
-            this.txtSearchMedications.Location = new System.Drawing.Point(331, 342);
-            this.txtSearchMedications.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtSearchMedications.Name = "txtSearchMedications";
-            this.txtSearchMedications.Size = new System.Drawing.Size(287, 21);
-            this.txtSearchMedications.TabIndex = 19;
             // 
             // btnBack
             // 
@@ -328,7 +248,7 @@
             this.btnBack.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(139, 28);
-            this.btnBack.TabIndex = 23;
+            this.btnBack.TabIndex = 22;
             this.btnBack.Text = "&Back";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
@@ -340,11 +260,11 @@
             this.btnReopen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReopen.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReopen.ForeColor = System.Drawing.Color.White;
-            this.btnReopen.Location = new System.Drawing.Point(491, 65);
+            this.btnReopen.Location = new System.Drawing.Point(512, 64);
             this.btnReopen.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnReopen.Name = "btnReopen";
             this.btnReopen.Size = new System.Drawing.Size(75, 28);
-            this.btnReopen.TabIndex = 22;
+            this.btnReopen.TabIndex = 10;
             this.btnReopen.Text = "Re&open";
             this.btnReopen.UseVisualStyleBackColor = false;
             this.btnReopen.Visible = false;
@@ -361,10 +281,150 @@
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(139, 28);
-            this.btnConfirm.TabIndex = 24;
+            this.btnConfirm.TabIndex = 0;
             this.btnConfirm.Text = "Con&firm";
             this.btnConfirm.UseVisualStyleBackColor = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // lblServiceDivider
+            // 
+            this.lblServiceDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.lblServiceDivider.Location = new System.Drawing.Point(24, 365);
+            this.lblServiceDivider.Name = "lblServiceDivider";
+            this.lblServiceDivider.Size = new System.Drawing.Size(280, 2);
+            this.lblServiceDivider.TabIndex = 16;
+            this.lblServiceDivider.Text = "label10";
+            // 
+            // lblMedDivider
+            // 
+            this.lblMedDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.lblMedDivider.Location = new System.Drawing.Point(335, 365);
+            this.lblMedDivider.Name = "lblMedDivider";
+            this.lblMedDivider.Size = new System.Drawing.Size(280, 2);
+            this.lblMedDivider.TabIndex = 20;
+            this.lblMedDivider.Text = "label10";
+            // 
+            // lsbServices
+            // 
+            this.lsbServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsbServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
+            this.lsbServices.FormattingEnabled = true;
+            this.lsbServices.ItemHeight = 15;
+            this.lsbServices.Location = new System.Drawing.Point(24, 376);
+            this.lsbServices.Name = "lsbServices";
+            this.lsbServices.Size = new System.Drawing.Size(280, 94);
+            this.lsbServices.TabIndex = 17;
+            // 
+            // lsbMedications
+            // 
+            this.lsbMedications.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsbMedications.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
+            this.lsbMedications.FormattingEnabled = true;
+            this.lsbMedications.ItemHeight = 15;
+            this.lsbMedications.Location = new System.Drawing.Point(336, 376);
+            this.lsbMedications.Name = "lsbMedications";
+            this.lsbMedications.Size = new System.Drawing.Size(280, 94);
+            this.lsbMedications.TabIndex = 21;
+            // 
+            // cboServices
+            // 
+            this.cboServices.FormattingEnabled = true;
+            this.cboServices.Location = new System.Drawing.Point(24, 336);
+            this.cboServices.Name = "cboServices";
+            this.cboServices.Size = new System.Drawing.Size(224, 23);
+            this.cboServices.TabIndex = 15;
+            // 
+            // cboMedications
+            // 
+            this.cboMedications.FormattingEnabled = true;
+            this.cboMedications.Location = new System.Drawing.Point(336, 336);
+            this.cboMedications.Name = "cboMedications";
+            this.cboMedications.Size = new System.Drawing.Size(224, 23);
+            this.cboMedications.TabIndex = 19;
+            // 
+            // picSearchMedication
+            // 
+            this.picSearchMedication.Image = global::carepoint.Properties.Resources.magnifying_glass;
+            this.picSearchMedication.Location = new System.Drawing.Point(592, 340);
+            this.picSearchMedication.Name = "picSearchMedication";
+            this.picSearchMedication.Size = new System.Drawing.Size(18, 18);
+            this.picSearchMedication.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSearchMedication.TabIndex = 39;
+            this.picSearchMedication.TabStop = false;
+            // 
+            // picSearchService
+            // 
+            this.picSearchService.Image = global::carepoint.Properties.Resources.magnifying_glass;
+            this.picSearchService.Location = new System.Drawing.Point(280, 340);
+            this.picSearchService.Name = "picSearchService";
+            this.picSearchService.Size = new System.Drawing.Size(18, 18);
+            this.picSearchService.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picSearchService.TabIndex = 38;
+            this.picSearchService.TabStop = false;
+            // 
+            // picAddMed
+            // 
+            this.picAddMed.Image = global::carepoint.Properties.Resources.add;
+            this.picAddMed.Location = new System.Drawing.Point(568, 340);
+            this.picAddMed.Name = "picAddMed";
+            this.picAddMed.Size = new System.Drawing.Size(18, 18);
+            this.picAddMed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAddMed.TabIndex = 33;
+            this.picAddMed.TabStop = false;
+            // 
+            // picAddService
+            // 
+            this.picAddService.Image = global::carepoint.Properties.Resources.add;
+            this.picAddService.Location = new System.Drawing.Point(256, 340);
+            this.picAddService.Name = "picAddService";
+            this.picAddService.Size = new System.Drawing.Size(18, 18);
+            this.picAddService.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picAddService.TabIndex = 31;
+            this.picAddService.TabStop = false;
+            // 
+            // picPrescription
+            // 
+            this.picPrescription.Image = global::carepoint.Properties.Resources.prescription;
+            this.picPrescription.Location = new System.Drawing.Point(576, 296);
+            this.picPrescription.Name = "picPrescription";
+            this.picPrescription.Size = new System.Drawing.Size(40, 40);
+            this.picPrescription.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPrescription.TabIndex = 30;
+            this.picPrescription.TabStop = false;
+            this.picPrescription.Visible = false;
+            // 
+            // picInvoice
+            // 
+            this.picInvoice.Image = global::carepoint.Properties.Resources.invoice;
+            this.picInvoice.Location = new System.Drawing.Point(264, 296);
+            this.picInvoice.Name = "picInvoice";
+            this.picInvoice.Size = new System.Drawing.Size(40, 40);
+            this.picInvoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picInvoice.TabIndex = 29;
+            this.picInvoice.TabStop = false;
+            this.picInvoice.Visible = false;
+            // 
+            // picCancelled
+            // 
+            this.picCancelled.Image = global::carepoint.Properties.Resources.cnl;
+            this.picCancelled.Location = new System.Drawing.Point(560, 64);
+            this.picCancelled.Name = "picCancelled";
+            this.picCancelled.Size = new System.Drawing.Size(32, 32);
+            this.picCancelled.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCancelled.TabIndex = 28;
+            this.picCancelled.TabStop = false;
+            this.picCancelled.Click += new System.EventHandler(this.picCancelled_Click);
+            // 
+            // picClosed
+            // 
+            this.picClosed.Image = global::carepoint.Properties.Resources.check;
+            this.picClosed.Location = new System.Drawing.Point(512, 64);
+            this.picClosed.Name = "picClosed";
+            this.picClosed.Size = new System.Drawing.Size(32, 32);
+            this.picClosed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picClosed.TabIndex = 27;
+            this.picClosed.TabStop = false;
+            this.picClosed.Click += new System.EventHandler(this.picClosed_Click);
             // 
             // FrmAppointment
             // 
@@ -374,22 +434,28 @@
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnBack;
             this.ClientSize = new System.Drawing.Size(640, 530);
+            this.Controls.Add(this.picSearchMedication);
+            this.Controls.Add(this.picSearchService);
+            this.Controls.Add(this.cboMedications);
+            this.Controls.Add(this.cboServices);
+            this.Controls.Add(this.lsbMedications);
+            this.Controls.Add(this.lsbServices);
+            this.Controls.Add(this.picAddMed);
+            this.Controls.Add(this.picAddService);
+            this.Controls.Add(this.picPrescription);
+            this.Controls.Add(this.picInvoice);
+            this.Controls.Add(this.picCancelled);
+            this.Controls.Add(this.picClosed);
+            this.Controls.Add(this.lblMedDivider);
+            this.Controls.Add(this.lblServiceDivider);
             this.Controls.Add(this.btnReopen);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.txtSearchMedications);
-            this.Controls.Add(this.txtSearchServices);
             this.Controls.Add(this.btnConfirm);
-            this.Controls.Add(this.btnInvoice);
-            this.Controls.Add(this.btnPrescription);
             this.Controls.Add(this.lblMedications);
             this.Controls.Add(this.lblServices);
-            this.Controls.Add(this.cklMedications);
-            this.Controls.Add(this.cklServices);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lblDescription);
             this.Controls.Add(this.lblDivider);
-            this.Controls.Add(this.btnCloseApp);
-            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblSpecializedIn);
             this.Controls.Add(this.lblSpecialty);
             this.Controls.Add(this.lblDoctor);
@@ -400,7 +466,7 @@
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.lblAppOf);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -408,6 +474,14 @@
             this.MinimizeBox = false;
             this.Name = "FrmAppointment";
             this.Text = "Appointment Details";
+            ((System.ComponentModel.ISupportInitialize)(this.picSearchMedication)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSearchService)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAddMed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAddService)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPrescription)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picInvoice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCancelled)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClosed)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,21 +498,27 @@
         private System.Windows.Forms.Label lblDoctor;
         private System.Windows.Forms.Label lblSpecialty;
         private System.Windows.Forms.Label lblSpecializedIn;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnCloseApp;
         private System.Windows.Forms.Label lblDivider;
         private System.Windows.Forms.Label lblDescription;
         private System.Windows.Forms.TextBox txtDescription;
-        private System.Windows.Forms.CheckedListBox cklServices;
-        private System.Windows.Forms.CheckedListBox cklMedications;
         private System.Windows.Forms.Label lblServices;
         private System.Windows.Forms.Label lblMedications;
-        private System.Windows.Forms.Button btnPrescription;
-        private System.Windows.Forms.Button btnInvoice;
-        private System.Windows.Forms.TextBox txtSearchServices;
-        private System.Windows.Forms.TextBox txtSearchMedications;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnReopen;
         private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Label lblServiceDivider;
+        private System.Windows.Forms.Label lblMedDivider;
+        private System.Windows.Forms.PictureBox picClosed;
+        private System.Windows.Forms.PictureBox picCancelled;
+        private System.Windows.Forms.PictureBox picInvoice;
+        private System.Windows.Forms.PictureBox picPrescription;
+        private System.Windows.Forms.PictureBox picAddService;
+        private System.Windows.Forms.PictureBox picAddMed;
+        private System.Windows.Forms.ListBox lsbServices;
+        private System.Windows.Forms.ListBox lsbMedications;
+        private System.Windows.Forms.ComboBox cboServices;
+        private System.Windows.Forms.ComboBox cboMedications;
+        private System.Windows.Forms.PictureBox picSearchMedication;
+        private System.Windows.Forms.PictureBox picSearchService;
     }
 }

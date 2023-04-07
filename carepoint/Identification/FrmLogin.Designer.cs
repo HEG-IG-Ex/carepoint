@@ -48,8 +48,8 @@
             // txtUsername
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(185)))), ((int)(((byte)(192)))));
             this.txtUsername.Location = new System.Drawing.Point(64, 196);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
@@ -59,8 +59,8 @@
             // txtPsw
             // 
             this.txtPsw.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPsw.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPsw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.txtPsw.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPsw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(185)))), ((int)(((byte)(192)))));
             this.txtPsw.Location = new System.Drawing.Point(64, 252);
             this.txtPsw.Margin = new System.Windows.Forms.Padding(2);
             this.txtPsw.Name = "txtPsw";
@@ -167,7 +167,7 @@
             this.lblExit.Name = "lblExit";
             this.lblExit.Size = new System.Drawing.Size(28, 13);
             this.lblExit.TabIndex = 7;
-            this.lblExit.Text = "Exit";
+            this.lblExit.Text = "&Exit";
             this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
             // 
             // FrmLogin

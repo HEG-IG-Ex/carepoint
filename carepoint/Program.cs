@@ -33,7 +33,7 @@ namespace carepoint
                 } 
                 else
                 {
-                    Form next = new FrmRegister(true);
+                    Form next = new FrmRegister();
                     result = next.ShowDialog();
 
                     if(next.DialogResult == DialogResult.OK)

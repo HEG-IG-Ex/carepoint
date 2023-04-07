@@ -48,7 +48,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>doctor.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
@@ -65,16 +66,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAvailabilities.cs">
+    <Compile Include="appointment\FrmAvailabilities.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAvailabilities.Designer.cs">
+    <Compile Include="appointment\FrmAvailabilities.Designer.cs">
       <DependentUpon>FrmAvailabilities.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAppointment.cs">
+    <Compile Include="appointment\FrmAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAppointment.Designer.cs">
+    <Compile Include="appointment\FrmAppointment.Designer.cs">
       <DependentUpon>FrmAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmDashboard.cs">
@@ -89,37 +90,37 @@
     <Compile Include="FrmMdi.Designer.cs">
       <DependentUpon>FrmMdi.cs</DependentUpon>
     </Compile>
-    <Compile Include="Identification\FrmBoot.cs">
+    <Compile Include="identification\FrmBoot.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Identification\FrmBoot.Designer.cs">
+    <Compile Include="identification\FrmBoot.Designer.cs">
       <DependentUpon>FrmBoot.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSearch.cs">
+    <Compile Include="appointment\FrmSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSearch.Designer.cs">
+    <Compile Include="appointment\FrmSearch.Designer.cs">
       <DependentUpon>FrmSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
-    <Compile Include="Identification\FrmRegister.cs">
+    <Compile Include="identification\FrmRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Identification\FrmRegister.Designer.cs">
+    <Compile Include="identification\FrmRegister.Designer.cs">
       <DependentUpon>FrmRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="Identification\FrmLogin.cs">
+    <Compile Include="identification\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Identification\FrmLogin.Designer.cs">
+    <Compile Include="identification\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmAppointment.resx">
+    <EmbeddedResource Include="appointment\FrmAppointment.resx">
       <DependentUpon>FrmAppointment.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAvailabilities.resx">
+    <EmbeddedResource Include="appointment\FrmAvailabilities.resx">
       <DependentUpon>FrmAvailabilities.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
@@ -128,13 +129,13 @@
     <EmbeddedResource Include="FrmMdi.resx">
       <DependentUpon>FrmMdi.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Identification\FrmBoot.resx">
+    <EmbeddedResource Include="identification\FrmBoot.resx">
       <DependentUpon>FrmBoot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Identification\FrmLogin.resx">
+    <EmbeddedResource Include="identification\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSearch.resx">
+    <EmbeddedResource Include="appointment\FrmSearch.resx">
       <DependentUpon>FrmSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -147,7 +148,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Identification\FrmRegister.resx">
+    <EmbeddedResource Include="identification\FrmRegister.resx">
       <DependentUpon>FrmRegister.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -164,7 +165,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="doctor.ico" />
+    <None Include="img\cnl.png" />
+    <None Include="img\check.png" />
+    <None Include="img\appointment-book.png" />
     <None Include="img\locked-padlock-.png" />
     <None Include="img\user.png" />
     <None Include="img\doctor.png" />
@@ -180,6 +183,21 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\prescription.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\magnifying-glass.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

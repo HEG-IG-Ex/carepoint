@@ -66,5 +66,12 @@ namespace carepoint
             FrmAvailabilities availabilities = new FrmAvailabilities();
             availabilities.ShowDialog();
         }
+
+        private void tsmiModify_Click(object sender, EventArgs e)
+        {
+            FrmRegister profil = new FrmRegister();
+            profil.ShowDialog();
+
+        }
     }
 }

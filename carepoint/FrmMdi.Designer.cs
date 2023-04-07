@@ -88,14 +88,14 @@
             // tsmiBook
             // 
             this.tsmiBook.Name = "tsmiBook";
-            this.tsmiBook.Size = new System.Drawing.Size(140, 22);
+            this.tsmiBook.Size = new System.Drawing.Size(180, 22);
             this.tsmiBook.Text = "&Book";
             this.tsmiBook.Click += new System.EventHandler(this.tsmiBook_Click);
             // 
             // tsmiAvailabilities
             // 
             this.tsmiAvailabilities.Name = "tsmiAvailabilities";
-            this.tsmiAvailabilities.Size = new System.Drawing.Size(140, 22);
+            this.tsmiAvailabilities.Size = new System.Drawing.Size(180, 22);
             this.tsmiAvailabilities.Text = "A&vailabilities";
             this.tsmiAvailabilities.Click += new System.EventHandler(this.tsmiAvailabilities_Click);
             // 
@@ -111,13 +111,14 @@
             // tsmiModify
             // 
             this.tsmiModify.Name = "tsmiModify";
-            this.tsmiModify.Size = new System.Drawing.Size(155, 22);
+            this.tsmiModify.Size = new System.Drawing.Size(180, 22);
             this.tsmiModify.Text = "&Modify";
+            this.tsmiModify.Click += new System.EventHandler(this.tsmiModify_Click);
             // 
             // tsmiResetPassword
             // 
             this.tsmiResetPassword.Name = "tsmiResetPassword";
-            this.tsmiResetPassword.Size = new System.Drawing.Size(155, 22);
+            this.tsmiResetPassword.Size = new System.Drawing.Size(180, 22);
             this.tsmiResetPassword.Text = "&Reset Password";
             // 
             // tsmiAdmin

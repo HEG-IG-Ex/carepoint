@@ -33,6 +33,7 @@
             this.btnRegister = new System.Windows.Forms.Button();
             this.lblCompany = new System.Windows.Forms.Label();
             this.picLogo = new System.Windows.Forms.PictureBox();
+            this.lblExit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             this.lblCompany.AutoSize = true;
             this.lblCompany.Font = new System.Drawing.Font("Bauhaus 93", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompany.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblCompany.Location = new System.Drawing.Point(46, 145);
+            this.lblCompany.Location = new System.Drawing.Point(46, 136);
             this.lblCompany.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCompany.Name = "lblCompany";
             this.lblCompany.Size = new System.Drawing.Size(145, 30);
@@ -90,6 +91,18 @@
             this.picLogo.TabIndex = 10;
             this.picLogo.TabStop = false;
             // 
+            // lblExit
+            // 
+            this.lblExit.AutoSize = true;
+            this.lblExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(185)))), ((int)(((byte)(192)))));
+            this.lblExit.Location = new System.Drawing.Point(104, 296);
+            this.lblExit.Name = "lblExit";
+            this.lblExit.Size = new System.Drawing.Size(28, 13);
+            this.lblExit.TabIndex = 11;
+            this.lblExit.Text = "&Exit";
+            this.lblExit.Click += new System.EventHandler(this.lblExit_Click);
+            // 
             // FrmBoot
             // 
             this.AcceptButton = this.btnLogin;
@@ -97,6 +110,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(237, 321);
+            this.Controls.Add(this.lblExit);
             this.Controls.Add(this.lblCompany);
             this.Controls.Add(this.picLogo);
             this.Controls.Add(this.btnRegister);
@@ -120,5 +134,6 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label lblCompany;
         private System.Windows.Forms.PictureBox picLogo;
+        private System.Windows.Forms.Label lblExit;
     }
 }

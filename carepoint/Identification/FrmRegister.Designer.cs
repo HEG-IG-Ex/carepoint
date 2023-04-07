@@ -46,13 +46,13 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.grpDoctor = new System.Windows.Forms.GroupBox();
+            this.pnlFees = new System.Windows.Forms.Panel();
+            this.txtFees = new System.Windows.Forms.TextBox();
             this.lblSpecialties = new System.Windows.Forms.Label();
             this.cklSpecialties = new System.Windows.Forms.CheckedListBox();
             this.lblFlatFee = new System.Windows.Forms.Label();
             this.lblCompany = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
-            this.pnlFees = new System.Windows.Forms.Panel();
-            this.txtFees = new System.Windows.Forms.TextBox();
             this.grpPatient = new System.Windows.Forms.GroupBox();
             this.cboInsurance = new System.Windows.Forms.ComboBox();
             this.lblInsurance = new System.Windows.Forms.Label();
@@ -129,18 +129,19 @@
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.txtEmail.Location = new System.Drawing.Point(20, 247);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(152, 13);
+            this.txtEmail.Size = new System.Drawing.Size(152, 14);
             this.txtEmail.TabIndex = 13;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.lblEmail.Location = new System.Drawing.Point(16, 231);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
@@ -152,7 +153,7 @@
             // 
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
+            this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.lblPhone.Location = new System.Drawing.Point(16, 183);
             this.lblPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhone.Name = "lblPhone";
@@ -163,28 +164,30 @@
             // txtPhone
             // 
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.txtPhone.Location = new System.Drawing.Point(20, 199);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(152, 13);
+            this.txtPhone.Size = new System.Drawing.Size(152, 14);
             this.txtPhone.TabIndex = 10;
             // 
             // txtLastname
             // 
             this.txtLastname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtLastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.txtLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.txtLastname.Location = new System.Drawing.Point(20, 140);
             this.txtLastname.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastname.Name = "txtLastname";
-            this.txtLastname.Size = new System.Drawing.Size(152, 13);
+            this.txtLastname.Size = new System.Drawing.Size(152, 14);
             this.txtLastname.TabIndex = 7;
             // 
             // lblLastname
             // 
             this.lblLastname.AutoSize = true;
             this.lblLastname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
+            this.lblLastname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.lblLastname.Location = new System.Drawing.Point(16, 124);
             this.lblLastname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLastname.Name = "lblLastname";
@@ -196,7 +199,7 @@
             // 
             this.lblFirstname.AutoSize = true;
             this.lblFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFirstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
+            this.lblFirstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.lblFirstname.Location = new System.Drawing.Point(16, 78);
             this.lblFirstname.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFirstname.Name = "lblFirstname";
@@ -207,28 +210,30 @@
             // txtFirstname
             // 
             this.txtFirstname.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFirstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.txtFirstname.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFirstname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.txtFirstname.Location = new System.Drawing.Point(20, 94);
             this.txtFirstname.Margin = new System.Windows.Forms.Padding(2);
             this.txtFirstname.Name = "txtFirstname";
-            this.txtFirstname.Size = new System.Drawing.Size(152, 13);
+            this.txtFirstname.Size = new System.Drawing.Size(152, 14);
             this.txtFirstname.TabIndex = 4;
             // 
             // txtUsername
             // 
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.txtUsername.Location = new System.Drawing.Point(20, 48);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(152, 13);
+            this.txtUsername.Size = new System.Drawing.Size(152, 14);
             this.txtUsername.TabIndex = 1;
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
+            this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.lblUsername.Location = new System.Drawing.Point(16, 32);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsername.Name = "lblUsername";
@@ -252,12 +257,30 @@
             this.grpDoctor.TabStop = false;
             this.grpDoctor.Visible = false;
             // 
+            // pnlFees
+            // 
+            this.pnlFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
+            this.pnlFees.Location = new System.Drawing.Point(24, 70);
+            this.pnlFees.Name = "pnlFees";
+            this.pnlFees.Size = new System.Drawing.Size(160, 2);
+            this.pnlFees.TabIndex = 4;
+            // 
+            // txtFees
+            // 
+            this.txtFees.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
+            this.txtFees.Location = new System.Drawing.Point(24, 53);
+            this.txtFees.Margin = new System.Windows.Forms.Padding(2);
+            this.txtFees.Name = "txtFees";
+            this.txtFees.Size = new System.Drawing.Size(152, 13);
+            this.txtFees.TabIndex = 3;
+            // 
             // lblSpecialties
             // 
             this.lblSpecialties.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
             this.lblSpecialties.AutoSize = true;
             this.lblSpecialties.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSpecialties.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
+            this.lblSpecialties.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(185)))), ((int)(((byte)(192)))));
             this.lblSpecialties.Location = new System.Drawing.Point(20, 80);
             this.lblSpecialties.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSpecialties.Name = "lblSpecialties";
@@ -267,11 +290,13 @@
             // 
             // cklSpecialties
             // 
+            this.cklSpecialties.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cklSpecialties.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.cklSpecialties.FormattingEnabled = true;
             this.cklSpecialties.Location = new System.Drawing.Point(20, 100);
             this.cklSpecialties.Margin = new System.Windows.Forms.Padding(2);
             this.cklSpecialties.Name = "cklSpecialties";
-            this.cklSpecialties.Size = new System.Drawing.Size(154, 79);
+            this.cklSpecialties.Size = new System.Drawing.Size(154, 68);
             this.cklSpecialties.TabIndex = 1;
             // 
             // lblFlatFee
@@ -279,7 +304,7 @@
             this.lblFlatFee.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
             this.lblFlatFee.AutoSize = true;
             this.lblFlatFee.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFlatFee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
+            this.lblFlatFee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(185)))), ((int)(((byte)(192)))));
             this.lblFlatFee.Location = new System.Drawing.Point(21, 32);
             this.lblFlatFee.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFlatFee.Name = "lblFlatFee";
@@ -315,50 +340,34 @@
             this.btnRegister.UseVisualStyleBackColor = false;
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
-            // pnlFees
-            // 
-            this.pnlFees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.pnlFees.Location = new System.Drawing.Point(24, 70);
-            this.pnlFees.Name = "pnlFees";
-            this.pnlFees.Size = new System.Drawing.Size(160, 2);
-            this.pnlFees.TabIndex = 4;
-            // 
-            // txtFees
-            // 
-            this.txtFees.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtFees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.txtFees.Location = new System.Drawing.Point(24, 53);
-            this.txtFees.Margin = new System.Windows.Forms.Padding(2);
-            this.txtFees.Name = "txtFees";
-            this.txtFees.Size = new System.Drawing.Size(152, 13);
-            this.txtFees.TabIndex = 3;
-            // 
             // grpPatient
             // 
             this.grpPatient.Controls.Add(this.cboInsurance);
             this.grpPatient.Controls.Add(this.lblInsurance);
-            this.grpPatient.Location = new System.Drawing.Point(22, 326);
+            this.grpPatient.Location = new System.Drawing.Point(22, 328);
             this.grpPatient.Margin = new System.Windows.Forms.Padding(2);
             this.grpPatient.Name = "grpPatient";
             this.grpPatient.Padding = new System.Windows.Forms.Padding(2);
             this.grpPatient.Size = new System.Drawing.Size(192, 92);
-            this.grpPatient.TabIndex = 3;
+            this.grpPatient.TabIndex = 12;
             this.grpPatient.TabStop = false;
             // 
             // cboInsurance
             // 
+            this.cboInsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboInsurance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.cboInsurance.FormattingEnabled = true;
             this.cboInsurance.Location = new System.Drawing.Point(21, 48);
             this.cboInsurance.Margin = new System.Windows.Forms.Padding(2);
             this.cboInsurance.Name = "cboInsurance";
-            this.cboInsurance.Size = new System.Drawing.Size(152, 21);
+            this.cboInsurance.Size = new System.Drawing.Size(152, 23);
             this.cboInsurance.TabIndex = 1;
             // 
             // lblInsurance
             // 
             this.lblInsurance.AutoSize = true;
             this.lblInsurance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInsurance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
+            this.lblInsurance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
             this.lblInsurance.Location = new System.Drawing.Point(21, 26);
             this.lblInsurance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInsurance.Name = "lblInsurance";
@@ -368,6 +377,7 @@
             // 
             // FrmRegister
             // 
+            this.AcceptButton = this.btnRegister;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;

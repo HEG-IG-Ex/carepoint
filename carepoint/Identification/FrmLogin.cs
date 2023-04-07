@@ -28,15 +28,15 @@ namespace carepoint
                 switch (txtUsername.Text)
                 {
                     case "admin":
-                        Program.CurrentUser = new User(txtPsw.Text, txtUsername.Text, Role.Admin);
+                        Program.CurrentUser = new User(txtUsername.Text, txtPsw.Text, Role.Admin);
                         break;
 
                     case "doctor":
-                        Program.CurrentUser = new User(txtPsw.Text, txtUsername.Text, Role.Doctor);
+                        Program.CurrentUser = new User(txtUsername.Text, txtPsw.Text, Role.Doctor);
                         break;
 
                     default:
-                        Program.CurrentUser = new User(txtPsw.Text, txtUsername.Text, Role.Patient);
+                        Program.CurrentUser = new User(txtUsername.Text, txtPsw.Text, Role.Patient);
                         break;
                 }               
             }
