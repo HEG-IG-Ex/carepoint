@@ -53,8 +53,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Oracle.ManagedDataAccess">
+      <HintPath>..\..\..\..\..\..\program files\microsoft visual studio\2022\enterprise\common7\ide\extensions\4hb0ngeg.mcf\Assemblies\DataProviders\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation" />
+    <Reference Include="System.Text.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -117,6 +130,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="USR_DATA_DATASET.cs">
+      <DependentUpon>USR_DATA_DATASET.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="USR_DATA_DATASET.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>USR_DATA_DATASET.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="appointment\FrmAppointment.resx">
       <DependentUpon>FrmAppointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,6 +181,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="USR_DATA_DATASET.xsc">
+      <DependentUpon>USR_DATA_DATASET.xsd</DependentUpon>
+    </None>
+    <None Include="USR_DATA_DATASET.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>USR_DATA_DATASET.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="USR_DATA_DATASET.xss">
+      <DependentUpon>USR_DATA_DATASET.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -5,9 +5,14 @@ VisualStudioVersion = 17.5.33502.453
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Carepoint", "carepoint\Carepoint.csproj", "{B1E0FC84-5147-4EF7-BBF7-BEA952B25DD3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Éléments de solution", "Éléments de solution", "{29E56A09-A454-4AF1-BC87-AF834163A23C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{29E56A09-A454-4AF1-BC87-AF834163A23C}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "domain", "domain", "{14B74494-BED8-4476-BBD2-1AB7740EC19A}"
+	ProjectSection(SolutionItems) = preProject
+		carepoint\User.cs = carepoint\User.cs
 	EndProjectSection
 EndProject
 Global

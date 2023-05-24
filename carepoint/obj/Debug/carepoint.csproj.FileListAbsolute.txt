@@ -16,3 +16,15 @@ C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.FrmMdi.resou
 C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.PatientSide.FrmSearch.resources
 C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.FrmAppointment.resources
 C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.FrmAvailabilities.resources
+C:\Users\huniv\source\repos\carepoint\carepoint\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\huniv\source\repos\carepoint\carepoint\bin\Debug\System.Memory.dll
+C:\Users\huniv\source\repos\carepoint\carepoint\bin\Debug\System.Text.Json.dll
+C:\Users\huniv\source\repos\carepoint\carepoint\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\huniv\source\repos\carepoint\carepoint\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\huniv\source\repos\carepoint\carepoint\bin\Debug\System.Buffers.dll
+C:\Users\huniv\source\repos\carepoint\carepoint\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\huniv\source\repos\carepoint\carepoint\bin\Debug\System.ValueTuple.dll
+C:\Users\huniv\source\repos\carepoint\carepoint\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\huniv\source\repos\carepoint\carepoint\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\carepoint.exe.config
+C:\Users\huniv\source\repos\carepoint\carepoint\obj\Debug\Carepoint.csproj.CopyComplete

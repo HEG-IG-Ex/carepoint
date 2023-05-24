@@ -1,5 +1,4 @@
-﻿using carepoint.business;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
+
+using carepoint.factory;
+using carepoint.domain;
 
 namespace carepoint
 {
@@ -20,34 +22,32 @@ namespace carepoint
         }
 
         private void btn_login_Click(object sender, EventArgs e)
-        {   
+        {
 
-            if(!string.IsNullOrWhiteSpace(txtPsw.Text) && 
-                !string.IsNullOrWhiteSpace(txtUsername.Text))
+            //hash the password
+
+            // QUERY
+            //Get the user
+            USR_DATA_DATASET ds = new USR_DATA_DATASET();
+            USR_DATA_DATASETTableAdapters.CRP_PERSONTableAdapter tableAdapter = new USR_DATA_DATASETTableAdapters.CRP_PERSONTableAdapter();
+            DataTable table = tableAdapter.GetByAuthenticate("admin", "86ff11bd7933c00a2aaa8efafa4e5266c45b26b0");
+            
+             
+            // CHECK - Check if there is only one datarow = one user
+            if(table.Rows.Count == 1)
             {
-                switch (txtUsername.Text)
-                {
-                    case "admin":
-                        Program.CurrentUser = new User(txtUsername.Text, txtPsw.Text, Role.Admin);
-                        break;
+                // GRANT - Instantiate user
+                DataRow user = table.Rows[0];
+                PersonFactory personFactory = PersonFactory.Instance;
+                Program.CurrentUser = personFactory.CreateUser((Role)user["per_rol_id"], user);
 
-                    case "doctor":
-                        Program.CurrentUser = new User(txtUsername.Text, txtPsw.Text, Role.Doctor);
-                        break;
-
-                    default:
-                        Program.CurrentUser = new User(txtUsername.Text, txtPsw.Text, Role.Patient);
-                        break;
-                }               
-            }
-
-            if(Program.CurrentUser != null)
-            {
                 this.DialogResult = DialogResult.OK;
                 this.Close();
-
-            } else
+            }
+            else
             {
+                // DENY
+                // if not => DISLAY ERROR
                 MessageBox.Show("Login Error", "Username OR Password incorrect", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.txtUsername.Clear();
                 this.txtPsw.Clear();
