@@ -91,6 +91,12 @@
     <Compile Include="appointment\FrmAppointment.Designer.cs">
       <DependentUpon>FrmAppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="domain\Admin.cs" />
+    <Compile Include="domain\Doctor.cs" />
+    <Compile Include="domain\Insurance.cs" />
+    <Compile Include="domain\Patient.cs" />
+    <Compile Include="domain\Specialty.cs" />
+    <Compile Include="factory\PersonFactory.cs" />
     <Compile Include="FrmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,7 +121,7 @@
     <Compile Include="appointment\FrmSearch.Designer.cs">
       <DependentUpon>FrmSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
+    <Compile Include="domain\Person.cs" />
     <Compile Include="identification\FrmRegister.cs">
       <SubType>Form</SubType>
     </Compile>

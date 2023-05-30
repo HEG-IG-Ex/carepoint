@@ -1,4 +1,4 @@
-﻿using carepoint.business;
+﻿using carepoint.domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,7 +20,7 @@ namespace carepoint
             InitializeComponent();
             Boolean isProfil = Program.CurrentUser != null;
             if (isProfil) { 
-                Boolean isPatient = (Program.CurrentUser.role == Role.Patient);
+                Boolean isPatient = Program.CurrentUser is Patient;
                 this.grpDoctor.Visible = !isPatient;
                 this.grpPatient.Visible = isPatient;
                 btnRegister.Text = "Save";

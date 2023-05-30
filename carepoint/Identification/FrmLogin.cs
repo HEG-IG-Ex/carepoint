@@ -11,6 +11,9 @@ using Microsoft.VisualBasic;
 
 using carepoint.factory;
 using carepoint.domain;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Net.Mime.MediaTypeNames;
+using System.Security.Cryptography;
 
 namespace carepoint
 {
@@ -21,36 +24,62 @@ namespace carepoint
             InitializeComponent();
         }
 
+        private Boolean credentialsAreCaptured()
+        {
+            return !string.IsNullOrEmpty(this.txtUsername.Text) && !string.IsNullOrEmpty(this.txtPsw.Text);
+        }
+
+        public static string HashCode(string str)
+        {
+            System.Text.ASCIIEncoding encoder = new System.Text.ASCIIEncoding();
+            byte[] buffer = encoder.GetBytes(str);
+            SHA1CryptoServiceProvider cryptoTransformSHA1 = new SHA1CryptoServiceProvider();
+            string hash = BitConverter.ToString(cryptoTransformSHA1.ComputeHash(buffer)).Replace("-", "").ToLower();
+
+            return hash;
+        }
+
         private void btn_login_Click(object sender, EventArgs e)
         {
-
-            //hash the password
-
-            // QUERY
-            //Get the user
-            USR_DATA_DATASET ds = new USR_DATA_DATASET();
-            USR_DATA_DATASETTableAdapters.CRP_PERSONTableAdapter tableAdapter = new USR_DATA_DATASETTableAdapters.CRP_PERSONTableAdapter();
-            DataTable table = tableAdapter.GetByAuthenticate("admin", "86ff11bd7933c00a2aaa8efafa4e5266c45b26b0");
-            
-             
-            // CHECK - Check if there is only one datarow = one user
-            if(table.Rows.Count == 1)
+            //Validate Data
+            if(credentialsAreCaptured())
             {
-                // GRANT - Instantiate user
-                DataRow user = table.Rows[0];
-                PersonFactory personFactory = PersonFactory.Instance;
-                Program.CurrentUser = personFactory.CreateUser((Role)user["per_rol_id"], user);
+                //hash the password
+                String usrname = txtUsername.Text;
+                String hash = HashCode(this.txtPsw.Text);
 
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }
-            else
-            {
-                // DENY
-                // if not => DISLAY ERROR
-                MessageBox.Show("Login Error", "Username OR Password incorrect", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.txtUsername.Clear();
-                this.txtPsw.Clear();
+
+                // QUERY
+                //Get the user role
+                USR_DATA_DATASETTableAdapters.CRP_PERSONTableAdapter personTableAdapter = new USR_DATA_DATASETTableAdapters.CRP_PERSONTableAdapter();
+                DataTable table = personTableAdapter.GetByAuthenticate(usrname, hash);
+                //"admin", "86ff11bd7933c00a2aaa8efafa4e5266c45b26b0"
+                //"emilie.schmid", "1f0160076c9f42a157f0a8f0dcc68e02ff69045b"
+                //"julia.miller", "b1b0b8de8a6228f6501c0560365d3a7d74ffcd8e"
+
+                // CHECK - Check if there is only one datarow = one user
+                if (table.Rows.Count == 1)
+                {
+                    
+
+                    // GRANT - Instantiate chek records
+                    DataRow person = table.Rows[0];
+
+                    // Instantiate Person factory
+                    PersonFactory personFactory = PersonFactory.Instance;
+                    Program.CurrentUser = personFactory.CreatePerson(person);
+
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    // DENY
+                    // if not => DISLAY ERROR
+                    MessageBox.Show("Login Error", "Username OR Password incorrect", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    this.txtUsername.Clear();
+                    this.txtPsw.Clear();
+                }
             }
         }
 

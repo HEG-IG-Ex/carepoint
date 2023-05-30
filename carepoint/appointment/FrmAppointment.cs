@@ -1,4 +1,4 @@
-﻿using carepoint.business;
+﻿using carepoint.domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -39,7 +39,7 @@ namespace carepoint
         {
             txtDescription.Enabled = isEnable;
 
-            Boolean hasRwRights = (Program.CurrentUser.role == Role.Doctor);
+            Boolean hasRwRights = true; //(Program.CurrentUser); is instance of doctor
 
             Boolean isUsable = isEnable & hasRwRights;
 

@@ -8,9 +8,10 @@ namespace carepoint.domain
 {
     public enum Role
     {
+        Admin,
         Patient,
         Doctor,
-        Admin
+
     }
     internal abstract class Person
     {
@@ -27,6 +28,8 @@ namespace carepoint.domain
 
         protected Person(int id, string username, string firsname, string lastname, string tel, string mail)
         {
+            this.id = id;
+            this.username = username;
             this.firsname = firsname;
             this.lastname = lastname;
             this.tel = tel;

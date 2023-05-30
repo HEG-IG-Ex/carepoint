@@ -1,4 +1,4 @@
-﻿using carepoint.business;
+﻿using carepoint.domain;
 using carepoint.PatientSide;
 using System;
 using System.Collections.Generic;
@@ -28,19 +28,20 @@ namespace carepoint
 
         private void setMenu()
         {
-            switch (Program.CurrentUser.role)
+
+            switch (Program.CurrentUser)
             {
-                case Role.Admin:
+                case Admin admin:
                     tsmiAdmin.Visible = true;
                     tsmiAvailabilities.Visible = false;
                     tsmiBook.Visible = false;
                     break;
-                case Role.Doctor:
+                case Doctor doctor:
                     tsmiAdmin.Visible = false;
                     tsmiAvailabilities.Visible = true;
                     tsmiBook.Visible = false;
                     break;
-                case Role.Patient:
+                case Patient patient:
                     tsmiAdmin.Visible = false;
                     tsmiAvailabilities.Visible = false;
                     tsmiBook.Visible = true;

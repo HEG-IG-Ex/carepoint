@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using carepoint.business;
+using carepoint.domain;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace carepoint
 {
     internal static class Program
     {
-        public static User CurrentUser;
+        public static Person CurrentUser;
         public static FrmMdi container;
 
         /// <summary>

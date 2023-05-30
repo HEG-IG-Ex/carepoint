@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using carepoint.domain;
 using Microsoft.VisualBasic.ApplicationServices;
 using System.Data;
 
@@ -25,25 +24,36 @@ namespace carepoint.factory
             get { return instance; }
         }
 
-        public Person CreateUser(Role role, DataRow dr)
+        public Person CreatePerson(DataRow person)
         {
-            int id = Convert.ToInt32(dr["id"]);
-            string username = dr["per_username"].ToString();
-            string firstname = dr["UserType"].ToString();
-            string lastname = dr["UserType"].ToString();
-            string tel = dr["tel"].ToString();
-            string mail = dr["mail"].ToString();
+            DataTable table = null;
+
+            int id = Convert.ToInt16(person["PER_ID"]);
+            Role role = (Role)Convert.ToInt16(person["PER_ROL_ID"]) - 1;
+            string username = person["PER_USERNAME"].ToString();
+            string firstname = person["PER_FIRSTNAME"].ToString();
+            string lastname = person["PER_LASTNAME"].ToString();
+            string tel = person["PER_TEL"].ToString();
+            string mail = person["PER_MAIL"].ToString();
 
             switch (role)
             {
                 case Role.Patient:
-                    return new Patient(id, username, firstname, lastname, tel, mail, new Insurance(Convert.ToInt32(dr["ins_id"]), dr["ins_name"].ToString()));
+                    USR_DATA_DATASETTableAdapters.VW_PATIENTSTableAdapter patientTableAdapter = new USR_DATA_DATASETTableAdapters.VW_PATIENTSTableAdapter();
+                    table = patientTableAdapter.GetDataById(id);
+                    DataRow patient = table.Rows[0];
+                    return new Patient(id, username, firstname, lastname, tel, mail, new Insurance(Convert.ToInt32(patient["PAT_INS_ID"]), patient["INS_NAME"].ToString()));
                 case Role.Doctor:
-                    return new Doctor(id, username, firstname, lastname, tel, mail, Convert.ToDouble(dr["doc_fee_per_consult"]), Convert.ToDateTime(dr["doc_start_work_date"]), new Specialty(Convert.ToInt32(dr["spe_id"]), dr["spe_name"].ToString()));
+                    USR_DATA_DATASETTableAdapters.VW_DOCTORSTableAdapter doctorTableAdapter = new USR_DATA_DATASETTableAdapters.VW_DOCTORSTableAdapter();
+                    table = doctorTableAdapter.GetDataById(id);
+                    DataRow doctor = table.Rows[0];
+                    return new Doctor(id, username, firstname, lastname, tel, mail, Convert.ToDouble(doctor["DOC_FEE_PER_CONSULT"]), Convert.ToDateTime(doctor["DOC_START_WORK_DATE"]), new Specialty(Convert.ToInt32(doctor["DOC_SPE_ID"]), doctor["SPE_NAME"].ToString()));
                 case Role.Admin:
+                    //USR_DATA_DATASETTableAdapters.CRP_PERSONTableAdapter personTableAdapter = new USR_DATA_DATASETTableAdapters.CRP_PERSONTableAdapter();
+                    //table = personTableAdapter.GetDataById(Convert.ToInt16(id));
                     return new Admin(id, username, firstname, lastname, tel, mail);
                 default:
-                    throw new ArgumentException("Invalid user type.");
+                    throw new ArgumentException("Invalid person type.");
             }
         }
     }

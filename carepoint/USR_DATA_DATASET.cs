@@ -7,9 +7,16 @@
     }
 }
 
-namespace carepoint.USR_DATA_DATASETTableAdapters {
-    
-    
+namespace carepoint.USR_DATA_DATASETTableAdapters
+{
+    partial class VW_DOCTORS_APPTableAdapter
+    {
+    }
+
+    partial class VW_DOCTORS_NEXT_APPTableAdapter
+    {
+    }
+
     public partial class CRP_PERSONTableAdapter {
     }
 }

@@ -1,17 +1,11 @@
-﻿using carepoint.business;
+﻿using carepoint.domain;
 using carepoint.PatientSide;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+
 
 namespace carepoint
 {
@@ -25,26 +19,25 @@ namespace carepoint
         private FrmDashboard()
         {
             InitializeComponent();
+            lblUsername.Text = Program.CurrentUser.username.ToUpper();
 
             // This is test data for prototyppe purpose
-            setupDataGridView(dgvNextApp);
+            /*setupDataGridView(dgvNextApp);
             setupDataGridView(dgvPastApp);
             populateDataGridViewNextApp(dgvNextApp);
             populateDataGridViewNextApp(dgvPastApp);
-            createCancelColumn();
-
-
-            lblUsername.Text = Program.CurrentUser.username.ToUpper();
+            createCancelColumn();*/
 
             setTooltip();
 
             //ToolStripMenuItem menuItem = MainMenu.Items[mnItm] as ToolStripMenuItem;
 
             // TODO: Header will change according to role
-            headersNextApp = new List<string>() { "id", "Date", "Hour", "Doctor", "Description", "Cancel"};
+            /*headersNextApp = new List<string>() { "id", "Date", "Hour", "Doctor", "Description", "Cancel"};
             headersPastApp = new List<string>() { "id", "Date", "Hour", "Doctor", "Description", "Invoice", "Prescription" };
+            */
 
-            picBook.Visible = (Program.CurrentUser.role == Role.Patient);            
+            picBook.Visible = (Program.CurrentUser is Patient);
         }
 
         static public FrmDashboard getInstance()
@@ -56,9 +49,50 @@ namespace carepoint
             return instance;
         }
 
-        private void setupDataGridView(DataGridView dgv)
+        private int determineCombination(Boolean isNext)
         {
-            dgv.ColumnCount = 6;
+            int roleByte = Program.CurrentUser is Doctor ? 0b00 : 0b10;
+            int dgvByte = isNext ? 0b00 : 0b01;
+            int combi = roleByte * dgvByte;
+
+            return combi;
+        }
+
+        private void populateNextAppointmentForDoctors()
+        {
+            USR_DATA_DATASETTableAdapters.VW_DOCTORS_APPTableAdapter docAppTableAdapter = new USR_DATA_DATASETTableAdapters.VW_DOCTORS_APPTableAdapter();
+            DataTable table = docAppTableAdapter.GetNextAppByDocId(Program.CurrentUser.id);
+            dgvNextApp.DataSource = table;
+            dgvNextApp.Columns["APP_ID"].Visible = false;
+        }
+
+        private void populatePastAppointmentForDoctors()
+        {
+            USR_DATA_DATASETTableAdapters.VW_DOCTORS_APPTableAdapter docAppTableAdapter = new USR_DATA_DATASETTableAdapters.VW_DOCTORS_APPTableAdapter();
+            DataTable table = docAppTableAdapter.GetPastAppByDocId(Program.CurrentUser.id);
+            dgvPastApp.DataSource = table;
+            dgvPastApp.Columns["APP_ID"].Visible = false;
+        }
+
+        private void populateNextAppointmentForPatient()
+        {
+            USR_DATA_DATASETTableAdapters.VW_PATIENTS_APPTableAdapter patAppTableAdapter = new USR_DATA_DATASETTableAdapters.VW_PATIENTS_APPTableAdapter();
+            DataTable table = patAppTableAdapter.GetNextAppByPatId(Program.CurrentUser.id);
+            dgvNextApp.DataSource = table;
+            dgvNextApp.Columns["APP_ID"].Visible = false;
+        }
+
+        private void populatePastAppointmentForPatient()
+        {
+            USR_DATA_DATASETTableAdapters.VW_PATIENTS_APPTableAdapter patAppTableAdapter = new USR_DATA_DATASETTableAdapters.VW_PATIENTS_APPTableAdapter();
+            DataTable table = patAppTableAdapter.GetPastAppByPatId(Program.CurrentUser.id);
+            dgvPastApp.DataSource = table;
+            dgvPastApp.Columns["APP_ID"].Visible = false;
+        }
+
+        private void setupDataGridView()
+        {
+            /*dgv.ColumnCount = 6;
 
             dgv.ColumnHeadersDefaultCellStyle.BackColor = Color.Navy;
             dgv.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
@@ -84,7 +118,7 @@ namespace carepoint
             dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgv.MultiSelect = false;
             dgv.Dock = DockStyle.Fill;
-            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;*/
         }
 
         private void createCancelColumn()
