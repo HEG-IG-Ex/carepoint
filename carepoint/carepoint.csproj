@@ -193,6 +193,7 @@
     <None Include="USR_DATA_DATASET.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <SubType>Designer</SubType>
+      <LastGenOutput>USR_DATA_DATASET.Designer.cs</LastGenOutput>
     </None>
     <None Include="USR_DATA_DATASET.xss">
       <DependentUpon>USR_DATA_DATASET.xsd</DependentUpon>

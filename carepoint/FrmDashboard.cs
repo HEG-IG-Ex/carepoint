@@ -13,9 +13,6 @@ namespace carepoint
     {
         static FrmDashboard instance;
 
-        List<string> headersNextApp;
-        List<string> headersPastApp;
-
         private FrmDashboard()
         {
             InitializeComponent();

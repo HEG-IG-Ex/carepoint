@@ -206,7 +206,31 @@
               <Mapping SourceColumn="DOC_START_WORK_DATE" DataSetColumn="DOC_START_WORK_DATE" />
               <Mapping SourceColumn="DOC_IS_DELETED" DataSetColumn="DOC_IS_DELETED" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillDocAsCriteriaList" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDocAsCriteriaList" GeneratorSourceName="FillDocAsCriteriaList" GetMethodModifier="Public" GetMethodName="GetDocAsCriteriaList" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDocAsCriteriaList" UserSourceName="FillDocAsCriteriaList">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT
+    PER_ID,
+    PER_USERNAME,
+    PER_PSW,
+    PER_FIRSTNAME,
+    PER_LASTNAME,
+    PER_TEL,
+    PER_MAIL,
+    DOC_FEE_PER_CONSULT,
+    DOC_START_WORK_DATE,
+    DOC_SPE_ID,
+    SPE_NAME
+FROM
+    CRP_PERSON
+    INNER JOIN CRP_DOC ON PER_ID = DOC_PER_ID
+    LEFT JOIN CRP_SPECIALTY ON DOC_SPE_ID = SPE_ID</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="CRP_INSURANCETableAdapter" GeneratorDataComponentClassName="CRP_INSURANCETableAdapter" Name="CRP_INSURANCE" UserDataComponentName="CRP_INSURANCETableAdapter">
             <MainSource>
@@ -1069,6 +1093,55 @@ WHERE (APP_PAT_ID = :id) AND (("Appointment Date" &lt; SYSDATE) OR ("Cancellatio
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VW_DOCTORSTableAdapter" GeneratorDataComponentClassName="VW_DOCTORSTableAdapter" Name="VW_DOCTORS" UserDataComponentName="VW_DOCTORSTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="USR_DATA.VW_DOCTORS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT PER_ID, PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID, SPE_NAME FROM USR_DATA.VW_DOCTORS</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="PER_ID" DataSetColumn="PER_ID" />
+              <Mapping SourceColumn="PER_USERNAME" DataSetColumn="PER_USERNAME" />
+              <Mapping SourceColumn="PER_PSW" DataSetColumn="PER_PSW" />
+              <Mapping SourceColumn="PER_FIRSTNAME" DataSetColumn="PER_FIRSTNAME" />
+              <Mapping SourceColumn="PER_LASTNAME" DataSetColumn="PER_LASTNAME" />
+              <Mapping SourceColumn="PER_TEL" DataSetColumn="PER_TEL" />
+              <Mapping SourceColumn="PER_MAIL" DataSetColumn="PER_MAIL" />
+              <Mapping SourceColumn="DOC_FEE_PER_CONSULT" DataSetColumn="DOC_FEE_PER_CONSULT" />
+              <Mapping SourceColumn="DOC_START_WORK_DATE" DataSetColumn="DOC_START_WORK_DATE" />
+              <Mapping SourceColumn="DOC_SPE_ID" DataSetColumn="DOC_SPE_ID" />
+              <Mapping SourceColumn="SPE_NAME" DataSetColumn="SPE_NAME" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="USR_DATA.VW_DOCTORS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillById" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDataById" GeneratorSourceName="FillById" GetMethodModifier="Public" GetMethodName="GetDataById" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataById" UserSourceName="FillById">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT PER_ID, PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID, SPE_NAME FROM USR_DATA.VW_DOCTORS
+WHERE PER_ID = :id
+</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="id" ColumnName="PER_ID" DataSourceName="USR_DATA.VW_DOCTORS" DataTypeServer="NUMBER(22)" DbType="Decimal" Direction="Input" ParameterName=":id" Precision="4" ProviderType="Decimal" Scale="0" Size="22" SourceColumn="PER_ID" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="USR_DATA.VW_DOCTORS" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillDocAsCriteriaList" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetDocAsCriteriaList" GeneratorSourceName="FillDocAsCriteriaList" GetMethodModifier="Public" GetMethodName="GetDocAsCriteriaList" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDocAsCriteriaList" UserSourceName="FillDocAsCriteriaList">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT PER_ID, CONCAT(CONCAT(CONCAT('Dr.', PER_FIRSTNAME), ' '), PER_LASTNAME) AS fullname, PER_USERNAME, PER_PSW, PER_FIRSTNAME, PER_LASTNAME, PER_TEL, PER_MAIL, DOC_FEE_PER_CONSULT, DOC_START_WORK_DATE, DOC_SPE_ID, SPE_NAME
+FROM  USR_DATA.VW_DOCTORS
+WHERE (PER_ID IS NOT NULL)</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources>
           <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="USR_DATA.PKG_CAREPOINT.BATCHINVOICES" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="PKG_CAREPOINT_BATCHINVOICES" MethodsParameterType="CLR" Modifier="Public" Name="PKG_CAREPOINT_BATCHINVOICES" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="PKG_CAREPOINT_BATCHINVOICES">
@@ -1457,27 +1530,27 @@ WHERE (APP_PAT_ID = :id) AND (("Appointment Date" &lt; SYSDATE) OR ("Cancellatio
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VW_DOCTORS_APP" msprop:Generator_RowClassName="VW_DOCTORS_APPRow" msprop:Generator_RowEvHandlerName="VW_DOCTORS_APPRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_DOCTORS_APPRowDeleted" msprop:Generator_RowDeletingName="VW_DOCTORS_APPRowDeleting" msprop:Generator_RowEvArgName="VW_DOCTORS_APPRowChangeEvent" msprop:Generator_TablePropName="VW_DOCTORS_APP" msprop:Generator_RowChangedName="VW_DOCTORS_APPRowChanged" msprop:Generator_UserTableName="VW_DOCTORS_APP" msprop:Generator_RowChangingName="VW_DOCTORS_APPRowChanging" msprop:Generator_TableClassName="VW_DOCTORS_APPDataTable" msprop:Generator_TableVarName="tableVW_DOCTORS_APP">
+        <xs:element name="VW_DOCTORS_APP" msprop:Generator_RowEvHandlerName="VW_DOCTORS_APPRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_DOCTORS_APPRowDeleted" msprop:Generator_RowDeletingName="VW_DOCTORS_APPRowDeleting" msprop:Generator_RowEvArgName="VW_DOCTORS_APPRowChangeEvent" msprop:Generator_TablePropName="VW_DOCTORS_APP" msprop:Generator_RowChangedName="VW_DOCTORS_APPRowChanged" msprop:Generator_UserTableName="VW_DOCTORS_APP" msprop:Generator_RowChangingName="VW_DOCTORS_APPRowChanging" msprop:Generator_RowClassName="VW_DOCTORS_APPRow" msprop:Generator_TableClassName="VW_DOCTORS_APPDataTable" msprop:Generator_TableVarName="tableVW_DOCTORS_APP">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="APP_ID" msprop:Generator_UserColumnName="APP_ID" msprop:Generator_ColumnPropNameInTable="APP_IDColumn" msprop:Generator_ColumnPropNameInRow="APP_ID" msprop:Generator_ColumnVarNameInTable="columnAPP_ID" type="xs:short" />
-              <xs:element name="Appointment_x0020_Date" msprop:Generator_UserColumnName="Appointment Date" msprop:Generator_ColumnPropNameInTable="Appointment_DateColumn" msprop:Generator_ColumnPropNameInRow="Appointment_Date" msprop:Generator_ColumnVarNameInTable="columnAppointment_Date" type="xs:dateTime" />
-              <xs:element name="Cancellation_x0020_Date" msprop:Generator_UserColumnName="Cancellation Date" msprop:Generator_ColumnPropNameInTable="Cancellation_DateColumn" msprop:Generator_ColumnPropNameInRow="Cancellation_Date" msprop:Generator_ColumnVarNameInTable="columnCancellation_Date" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Cancellation_x0020_Reason" msprop:Generator_UserColumnName="Cancellation Reason" msprop:Generator_ColumnPropNameInTable="Cancellation_ReasonColumn" msprop:Generator_ColumnPropNameInRow="Cancellation_Reason" msprop:Generator_ColumnVarNameInTable="columnCancellation_Reason" minOccurs="0">
+              <xs:element name="APP_ID" msprop:Generator_ColumnPropNameInTable="APP_IDColumn" msprop:Generator_ColumnPropNameInRow="APP_ID" msprop:Generator_UserColumnName="APP_ID" msprop:Generator_ColumnVarNameInTable="columnAPP_ID" type="xs:short" />
+              <xs:element name="Appointment_x0020_Date" msprop:Generator_ColumnPropNameInTable="Appointment_DateColumn" msprop:Generator_ColumnPropNameInRow="Appointment_Date" msprop:Generator_UserColumnName="Appointment Date" msprop:Generator_ColumnVarNameInTable="columnAppointment_Date" type="xs:dateTime" />
+              <xs:element name="Cancellation_x0020_Date" msprop:Generator_ColumnPropNameInTable="Cancellation_DateColumn" msprop:Generator_ColumnPropNameInRow="Cancellation_Date" msprop:Generator_UserColumnName="Cancellation Date" msprop:Generator_ColumnVarNameInTable="columnCancellation_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Cancellation_x0020_Reason" msprop:Generator_ColumnPropNameInTable="Cancellation_ReasonColumn" msprop:Generator_ColumnPropNameInRow="Cancellation_Reason" msprop:Generator_UserColumnName="Cancellation Reason" msprop:Generator_ColumnVarNameInTable="columnCancellation_Reason" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="128" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Patient_x0020_Fullname" msprop:Generator_UserColumnName="Patient Fullname" msprop:Generator_ColumnPropNameInTable="Patient_FullnameColumn" msprop:Generator_ColumnPropNameInRow="Patient_Fullname" msprop:Generator_ColumnVarNameInTable="columnPatient_Fullname" minOccurs="0">
+              <xs:element name="Patient_x0020_Fullname" msprop:Generator_ColumnPropNameInTable="Patient_FullnameColumn" msprop:Generator_ColumnPropNameInRow="Patient_Fullname" msprop:Generator_UserColumnName="Patient Fullname" msprop:Generator_ColumnVarNameInTable="columnPatient_Fullname" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="257" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription">
+              <xs:element name="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnVarNameInTable="columnDescription">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="128" />
@@ -1487,27 +1560,86 @@ WHERE (APP_PAT_ID = :id) AND (("Appointment Date" &lt; SYSDATE) OR ("Cancellatio
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="VW_PATIENTS_APP" msprop:Generator_RowClassName="VW_PATIENTS_APPRow" msprop:Generator_RowEvHandlerName="VW_PATIENTS_APPRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_PATIENTS_APPRowDeleted" msprop:Generator_RowDeletingName="VW_PATIENTS_APPRowDeleting" msprop:Generator_RowEvArgName="VW_PATIENTS_APPRowChangeEvent" msprop:Generator_TablePropName="VW_PATIENTS_APP" msprop:Generator_RowChangedName="VW_PATIENTS_APPRowChanged" msprop:Generator_UserTableName="VW_PATIENTS_APP" msprop:Generator_RowChangingName="VW_PATIENTS_APPRowChanging" msprop:Generator_TableClassName="VW_PATIENTS_APPDataTable" msprop:Generator_TableVarName="tableVW_PATIENTS_APP">
+        <xs:element name="VW_PATIENTS_APP" msprop:Generator_RowEvHandlerName="VW_PATIENTS_APPRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_PATIENTS_APPRowDeleted" msprop:Generator_RowDeletingName="VW_PATIENTS_APPRowDeleting" msprop:Generator_RowEvArgName="VW_PATIENTS_APPRowChangeEvent" msprop:Generator_TablePropName="VW_PATIENTS_APP" msprop:Generator_RowChangedName="VW_PATIENTS_APPRowChanged" msprop:Generator_UserTableName="VW_PATIENTS_APP" msprop:Generator_RowChangingName="VW_PATIENTS_APPRowChanging" msprop:Generator_RowClassName="VW_PATIENTS_APPRow" msprop:Generator_TableClassName="VW_PATIENTS_APPDataTable" msprop:Generator_TableVarName="tableVW_PATIENTS_APP">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="APP_ID" msprop:Generator_UserColumnName="APP_ID" msprop:Generator_ColumnPropNameInTable="APP_IDColumn" msprop:Generator_ColumnPropNameInRow="APP_ID" msprop:Generator_ColumnVarNameInTable="columnAPP_ID" type="xs:short" />
-              <xs:element name="Appointment_x0020_Date" msprop:Generator_UserColumnName="Appointment Date" msprop:Generator_ColumnPropNameInTable="Appointment_DateColumn" msprop:Generator_ColumnPropNameInRow="Appointment_Date" msprop:Generator_ColumnVarNameInTable="columnAppointment_Date" type="xs:dateTime" />
-              <xs:element name="Cancellation_x0020_Date" msprop:Generator_UserColumnName="Cancellation Date" msprop:Generator_ColumnPropNameInTable="Cancellation_DateColumn" msprop:Generator_ColumnPropNameInRow="Cancellation_Date" msprop:Generator_ColumnVarNameInTable="columnCancellation_Date" type="xs:dateTime" minOccurs="0" />
-              <xs:element name="Cancellation_x0020_Reason" msprop:Generator_UserColumnName="Cancellation Reason" msprop:Generator_ColumnPropNameInTable="Cancellation_ReasonColumn" msprop:Generator_ColumnPropNameInRow="Cancellation_Reason" msprop:Generator_ColumnVarNameInTable="columnCancellation_Reason" minOccurs="0">
+              <xs:element name="APP_ID" msprop:Generator_ColumnPropNameInTable="APP_IDColumn" msprop:Generator_ColumnPropNameInRow="APP_ID" msprop:Generator_UserColumnName="APP_ID" msprop:Generator_ColumnVarNameInTable="columnAPP_ID" type="xs:short" />
+              <xs:element name="Appointment_x0020_Date" msprop:Generator_ColumnPropNameInTable="Appointment_DateColumn" msprop:Generator_ColumnPropNameInRow="Appointment_Date" msprop:Generator_UserColumnName="Appointment Date" msprop:Generator_ColumnVarNameInTable="columnAppointment_Date" type="xs:dateTime" />
+              <xs:element name="Cancellation_x0020_Date" msprop:Generator_ColumnPropNameInTable="Cancellation_DateColumn" msprop:Generator_ColumnPropNameInRow="Cancellation_Date" msprop:Generator_UserColumnName="Cancellation Date" msprop:Generator_ColumnVarNameInTable="columnCancellation_Date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Cancellation_x0020_Reason" msprop:Generator_ColumnPropNameInTable="Cancellation_ReasonColumn" msprop:Generator_ColumnPropNameInRow="Cancellation_Reason" msprop:Generator_UserColumnName="Cancellation Reason" msprop:Generator_ColumnVarNameInTable="columnCancellation_Reason" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="128" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Doctor" msprop:Generator_UserColumnName="Doctor" msprop:Generator_ColumnPropNameInTable="DoctorColumn" msprop:Generator_ColumnPropNameInRow="Doctor" msprop:Generator_ColumnVarNameInTable="columnDoctor" minOccurs="0">
+              <xs:element name="Doctor" msprop:Generator_ColumnPropNameInTable="DoctorColumn" msprop:Generator_ColumnPropNameInRow="Doctor" msprop:Generator_UserColumnName="Doctor" msprop:Generator_ColumnVarNameInTable="columnDoctor" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="131" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnVarNameInTable="columnDescription">
+              <xs:element name="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_UserColumnName="Description" msprop:Generator_ColumnVarNameInTable="columnDescription">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VW_DOCTORS" msprop:Generator_RowEvHandlerName="VW_DOCTORSRowChangeEventHandler" msprop:Generator_RowDeletedName="VW_DOCTORSRowDeleted" msprop:Generator_RowDeletingName="VW_DOCTORSRowDeleting" msprop:Generator_RowEvArgName="VW_DOCTORSRowChangeEvent" msprop:Generator_TablePropName="VW_DOCTORS" msprop:Generator_RowChangedName="VW_DOCTORSRowChanged" msprop:Generator_UserTableName="VW_DOCTORS" msprop:Generator_RowChangingName="VW_DOCTORSRowChanging" msprop:Generator_RowClassName="VW_DOCTORSRow" msprop:Generator_TableClassName="VW_DOCTORSDataTable" msprop:Generator_TableVarName="tableVW_DOCTORS">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PER_ID" msprop:Generator_ColumnPropNameInTable="PER_IDColumn" msprop:Generator_ColumnPropNameInRow="PER_ID" msprop:Generator_UserColumnName="PER_ID" msprop:Generator_ColumnVarNameInTable="columnPER_ID" type="xs:short" />
+              <xs:element name="PER_USERNAME" msprop:Generator_ColumnPropNameInTable="PER_USERNAMEColumn" msprop:Generator_ColumnPropNameInRow="PER_USERNAME" msprop:Generator_UserColumnName="PER_USERNAME" msprop:Generator_ColumnVarNameInTable="columnPER_USERNAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PER_PSW" msprop:Generator_ColumnPropNameInTable="PER_PSWColumn" msprop:Generator_ColumnPropNameInRow="PER_PSW" msprop:Generator_UserColumnName="PER_PSW" msprop:Generator_ColumnVarNameInTable="columnPER_PSW">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PER_FIRSTNAME" msprop:Generator_ColumnPropNameInTable="PER_FIRSTNAMEColumn" msprop:Generator_ColumnPropNameInRow="PER_FIRSTNAME" msprop:Generator_UserColumnName="PER_FIRSTNAME" msprop:Generator_ColumnVarNameInTable="columnPER_FIRSTNAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PER_LASTNAME" msprop:Generator_ColumnPropNameInTable="PER_LASTNAMEColumn" msprop:Generator_ColumnPropNameInRow="PER_LASTNAME" msprop:Generator_UserColumnName="PER_LASTNAME" msprop:Generator_ColumnVarNameInTable="columnPER_LASTNAME">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PER_TEL" msprop:Generator_ColumnPropNameInTable="PER_TELColumn" msprop:Generator_ColumnPropNameInRow="PER_TEL" msprop:Generator_UserColumnName="PER_TEL" msprop:Generator_ColumnVarNameInTable="columnPER_TEL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PER_MAIL" msprop:Generator_ColumnPropNameInTable="PER_MAILColumn" msprop:Generator_ColumnPropNameInRow="PER_MAIL" msprop:Generator_UserColumnName="PER_MAIL" msprop:Generator_ColumnVarNameInTable="columnPER_MAIL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DOC_FEE_PER_CONSULT" msprop:Generator_ColumnPropNameInTable="DOC_FEE_PER_CONSULTColumn" msprop:Generator_ColumnPropNameInRow="DOC_FEE_PER_CONSULT" msprop:Generator_UserColumnName="DOC_FEE_PER_CONSULT" msprop:Generator_ColumnVarNameInTable="columnDOC_FEE_PER_CONSULT" type="xs:short" />
+              <xs:element name="DOC_START_WORK_DATE" msprop:Generator_ColumnPropNameInTable="DOC_START_WORK_DATEColumn" msprop:Generator_ColumnPropNameInRow="DOC_START_WORK_DATE" msprop:Generator_UserColumnName="DOC_START_WORK_DATE" msprop:Generator_ColumnVarNameInTable="columnDOC_START_WORK_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DOC_SPE_ID" msprop:Generator_ColumnPropNameInTable="DOC_SPE_IDColumn" msprop:Generator_ColumnPropNameInRow="DOC_SPE_ID" msprop:Generator_UserColumnName="DOC_SPE_ID" msprop:Generator_ColumnVarNameInTable="columnDOC_SPE_ID" type="xs:short" />
+              <xs:element name="SPE_NAME" msprop:Generator_ColumnPropNameInTable="SPE_NAMEColumn" msprop:Generator_ColumnPropNameInRow="SPE_NAME" msprop:Generator_UserColumnName="SPE_NAME" msprop:Generator_ColumnVarNameInTable="columnSPE_NAME" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="128" />

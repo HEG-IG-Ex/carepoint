@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using carepoint.domain;
 
 namespace carepoint.PatientSide
 {
@@ -41,10 +43,16 @@ namespace carepoint.PatientSide
         }
 
         private void picBook_Click(object sender, EventArgs e)
-        {
-            FrmAppointment appointment = new FrmAppointment();
-            //appointment.MdiParent = Program.container;
-            appointment.ShowDialog();
+        {       
+            if(dgvNextAvailabilities.DataSource != null && dgvNextAvailabilities.SelectedRows.Count > 0)
+            {
+                DataRowView vrow = (DataRowView)cboCriteriaList.SelectedItem;
+                DataRow row = vrow.Row;
+
+                FrmAppointment appointment = new FrmAppointment();
+                appointment.ShowDialog();
+            }
+            
         }
 
         private void rdoDoctor_CheckedChanged(object sender, EventArgs e)
@@ -56,12 +64,73 @@ namespace carepoint.PatientSide
             {
                 // Perform actions based on the selected radio button
                 // You can access the properties of the selected radio button using 'radioButton'
-                //USR_DATA_DATASETTableAdapters.VW_DOCTORSTableAdapter doctorsTableAdapter = new USR_DATA_DATASETTableAdapters.VW_DOCTORSTableAdapter();
-                //DataTable table = doctorsTableAdapter.GetDoctorsAsCriteriaList();
-                //cboCriteriaList.DataSource = table;
-                cboCriteriaList.DisplayMember = "fullname";
-                cboCriteriaList.ValueMember = "PER_ID";
+                loadDoctorsList();
+
             }
+        }
+
+
+        private void rdoSpecialty_CheckedChanged(object sender, EventArgs e)
+        {
+            // Handle the event when the radio button selection changes
+            RadioButton radioButton = (RadioButton)sender;
+
+            if (radioButton.Checked)
+            {
+                // Perform actions based on the selected radio button
+                // You can access the properties of the selected radio button using 'radioButton'
+                loadSpecialty();
+
+            }
+        }
+
+        private void loadDoctorsList()
+        {
+            USR_DATA_DATASETTableAdapters.VW_DOCTORSTableAdapter docTableAdapter = new USR_DATA_DATASETTableAdapters.VW_DOCTORSTableAdapter();
+            //USR_DATA_DATASETTableAdapters.CRP_DOCTableAdapter docTableAdapter = new USR_DATA_DATASETTableAdapters.CRP_DOCTableAdapter();
+            DataTable table = docTableAdapter.GetDocAsCriteriaList();
+            cboCriteriaList.DataSource = table;
+            cboCriteriaList.DisplayMember = "fullname";
+            cboCriteriaList.ValueMember = "PER_ID";
+        }
+
+
+        private void loadSpecialty()
+        {
+            USR_DATA_DATASETTableAdapters.CRP_SPECIALTYTableAdapter speTableAdapter = new USR_DATA_DATASETTableAdapters.CRP_SPECIALTYTableAdapter();
+            DataTable table = speTableAdapter.GetData();
+            cboCriteriaList.DataSource = table;
+            cboCriteriaList.DisplayMember = "SPE_NAME";
+            cboCriteriaList.ValueMember = "SPE_ID";
+        }
+
+        private void cboCriteriaList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            System.Windows.Forms.ComboBox comboBox = (System.Windows.Forms.ComboBox)sender; // Cast the sender to ComboBox
+
+            // Retrieve the selected value
+            object selectedValue = comboBox.SelectedValue;
+            // Check if the selected value is not null and can be converted to an integer
+            if (selectedValue != null && int.TryParse(selectedValue.ToString(), out int intValue))
+            {
+                DataTable table = null;
+                if (rdoDoctor.Checked)
+                {
+                    USR_DATA_DATASETTableAdapters.PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCTableAdapter q = new USR_DATA_DATASETTableAdapters.PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCTableAdapter();
+                    table = q.GetData(intValue);
+                }
+                else if (rdoSpecialty.Checked)
+                {
+                    USR_DATA_DATASETTableAdapters.PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPETableAdapter q = new USR_DATA_DATASETTableAdapters.PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPETableAdapter();
+                    table = q.GetData(intValue);
+                }
+
+                dgvNextAvailabilities.DataSource = table;
+                dgvNextAvailabilities.BackgroundColor = Color.White;
+                dgvNextAvailabilities.RowHeadersVisible = false;
+            }
+
+
         }
     }
 }

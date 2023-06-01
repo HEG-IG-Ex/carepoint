@@ -51,7 +51,7 @@
             this.rdoDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoDoctor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.rdoDoctor.Location = new System.Drawing.Point(24, 23);
-            this.rdoDoctor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoDoctor.Margin = new System.Windows.Forms.Padding(4);
             this.rdoDoctor.Name = "rdoDoctor";
             this.rdoDoctor.Size = new System.Drawing.Size(121, 33);
             this.rdoDoctor.TabIndex = 0;
@@ -67,22 +67,23 @@
             this.rdoSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoSpecialty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.rdoSpecialty.Location = new System.Drawing.Point(200, 23);
-            this.rdoSpecialty.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rdoSpecialty.Margin = new System.Windows.Forms.Padding(4);
             this.rdoSpecialty.Name = "rdoSpecialty";
             this.rdoSpecialty.Size = new System.Drawing.Size(151, 33);
             this.rdoSpecialty.TabIndex = 1;
             this.rdoSpecialty.TabStop = true;
             this.rdoSpecialty.Text = "&Specialty";
             this.rdoSpecialty.UseVisualStyleBackColor = false;
+            this.rdoSpecialty.CheckedChanged += new System.EventHandler(this.rdoSpecialty_CheckedChanged);
             // 
             // grpSearchCriteria
             // 
             this.grpSearchCriteria.Controls.Add(this.rdoSpecialty);
             this.grpSearchCriteria.Controls.Add(this.rdoDoctor);
             this.grpSearchCriteria.Location = new System.Drawing.Point(24, 81);
-            this.grpSearchCriteria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpSearchCriteria.Margin = new System.Windows.Forms.Padding(4);
             this.grpSearchCriteria.Name = "grpSearchCriteria";
-            this.grpSearchCriteria.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.grpSearchCriteria.Padding = new System.Windows.Forms.Padding(4);
             this.grpSearchCriteria.Size = new System.Drawing.Size(368, 71);
             this.grpSearchCriteria.TabIndex = 1;
             this.grpSearchCriteria.TabStop = false;
@@ -104,10 +105,11 @@
             this.cboCriteriaList.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.cboCriteriaList.FormattingEnabled = true;
             this.cboCriteriaList.Location = new System.Drawing.Point(32, 223);
-            this.cboCriteriaList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboCriteriaList.Margin = new System.Windows.Forms.Padding(4);
             this.cboCriteriaList.Name = "cboCriteriaList";
             this.cboCriteriaList.Size = new System.Drawing.Size(360, 33);
             this.cboCriteriaList.TabIndex = 3;
+            this.cboCriteriaList.SelectedIndexChanged += new System.EventHandler(this.cboCriteriaList_SelectedIndexChanged);
             // 
             // cboSearchCriteria
             // 
@@ -126,10 +128,11 @@
             // 
             this.dgvNextAvailabilities.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNextAvailabilities.Location = new System.Drawing.Point(32, 352);
-            this.dgvNextAvailabilities.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvNextAvailabilities.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNextAvailabilities.Name = "dgvNextAvailabilities";
             this.dgvNextAvailabilities.RowHeadersWidth = 82;
             this.dgvNextAvailabilities.RowTemplate.Height = 33;
+            this.dgvNextAvailabilities.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvNextAvailabilities.Size = new System.Drawing.Size(360, 248);
             this.dgvNextAvailabilities.TabIndex = 5;
             // 
@@ -163,7 +166,7 @@
             // 
             this.picBook.Image = global::carepoint.Properties.Resources.appointment_book;
             this.picBook.Location = new System.Drawing.Point(336, 292);
-            this.picBook.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.picBook.Margin = new System.Windows.Forms.Padding(6);
             this.picBook.Name = "picBook";
             this.picBook.Size = new System.Drawing.Size(60, 58);
             this.picBook.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,7 +190,7 @@
             this.Controls.Add(this.grpSearchCriteria);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmSearch";
