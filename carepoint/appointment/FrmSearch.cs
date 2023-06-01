@@ -46,5 +46,22 @@ namespace carepoint.PatientSide
             //appointment.MdiParent = Program.container;
             appointment.ShowDialog();
         }
+
+        private void rdoDoctor_CheckedChanged(object sender, EventArgs e)
+        {
+            // Handle the event when the radio button selection changes
+            RadioButton radioButton = (RadioButton)sender;
+
+            if (radioButton.Checked)
+            {
+                // Perform actions based on the selected radio button
+                // You can access the properties of the selected radio button using 'radioButton'
+                //USR_DATA_DATASETTableAdapters.VW_DOCTORSTableAdapter doctorsTableAdapter = new USR_DATA_DATASETTableAdapters.VW_DOCTORSTableAdapter();
+                //DataTable table = doctorsTableAdapter.GetDoctorsAsCriteriaList();
+                //cboCriteriaList.DataSource = table;
+                cboCriteriaList.DisplayMember = "fullname";
+                cboCriteriaList.ValueMember = "PER_ID";
+            }
+        }
     }
 }
