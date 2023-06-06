@@ -65,6 +65,7 @@ namespace carepoint
         }
 
 
+
         private void populateNextAppointmentForDoctors()
         {
             USR_DATA_DATASETTableAdapters.VW_DOCTORS_APPTableAdapter docAppTableAdapter = new USR_DATA_DATASETTableAdapters.VW_DOCTORS_APPTableAdapter();
@@ -117,44 +118,6 @@ namespace carepoint
             }
         }
 
-        /*private void dgvNextApp_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                if (e.RowIndex > -1 && e.ColumnIndex > -1)
-                {
-                    DataGridViewCell cell = (sender as DataGridView)[e.ColumnIndex, e.RowIndex];
-                    cmsApp.Show(cell.DataGridView, PointToClient(Cursor.Position));
-                    if (!cell.Selected)
-                    {
-                        cell.DataGridView.ClearSelection();
-                        cell.DataGridView.CurrentCell = cell;
-                        cell.Selected = true;
-                    }
-                }
-            }
-        }*/
-
-        private void dgvNextApp_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Right)
-            {
-                var hitTestInfo = dgvNextApp.HitTest(e.X, e.Y);
-                if (hitTestInfo.RowIndex >= 0 && hitTestInfo.ColumnIndex >= 0)
-                {
-                    dgvNextApp.ClearSelection();
-                    dgvNextApp.Rows[hitTestInfo.RowIndex].Selected = true;
-
-                    DataGridViewRow selectedRow = dgvNextApp.Rows[hitTestInfo.RowIndex];
-                    DataGridViewCell clickedCell = selectedRow.Cells[hitTestInfo.ColumnIndex];
-
-                    Point cellPosition = dgvNextApp.PointToScreen(clickedCell.ContentBounds.Location);
-
-                    cmsApp.Show(cellPosition);
-                }
-            }
-        }
-
         private void setTooltip()
         {
             // Create the ToolTip and associate with the Form container.
@@ -200,9 +163,24 @@ namespace carepoint
 
                 if (!string.IsNullOrWhiteSpace(reason))
                 {
-                    DataAccessLayer.getInstance.cancelAppointment(Convert.ToInt16(selectedRow.Cells[0].Value), reason);
+                    if (DataAccessLayer.getInstance.cancelAppointment(Convert.ToInt16(selectedRow.Cells[0].Value), reason))
+                    {
+                        this.populateNextAppointment();
+                    }
                 }
             }   
+        }
+
+        private void dgvNextApp_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            var dataGrid = (DataGridView)sender;
+            if (e.Button == MouseButtons.Right && e.RowIndex != -1)
+            {
+                var row = dataGrid.Rows[e.RowIndex];
+                dataGrid.CurrentCell = row.Cells[e.ColumnIndex == -1 ? 1 : e.ColumnIndex];
+                row.Selected = true;
+                dataGrid.Focus();
+            }
         }
     }
 

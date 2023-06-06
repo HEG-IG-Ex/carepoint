@@ -27,16 +27,33 @@ namespace carepoint.dao
 
         public Boolean createNewAppointment(Appointment app)
         {
-            USR_DATA_DATASETTableAdapters.CRP_APPOINTMENTTableAdapter appTableAdapter = new USR_DATA_DATASETTableAdapters.CRP_APPOINTMENTTableAdapter();
-            int test = appTableAdapter.create(app.patient.id, app.doctor.id, app.appointmentDate, app.desc);
-            return true;
+            try
+            {
+                USR_DATA_DATASETTableAdapters.CRP_APPOINTMENTTableAdapter appTableAdapter = new USR_DATA_DATASETTableAdapters.CRP_APPOINTMENTTableAdapter();
+                appTableAdapter.create(app.patient.id, app.doctor.id, app.appointmentDate, app.desc);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error canceling appointment: " + ex.Message);
+                return false;
+            }
         }
 
         public Boolean cancelAppointment(int appId, String cancelReason)
         {
-            USR_DATA_DATASETTableAdapters.CRP_APPOINTMENTTableAdapter appTableAdapter = new USR_DATA_DATASETTableAdapters.CRP_APPOINTMENTTableAdapter();
-            int test = appTableAdapter.cancel(cancelReason, appId);
-            return true;
+            try
+            {
+                USR_DATA_DATASETTableAdapters.CRP_APPOINTMENTTableAdapter appTableAdapter = new USR_DATA_DATASETTableAdapters.CRP_APPOINTMENTTableAdapter();
+                appTableAdapter.cancel(cancelReason, appId);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error canceling appointment: " + ex.Message);
+                return false;
+            }
         }
     }
 }
+

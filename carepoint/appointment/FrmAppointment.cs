@@ -71,14 +71,17 @@ namespace carepoint
             if (res == DialogResult.Yes)
             {
                 appointment = new Appointment(this.dt, this.patient, this.doctor, txtDescription.Text);
-                DataAccessLayer.getInstance.createNewAppointment(appointment);
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }else{
-                this.DialogResult = DialogResult.None;
-                this.Close();
+                if (DataAccessLayer.getInstance.createNewAppointment(appointment))
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+                    this.DialogResult = DialogResult.None;
+                    this.Close();
+                }
             }
-
 
         }
 
