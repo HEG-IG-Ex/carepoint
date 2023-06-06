@@ -12,6 +12,14 @@
 
 namespace carepoint.USR_DATA_DATASETTableAdapters
 {
+    partial class CRP_APPOINTMENTTableAdapter
+    {
+    }
+
+    partial class CRP_MEDICATIONTableAdapter
+    {
+    }
+
     partial class VW_PATIENTS_APPTableAdapter
     {
     }

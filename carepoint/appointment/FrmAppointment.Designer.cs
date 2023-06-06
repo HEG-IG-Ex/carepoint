@@ -87,19 +87,20 @@
             this.lblDate.AutoSize = true;
             this.lblDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
-            this.lblDate.Location = new System.Drawing.Point(171, 28);
+            this.lblDate.Location = new System.Drawing.Point(152, 28);
             this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
             this.lblDate.Size = new System.Drawing.Size(58, 15);
             this.lblDate.TabIndex = 1;
             this.lblDate.Text = "<DATE>";
+            this.lblDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblAt
             // 
             this.lblAt.AutoSize = true;
             this.lblAt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblAt.Location = new System.Drawing.Point(267, 28);
+            this.lblAt.Location = new System.Drawing.Point(320, 28);
             this.lblAt.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAt.Name = "lblAt";
             this.lblAt.Size = new System.Drawing.Size(19, 15);
@@ -111,12 +112,13 @@
             this.lblHours.AutoSize = true;
             this.lblHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHours.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
-            this.lblHours.Location = new System.Drawing.Point(309, 28);
+            this.lblHours.Location = new System.Drawing.Point(362, 28);
             this.lblHours.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHours.Name = "lblHours";
             this.lblHours.Size = new System.Drawing.Size(72, 15);
             this.lblHours.TabIndex = 3;
             this.lblHours.Text = "<HOURS>";
+            this.lblHours.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblStatus
             // 
@@ -149,7 +151,7 @@
             this.lblDoctor.AutoSize = true;
             this.lblDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDoctor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
-            this.lblDoctor.Location = new System.Drawing.Point(85, 74);
+            this.lblDoctor.Location = new System.Drawing.Point(64, 74);
             this.lblDoctor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDoctor.Name = "lblDoctor";
             this.lblDoctor.Size = new System.Drawing.Size(80, 15);
@@ -161,7 +163,7 @@
             this.lblSpecialty.AutoSize = true;
             this.lblSpecialty.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSpecialty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(135)))), ((int)(((byte)(171)))));
-            this.lblSpecialty.Location = new System.Drawing.Point(320, 74);
+            this.lblSpecialty.Location = new System.Drawing.Point(360, 74);
             this.lblSpecialty.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSpecialty.Name = "lblSpecialty";
             this.lblSpecialty.Size = new System.Drawing.Size(81, 15);
@@ -173,7 +175,7 @@
             this.lblSpecializedIn.AutoSize = true;
             this.lblSpecializedIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSpecializedIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblSpecializedIn.Location = new System.Drawing.Point(203, 74);
+            this.lblSpecializedIn.Location = new System.Drawing.Point(248, 74);
             this.lblSpecializedIn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSpecializedIn.Name = "lblSpecializedIn";
             this.lblSpecializedIn.Size = new System.Drawing.Size(90, 15);
@@ -194,7 +196,7 @@
             this.lblDescription.AutoSize = true;
             this.lblDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblDescription.Location = new System.Drawing.Point(21, 148);
+            this.lblDescription.Location = new System.Drawing.Point(16, 136);
             this.lblDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(80, 15);
@@ -205,7 +207,7 @@
             // 
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
-            this.txtDescription.Location = new System.Drawing.Point(21, 175);
+            this.txtDescription.Location = new System.Drawing.Point(16, 160);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -217,7 +219,7 @@
             this.lblServices.AutoSize = true;
             this.lblServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblServices.Location = new System.Drawing.Point(24, 312);
+            this.lblServices.Location = new System.Drawing.Point(24, 308);
             this.lblServices.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblServices.Name = "lblServices";
             this.lblServices.Size = new System.Drawing.Size(61, 15);
@@ -229,7 +231,7 @@
             this.lblMedications.AutoSize = true;
             this.lblMedications.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMedications.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblMedications.Location = new System.Drawing.Point(336, 312);
+            this.lblMedications.Location = new System.Drawing.Point(336, 308);
             this.lblMedications.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMedications.Name = "lblMedications";
             this.lblMedications.Size = new System.Drawing.Size(85, 15);
@@ -244,7 +246,7 @@
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(96, 488);
+            this.btnBack.Location = new System.Drawing.Point(96, 496);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(139, 28);
@@ -277,7 +279,7 @@
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(395, 488);
+            this.btnConfirm.Location = new System.Drawing.Point(395, 496);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(139, 28);
@@ -289,7 +291,7 @@
             // lblServiceDivider
             // 
             this.lblServiceDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblServiceDivider.Location = new System.Drawing.Point(24, 365);
+            this.lblServiceDivider.Location = new System.Drawing.Point(24, 361);
             this.lblServiceDivider.Name = "lblServiceDivider";
             this.lblServiceDivider.Size = new System.Drawing.Size(280, 2);
             this.lblServiceDivider.TabIndex = 16;
@@ -298,7 +300,7 @@
             // lblMedDivider
             // 
             this.lblMedDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblMedDivider.Location = new System.Drawing.Point(335, 365);
+            this.lblMedDivider.Location = new System.Drawing.Point(335, 361);
             this.lblMedDivider.Name = "lblMedDivider";
             this.lblMedDivider.Size = new System.Drawing.Size(280, 2);
             this.lblMedDivider.TabIndex = 20;
@@ -310,7 +312,7 @@
             this.lsbServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.lsbServices.FormattingEnabled = true;
             this.lsbServices.ItemHeight = 15;
-            this.lsbServices.Location = new System.Drawing.Point(24, 376);
+            this.lsbServices.Location = new System.Drawing.Point(24, 372);
             this.lsbServices.Name = "lsbServices";
             this.lsbServices.Size = new System.Drawing.Size(280, 94);
             this.lsbServices.TabIndex = 17;
@@ -321,7 +323,7 @@
             this.lsbMedications.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.lsbMedications.FormattingEnabled = true;
             this.lsbMedications.ItemHeight = 15;
-            this.lsbMedications.Location = new System.Drawing.Point(336, 376);
+            this.lsbMedications.Location = new System.Drawing.Point(336, 372);
             this.lsbMedications.Name = "lsbMedications";
             this.lsbMedications.Size = new System.Drawing.Size(280, 94);
             this.lsbMedications.TabIndex = 21;
@@ -329,7 +331,7 @@
             // cboServices
             // 
             this.cboServices.FormattingEnabled = true;
-            this.cboServices.Location = new System.Drawing.Point(24, 336);
+            this.cboServices.Location = new System.Drawing.Point(24, 332);
             this.cboServices.Name = "cboServices";
             this.cboServices.Size = new System.Drawing.Size(224, 23);
             this.cboServices.TabIndex = 15;
@@ -337,7 +339,7 @@
             // cboMedications
             // 
             this.cboMedications.FormattingEnabled = true;
-            this.cboMedications.Location = new System.Drawing.Point(336, 336);
+            this.cboMedications.Location = new System.Drawing.Point(336, 332);
             this.cboMedications.Name = "cboMedications";
             this.cboMedications.Size = new System.Drawing.Size(224, 23);
             this.cboMedications.TabIndex = 19;
@@ -345,7 +347,7 @@
             // picSearchMedication
             // 
             this.picSearchMedication.Image = global::carepoint.Properties.Resources.magnifying_glass;
-            this.picSearchMedication.Location = new System.Drawing.Point(592, 340);
+            this.picSearchMedication.Location = new System.Drawing.Point(592, 336);
             this.picSearchMedication.Name = "picSearchMedication";
             this.picSearchMedication.Size = new System.Drawing.Size(18, 18);
             this.picSearchMedication.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -355,7 +357,7 @@
             // picSearchService
             // 
             this.picSearchService.Image = global::carepoint.Properties.Resources.magnifying_glass;
-            this.picSearchService.Location = new System.Drawing.Point(280, 340);
+            this.picSearchService.Location = new System.Drawing.Point(280, 336);
             this.picSearchService.Name = "picSearchService";
             this.picSearchService.Size = new System.Drawing.Size(18, 18);
             this.picSearchService.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -365,7 +367,7 @@
             // picAddMed
             // 
             this.picAddMed.Image = global::carepoint.Properties.Resources.add;
-            this.picAddMed.Location = new System.Drawing.Point(568, 340);
+            this.picAddMed.Location = new System.Drawing.Point(568, 336);
             this.picAddMed.Name = "picAddMed";
             this.picAddMed.Size = new System.Drawing.Size(18, 18);
             this.picAddMed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -375,7 +377,7 @@
             // picAddService
             // 
             this.picAddService.Image = global::carepoint.Properties.Resources.add;
-            this.picAddService.Location = new System.Drawing.Point(256, 340);
+            this.picAddService.Location = new System.Drawing.Point(256, 336);
             this.picAddService.Name = "picAddService";
             this.picAddService.Size = new System.Drawing.Size(18, 18);
             this.picAddService.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -385,7 +387,7 @@
             // picPrescription
             // 
             this.picPrescription.Image = global::carepoint.Properties.Resources.prescription;
-            this.picPrescription.Location = new System.Drawing.Point(576, 296);
+            this.picPrescription.Location = new System.Drawing.Point(576, 292);
             this.picPrescription.Name = "picPrescription";
             this.picPrescription.Size = new System.Drawing.Size(40, 40);
             this.picPrescription.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -396,7 +398,7 @@
             // picInvoice
             // 
             this.picInvoice.Image = global::carepoint.Properties.Resources.invoice;
-            this.picInvoice.Location = new System.Drawing.Point(264, 296);
+            this.picInvoice.Location = new System.Drawing.Point(264, 292);
             this.picInvoice.Name = "picInvoice";
             this.picInvoice.Size = new System.Drawing.Size(40, 40);
             this.picInvoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

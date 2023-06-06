@@ -1,22 +1,68 @@
-﻿using carepoint.domain;
+﻿using carepoint.dao;
+using carepoint.domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace carepoint
 {
     public partial class FrmAppointment : Form
     {
-        public FrmAppointment()
+        private Appointment appointment;
+        private DateTime dt;
+        private Doctor doctor;
+        private Patient patient;
+
+
+        public FrmAppointment(DateTime dt, Doctor doc, Boolean isOpenByPatient)
         {
+            
             InitializeComponent();
-            changeFormStatus(true);
+            this.dt = dt;
+            this.doctor = doc;
+
+            lblDate.Text = dt.Date.ToString();
+            lblHours.Text = dt.TimeOfDay.ToString();
+            lblDoctor.Text = "Dr" + doctor.firsname + " " + doctor.lastname;
+            lblSpecialty.Text = doctor.specialty.name;
+            lblStatus.Text = "OPEN";
+
+            if (isOpenByPatient)
+            {
+                patient = (Patient) Program.CurrentUser;
+            }
+
+            loadServices();
+            loadMedications();
+            changeFormStatus(isOpenByPatient);
+        }
+
+        private void loadServices()
+        {
+            USR_DATA_DATASETTableAdapters.CRP_SERVICETableAdapter serTableAdapter = new USR_DATA_DATASETTableAdapters.CRP_SERVICETableAdapter();
+            DataTable table = serTableAdapter.GetData();
+            cboServices.DataSource = table;
+            cboServices.DisplayMember = "SER_NAME";
+            cboServices.ValueMember = "SER_CODE";
+            cboServices.SelectedIndex = -1;
+        }
+
+        private void loadMedications()
+        {
+            USR_DATA_DATASETTableAdapters.CRP_MEDICATIONTableAdapter medTableAdapteer = new USR_DATA_DATASETTableAdapters.CRP_MEDICATIONTableAdapter();
+            DataTable table = medTableAdapteer.GetData();
+            cboMedications.DataSource = table;
+            cboMedications.DisplayMember = "MED_NAME";
+            cboMedications.ValueMember = "MED_ID";
+            cboMedications.SelectedIndex = -1;
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -24,9 +70,16 @@ namespace carepoint
             DialogResult res = MessageBox.Show("Confirm Appointment ?", "Do you want to book this Appointment ?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
             if (res == DialogResult.Yes)
             {
+                appointment = new Appointment(this.dt, this.patient, this.doctor, txtDescription.Text);
+                DataAccessLayer.getInstance.createNewAppointment(appointment);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }else{
                 this.DialogResult = DialogResult.None;
                 this.Close();
             }
+
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -39,7 +92,7 @@ namespace carepoint
         {
             txtDescription.Enabled = isEnable;
 
-            Boolean hasRwRights = true; //(Program.CurrentUser); is instance of doctor
+            Boolean hasRwRights = Program.CurrentUser is Doctor;
 
             Boolean isUsable = isEnable & hasRwRights;
 

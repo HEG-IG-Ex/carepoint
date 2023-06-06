@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using carepoint.domain;
+using carepoint.factory;
 
 namespace carepoint.PatientSide
 {
@@ -44,15 +45,26 @@ namespace carepoint.PatientSide
 
         private void picBook_Click(object sender, EventArgs e)
         {       
-            if(dgvNextAvailabilities.DataSource != null && dgvNextAvailabilities.SelectedRows.Count > 0)
+            if(dgvNextAvailabilities.DataSource != null && dgvNextAvailabilities.SelectedRows.Count > 0 && rdoDoctor.Checked)
             {
                 DataRowView vrow = (DataRowView)cboCriteriaList.SelectedItem;
                 DataRow row = vrow.Row;
 
-                FrmAppointment appointment = new FrmAppointment();
+                Doctor doc = PersonFactory.getInstance.createDoctor(row);
+
+                DataGridViewRow dgvRow = dgvNextAvailabilities.SelectedRows[0];
+                DateTime dt = Convert.ToDateTime(dgvRow.Cells[0].Value);
+
+                FrmAppointment appointment = new FrmAppointment(dt, doc, true);
                 appointment.ShowDialog();
+
+                if (appointment.DialogResult == DialogResult.OK) 
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
-            
+
         }
 
         private void rdoDoctor_CheckedChanged(object sender, EventArgs e)
@@ -92,6 +104,7 @@ namespace carepoint.PatientSide
             cboCriteriaList.DataSource = table;
             cboCriteriaList.DisplayMember = "fullname";
             cboCriteriaList.ValueMember = "PER_ID";
+            cboCriteriaList.SelectedIndex = -1;
         }
 
 
@@ -102,6 +115,7 @@ namespace carepoint.PatientSide
             cboCriteriaList.DataSource = table;
             cboCriteriaList.DisplayMember = "SPE_NAME";
             cboCriteriaList.ValueMember = "SPE_ID";
+            cboCriteriaList.SelectedIndex = -1;
         }
 
         private void cboCriteriaList_SelectedIndexChanged(object sender, EventArgs e)

@@ -13,7 +13,7 @@ namespace carepoint.domain
         Doctor,
 
     }
-    internal abstract class Person
+    public abstract class Person
     {
         public int id { get; private set; }
         public string username { get; private set; }

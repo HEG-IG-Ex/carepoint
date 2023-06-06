@@ -1,10 +1,13 @@
-﻿using carepoint.domain;
+﻿using carepoint.dao;
+using carepoint.domain;
 using carepoint.PatientSide;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace carepoint
@@ -21,24 +24,7 @@ namespace carepoint
             setTooltip();
             picBook.Visible = (Program.CurrentUser is Patient);
 
-            // This is test data for prototyppe purpose
-            /*setupDataGridView(dgvNextApp);
-            setupDataGridView(dgvPastApp);
-            populateDataGridViewNextApp(dgvNextApp);
-            populateDataGridViewNextApp(dgvPastApp);
-            createCancelColumn();*/
-
-
-
-            //ToolStripMenuItem menuItem = MainMenu.Items[mnItm] as ToolStripMenuItem;
-
-            // TODO: Header will change according to role
-            /*headersNextApp = new List<string>() { "id", "Date", "Hour", "Doctor", "Description", "Cancel"};
-            headersPastApp = new List<string>() { "id", "Date", "Hour", "Doctor", "Description", "Invoice", "Prescription" };
-            */
-
-
-        }
+         }
 
         static public FrmDashboard getInstance()
         {
@@ -131,7 +117,7 @@ namespace carepoint
             }
         }
 
-        private void dgvNextApp_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        /*private void dgvNextApp_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.Button == MouseButtons.Right)
             {
@@ -145,6 +131,26 @@ namespace carepoint
                         cell.DataGridView.CurrentCell = cell;
                         cell.Selected = true;
                     }
+                }
+            }
+        }*/
+
+        private void dgvNextApp_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                var hitTestInfo = dgvNextApp.HitTest(e.X, e.Y);
+                if (hitTestInfo.RowIndex >= 0 && hitTestInfo.ColumnIndex >= 0)
+                {
+                    dgvNextApp.ClearSelection();
+                    dgvNextApp.Rows[hitTestInfo.RowIndex].Selected = true;
+
+                    DataGridViewRow selectedRow = dgvNextApp.Rows[hitTestInfo.RowIndex];
+                    DataGridViewCell clickedCell = selectedRow.Cells[hitTestInfo.ColumnIndex];
+
+                    Point cellPosition = dgvNextApp.PointToScreen(clickedCell.ContentBounds.Location);
+
+                    cmsApp.Show(cellPosition);
                 }
             }
         }
@@ -171,12 +177,33 @@ namespace carepoint
             FrmSearch search = new FrmSearch();
             //search.MdiParent = Program.container;
             search.ShowDialog();
+            if(search.DialogResult == DialogResult.OK)
+            {
+                this.populateNextAppointment();
+            }
         }
 
         private void tsmiOpen_Click(object sender, EventArgs e)
         {
-            FrmAppointment appointment = new FrmAppointment();
-            appointment.ShowDialog();
+            //FrmAppointment appointment = new FrmAppointment();
+            //appointment.ShowDialog();
+        }
+
+        private void tsmiCancel_Click(object sender, EventArgs e)
+        {
+            // Get the selected row
+            if (dgvNextApp.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dgvNextApp.SelectedRows[0];
+                int id = Convert.ToInt16(selectedRow.Cells[0].Value);
+                string reason = Microsoft.VisualBasic.Interaction.InputBox("Enter cancellation reason:", "Cancellation Reason", "");
+
+                if (!string.IsNullOrWhiteSpace(reason))
+                {
+                    DataAccessLayer.getInstance.cancelAppointment(Convert.ToInt16(selectedRow.Cells[0].Value), reason);
+                }
+            }   
         }
     }
+
 }

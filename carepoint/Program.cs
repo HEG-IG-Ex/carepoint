@@ -24,6 +24,7 @@ namespace carepoint
 
             FrmBoot boot = new FrmBoot();
             DialogResult result = boot.ShowDialog();
+
             if (result == DialogResult.OK)
             {
                 if (boot.IsLogin)

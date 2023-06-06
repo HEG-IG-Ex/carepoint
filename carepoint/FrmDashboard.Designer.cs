@@ -70,7 +70,7 @@
             this.tpNextApp.Controls.Add(this.dgvNextApp);
             this.tpNextApp.Location = new System.Drawing.Point(4, 24);
             this.tpNextApp.Name = "tpNextApp";
-            this.tpNextApp.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpNextApp.Padding = new System.Windows.Forms.Padding(3);
             this.tpNextApp.Size = new System.Drawing.Size(670, 260);
             this.tpNextApp.TabIndex = 0;
             this.tpNextApp.Text = "Next Appointment";
@@ -84,20 +84,20 @@
             this.dgvNextApp.BackgroundColor = System.Drawing.Color.White;
             this.dgvNextApp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvNextApp.Location = new System.Drawing.Point(16, 37);
-            this.dgvNextApp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvNextApp.Margin = new System.Windows.Forms.Padding(2);
             this.dgvNextApp.Name = "dgvNextApp";
             this.dgvNextApp.RowHeadersWidth = 82;
             this.dgvNextApp.RowTemplate.Height = 33;
             this.dgvNextApp.Size = new System.Drawing.Size(634, 210);
             this.dgvNextApp.TabIndex = 0;
-            this.dgvNextApp.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvNextApp_CellMouseDown);
+            this.dgvNextApp.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvNextApp_MouseDown);
             // 
             // tpPastApp
             // 
             this.tpPastApp.Controls.Add(this.dgvPastApp);
             this.tpPastApp.Location = new System.Drawing.Point(4, 24);
             this.tpPastApp.Name = "tpPastApp";
-            this.tpPastApp.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tpPastApp.Padding = new System.Windows.Forms.Padding(3);
             this.tpPastApp.Size = new System.Drawing.Size(670, 260);
             this.tpPastApp.TabIndex = 1;
             this.tpPastApp.Text = "Past Appointment";
@@ -111,7 +111,7 @@
             this.dgvPastApp.BackgroundColor = System.Drawing.Color.White;
             this.dgvPastApp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPastApp.Location = new System.Drawing.Point(16, 37);
-            this.dgvPastApp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvPastApp.Margin = new System.Windows.Forms.Padding(2);
             this.dgvPastApp.Name = "dgvPastApp";
             this.dgvPastApp.RowHeadersWidth = 82;
             this.dgvPastApp.RowTemplate.Height = 33;
@@ -151,6 +151,7 @@
             this.tsmiCancel.Name = "tsmiCancel";
             this.tsmiCancel.Size = new System.Drawing.Size(180, 22);
             this.tsmiCancel.Text = "Cance&l";
+            this.tsmiCancel.Click += new System.EventHandler(this.tsmiCancel_Click);
             // 
             // lblUsername
             // 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace carepoint.domain
 {
-    internal class Specialty
+    public class Specialty
     {
         public int id { get; private set; }
         public string name { get; private set; }

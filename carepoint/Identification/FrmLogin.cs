@@ -67,8 +67,8 @@ namespace carepoint
                     DataRow person = table.Rows[0];
 
                     // Instantiate Person factory
-                    PersonFactory personFactory = PersonFactory.Instance;
-                    Program.CurrentUser = personFactory.CreatePerson(person);
+                    PersonFactory personFactory = PersonFactory.getInstance;
+                    Program.CurrentUser = personFactory.createPerson(person);
 
                     this.DialogResult = DialogResult.OK;
                     this.Close();

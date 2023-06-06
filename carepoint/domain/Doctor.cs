@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace carepoint.domain
 {
-    internal class Doctor : Person
+    public class Doctor : Person
     {
         public Doctor(int id, string username, string firsname, string lastname, string tel, string mail, double feePerConsult, DateTime startWorkDate, Specialty specialty) : base(id, username, firsname, lastname, tel, mail)
         {

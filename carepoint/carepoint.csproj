@@ -91,7 +91,9 @@
     <Compile Include="appointment\FrmAppointment.Designer.cs">
       <DependentUpon>FrmAppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="dal\DataAccessLayer.cs" />
     <Compile Include="domain\Admin.cs" />
+    <Compile Include="domain\Appointment.cs" />
     <Compile Include="domain\Doctor.cs" />
     <Compile Include="domain\Insurance.cs" />
     <Compile Include="domain\Patient.cs" />
