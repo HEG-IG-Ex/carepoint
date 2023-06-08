@@ -59,7 +59,7 @@
             this.tabPastApp.Controls.Add(this.tpPastApp);
             this.tabPastApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.tabPastApp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPastApp.Location = new System.Drawing.Point(34, 80);
+            this.tabPastApp.Location = new System.Drawing.Point(32, 80);
             this.tabPastApp.Name = "tabPastApp";
             this.tabPastApp.SelectedIndex = 0;
             this.tabPastApp.Size = new System.Drawing.Size(678, 288);
@@ -104,19 +104,19 @@
             this.tsmiOpen,
             this.tsmiCancel});
             this.cmsApp.Name = "cmsApp";
-            this.cmsApp.Size = new System.Drawing.Size(181, 70);
+            this.cmsApp.Size = new System.Drawing.Size(111, 48);
             // 
             // tsmiOpen
             // 
             this.tsmiOpen.Name = "tsmiOpen";
-            this.tsmiOpen.Size = new System.Drawing.Size(180, 22);
+            this.tsmiOpen.Size = new System.Drawing.Size(110, 22);
             this.tsmiOpen.Text = "&Open";
             this.tsmiOpen.Click += new System.EventHandler(this.tsmiOpen_Click);
             // 
             // tsmiCancel
             // 
             this.tsmiCancel.Name = "tsmiCancel";
-            this.tsmiCancel.Size = new System.Drawing.Size(180, 22);
+            this.tsmiCancel.Size = new System.Drawing.Size(110, 22);
             this.tsmiCancel.Text = "Cance&l";
             this.tsmiCancel.Click += new System.EventHandler(this.tsmiCancel_Click);
             // 

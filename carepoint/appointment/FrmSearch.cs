@@ -70,9 +70,14 @@ namespace carepoint.PatientSide
             Doctor doc = PersonFactory.getInstance.createDoctor(row);
 
             DataGridViewRow dgvRow = dgvNextAvailabilities.SelectedRows[0];
-            DateTime dt = Convert.ToDateTime(dgvRow.Cells[0].Value);
 
-            return new Appointment(dt, (Patient)Program.CurrentUser, doc);
+
+            DateTime date = Convert.ToDateTime(dgvRow.Cells[0].Value);
+            TimeSpan hours = TimeSpan.Parse(dgvRow.Cells[1].Value.ToString());
+
+            DateTime mergedDateTime = date.Date + hours;
+
+            return new Appointment(mergedDateTime, (Patient)Program.CurrentUser, doc);
         }
 
         private void rdoDoctor_CheckedChanged(object sender, EventArgs e)
@@ -136,8 +141,6 @@ namespace carepoint.PatientSide
                 dgvNextAvailabilities.BackgroundColor = Color.White;
                 dgvNextAvailabilities.RowHeadersVisible = false;
             }
-
-
         }
     }
 }

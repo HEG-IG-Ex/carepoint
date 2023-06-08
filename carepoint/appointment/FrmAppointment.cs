@@ -27,7 +27,7 @@ namespace carepoint
         {
             InitializeComponent();
             appointment = app;
-            lblDate.Text = appointment.appointmentDate.Date.ToString();
+            lblDate.Text = appointment.appointmentDate.ToShortDateString();
             lblHours.Text = appointment.appointmentDate.TimeOfDay.ToString();
             lblDoctor.Text = "Dr " + appointment.doctor.firsname + " " + appointment.doctor.lastname;
             lblSpecialty.Text = appointment.doctor.specialty.name;

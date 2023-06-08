@@ -60,8 +60,6 @@ namespace carepoint {
         
         private _PKG_CAREPOINT_GETINVOICEFORAPPOINTMENTDataTable _tablePKG_CAREPOINT_GETINVOICEFORAPPOINTMENT;
         
-        private _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable _tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC;
-        
         private _PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPEDataTable _tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORSPE;
         
         private VW_DOCTORS_APPDataTable tableVW_DOCTORS_APP;
@@ -77,6 +75,8 @@ namespace carepoint {
         private VW_SERVICES_PROVIDEDDataTable tableVW_SERVICES_PROVIDED;
         
         private VW_PRESCRIPTIONSDataTable tableVW_PRESCRIPTIONS;
+        
+        private _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable _tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC;
         
         private global::System.Data.DataRelation relationFK_CRP_AVAILABILITY_CRP_DOC;
         
@@ -200,9 +200,6 @@ namespace carepoint {
                 if ((ds.Tables["PKG_CAREPOINT.GETINVOICEFORAPPOINTMENT"] != null)) {
                     base.Tables.Add(new _PKG_CAREPOINT_GETINVOICEFORAPPOINTMENTDataTable(ds.Tables["PKG_CAREPOINT.GETINVOICEFORAPPOINTMENT"]));
                 }
-                if ((ds.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC"] != null)) {
-                    base.Tables.Add(new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable(ds.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC"]));
-                }
                 if ((ds.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORSPE"] != null)) {
                     base.Tables.Add(new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPEDataTable(ds.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORSPE"]));
                 }
@@ -226,6 +223,9 @@ namespace carepoint {
                 }
                 if ((ds.Tables["VW_PRESCRIPTIONS"] != null)) {
                     base.Tables.Add(new VW_PRESCRIPTIONSDataTable(ds.Tables["VW_PRESCRIPTIONS"]));
+                }
+                if ((ds.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC"] != null)) {
+                    base.Tables.Add(new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable(ds.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -429,16 +429,6 @@ namespace carepoint {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC {
-            get {
-                return this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
         public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPEDataTable _PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPE {
             get {
                 return this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORSPE;
@@ -512,6 +502,16 @@ namespace carepoint {
         public VW_PRESCRIPTIONSDataTable VW_PRESCRIPTIONS {
             get {
                 return this.tableVW_PRESCRIPTIONS;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC {
+            get {
+                return this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC;
             }
         }
         
@@ -636,9 +636,6 @@ namespace carepoint {
                 if ((ds.Tables["PKG_CAREPOINT.GETINVOICEFORAPPOINTMENT"] != null)) {
                     base.Tables.Add(new _PKG_CAREPOINT_GETINVOICEFORAPPOINTMENTDataTable(ds.Tables["PKG_CAREPOINT.GETINVOICEFORAPPOINTMENT"]));
                 }
-                if ((ds.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC"] != null)) {
-                    base.Tables.Add(new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable(ds.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC"]));
-                }
                 if ((ds.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORSPE"] != null)) {
                     base.Tables.Add(new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPEDataTable(ds.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORSPE"]));
                 }
@@ -662,6 +659,9 @@ namespace carepoint {
                 }
                 if ((ds.Tables["VW_PRESCRIPTIONS"] != null)) {
                     base.Tables.Add(new VW_PRESCRIPTIONSDataTable(ds.Tables["VW_PRESCRIPTIONS"]));
+                }
+                if ((ds.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC"] != null)) {
+                    base.Tables.Add(new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable(ds.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -804,12 +804,6 @@ namespace carepoint {
                     this._tablePKG_CAREPOINT_GETINVOICEFORAPPOINTMENT.InitVars();
                 }
             }
-            this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC = ((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable)(base.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC"]));
-            if ((initTable == true)) {
-                if ((this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC != null)) {
-                    this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.InitVars();
-                }
-            }
             this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORSPE = ((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPEDataTable)(base.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORSPE"]));
             if ((initTable == true)) {
                 if ((this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORSPE != null)) {
@@ -856,6 +850,12 @@ namespace carepoint {
             if ((initTable == true)) {
                 if ((this.tableVW_PRESCRIPTIONS != null)) {
                     this.tableVW_PRESCRIPTIONS.InitVars();
+                }
+            }
+            this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC = ((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable)(base.Tables["PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC"]));
+            if ((initTable == true)) {
+                if ((this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC != null)) {
+                    this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.InitVars();
                 }
             }
             this.relationFK_CRP_AVAILABILITY_CRP_DOC = this.Relations["FK_CRP_AVAILABILITY_CRP_DOC"];
@@ -924,8 +924,6 @@ namespace carepoint {
             base.Tables.Add(this.tableVW_PATIENTS);
             this._tablePKG_CAREPOINT_GETINVOICEFORAPPOINTMENT = new _PKG_CAREPOINT_GETINVOICEFORAPPOINTMENTDataTable();
             base.Tables.Add(this._tablePKG_CAREPOINT_GETINVOICEFORAPPOINTMENT);
-            this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC = new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable();
-            base.Tables.Add(this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC);
             this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORSPE = new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPEDataTable();
             base.Tables.Add(this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORSPE);
             this.tableVW_DOCTORS_APP = new VW_DOCTORS_APPDataTable();
@@ -942,6 +940,8 @@ namespace carepoint {
             base.Tables.Add(this.tableVW_SERVICES_PROVIDED);
             this.tableVW_PRESCRIPTIONS = new VW_PRESCRIPTIONSDataTable();
             base.Tables.Add(this.tableVW_PRESCRIPTIONS);
+            this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC = new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable();
+            base.Tables.Add(this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC);
             this.relationFK_CRP_AVAILABILITY_CRP_DOC = new global::System.Data.DataRelation("FK_CRP_AVAILABILITY_CRP_DOC", new global::System.Data.DataColumn[] {
                         this.tableCRP_DOC.DOC_PER_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableCRP_AVAILABILITY.AVL_PER_IDColumn}, false);
@@ -1134,12 +1134,6 @@ namespace carepoint {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerialize_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC() {
-            return false;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerialize_PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPE() {
             return false;
         }
@@ -1183,6 +1177,12 @@ namespace carepoint {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private bool ShouldSerializeVW_PRESCRIPTIONS() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerialize_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC() {
             return false;
         }
         
@@ -1296,9 +1296,6 @@ namespace carepoint {
         public delegate void _PKG_CAREPOINT_GETINVOICEFORAPPOINTMENTRowChangeEventHandler(object sender, _PKG_CAREPOINT_GETINVOICEFORAPPOINTMENTRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEventHandler(object sender, _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent e);
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void _PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPERowChangeEventHandler(object sender, _PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPERowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -1321,6 +1318,9 @@ namespace carepoint {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void VW_PRESCRIPTIONSRowChangeEventHandler(object sender, VW_PRESCRIPTIONSRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEventHandler(object sender, _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -6726,255 +6726,6 @@ namespace carepoint {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable : global::System.Data.TypedTableBase<_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow> {
-            
-            private global::System.Data.DataColumn columnDT;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable() {
-                this.TableName = "PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DTColumn {
-                get {
-                    return this.columnDT;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow this[int index] {
-                get {
-                    return ((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEventHandler _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEventHandler _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEventHandler _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEventHandler _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Add_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow(_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow Add_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow(System.DateTime DT) {
-                _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow row_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow = ((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        DT};
-                row_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow.ItemArray = columnValuesArray;
-                this.Rows.Add(row_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow);
-                return row_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable cln = ((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal void InitVars() {
-                this.columnDT = base.Columns["DT"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            private void InitClass() {
-                this.columnDT = new global::System.Data.DataColumn("DT", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDT);
-                this.ExtendedProperties.Add("Generator_TableVarName", "_tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC");
-                this.ExtendedProperties.Add("Generator_UserTableName", "PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC");
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow New_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow() {
-                return ((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChanged != null)) {
-                    this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChanged(this, new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent(((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChanging != null)) {
-                    this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChanging(this, new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent(((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowDeleted != null)) {
-                    this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowDeleted(this, new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent(((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowDeleting != null)) {
-                    this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowDeleting(this, new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent(((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void Remove_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow(_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                USR_DATA_DATASET ds = new USR_DATA_DATASET();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class _PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPEDataTable : global::System.Data.TypedTableBase<_PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPERow> {
             
             private global::System.Data.DataColumn columnDT;
@@ -9979,6 +9730,270 @@ namespace carepoint {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable : global::System.Data.TypedTableBase<_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow> {
+            
+            private global::System.Data.DataColumn columnAVAILABILITY_DATE;
+            
+            private global::System.Data.DataColumn columnWORK_HOUR;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable() {
+                this.TableName = "PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn AVAILABILITY_DATEColumn {
+                get {
+                    return this.columnAVAILABILITY_DATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn WORK_HOURColumn {
+                get {
+                    return this.columnWORK_HOUR;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow this[int index] {
+                get {
+                    return ((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEventHandler _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEventHandler _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEventHandler _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEventHandler _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Add_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow(_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow Add_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow(System.DateTime AVAILABILITY_DATE, string WORK_HOUR) {
+                _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow row_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow = ((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        AVAILABILITY_DATE,
+                        WORK_HOUR};
+                row_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow.ItemArray = columnValuesArray;
+                this.Rows.Add(row_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow);
+                return row_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable cln = ((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnAVAILABILITY_DATE = base.Columns["AVAILABILITY_DATE"];
+                this.columnWORK_HOUR = base.Columns["WORK_HOUR"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnAVAILABILITY_DATE = new global::System.Data.DataColumn("AVAILABILITY_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAVAILABILITY_DATE);
+                this.columnWORK_HOUR = new global::System.Data.DataColumn("WORK_HOUR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnWORK_HOUR);
+                this.columnWORK_HOUR.MaxLength = 5;
+                this.ExtendedProperties.Add("Generator_TableVarName", "_tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC");
+                this.ExtendedProperties.Add("Generator_UserTableName", "PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC");
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow New_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow() {
+                return ((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChanged != null)) {
+                    this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChanged(this, new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent(((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChanging != null)) {
+                    this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChanging(this, new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent(((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowDeleted != null)) {
+                    this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowDeleted(this, new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent(((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowDeleting != null)) {
+                    this._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowDeleting(this, new _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent(((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void Remove_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow(_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                USR_DATA_DATASET ds = new USR_DATA_DATASET();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class CRP_AVAILABILITYRow : global::System.Data.DataRow {
@@ -11794,50 +11809,6 @@ namespace carepoint {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow : global::System.Data.DataRow {
-            
-            private _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable _tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC = ((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public System.DateTime DT {
-                get {
-                    try {
-                        return ((global::System.DateTime)(this[this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.DTColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'DT\' dans la table \'PKG_CAREPOINT.GETNEXTAVAILABILITYFO" +
-                                "RDOC\' est DBNull.", e);
-                    }
-                }
-                set {
-                    this[this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.DTColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsDTNull() {
-                return this.IsNull(this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.DTColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetDTNull() {
-                this[this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.DTColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class _PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPERow : global::System.Data.DataRow {
             
             private _PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPEDataTable _tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORSPE;
@@ -13300,6 +13271,79 @@ namespace carepoint {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow : global::System.Data.DataRow {
+            
+            private _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable _tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC = ((_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime AVAILABILITY_DATE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.AVAILABILITY_DATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'AVAILABILITY_DATE\' dans la table \'PKG_CAREPOINT.GETNEX" +
+                                "TAVAILABILITYFORDOC\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.AVAILABILITY_DATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string WORK_HOUR {
+                get {
+                    try {
+                        return ((string)(this[this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.WORK_HOURColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'WORK_HOUR\' dans la table \'PKG_CAREPOINT.GETNEXTAVAILAB" +
+                                "ILITYFORDOC\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.WORK_HOURColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAVAILABILITY_DATENull() {
+                return this.IsNull(this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.AVAILABILITY_DATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAVAILABILITY_DATENull() {
+                this[this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.AVAILABILITY_DATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsWORK_HOURNull() {
+                return this.IsNull(this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.WORK_HOURColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetWORK_HOURNull() {
+                this[this._tablePKG_CAREPOINT_GETNEXTAVAILABILITYFORDOC.WORK_HOURColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -13915,40 +13959,6 @@ namespace carepoint {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent : global::System.EventArgs {
-            
-            private _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow eventRow;
-            
-            private global::System.Data.DataRowAction eventAction;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent(_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow row, global::System.Data.DataRowAction action) {
-                this.eventRow = row;
-                this.eventAction = action;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow Row {
-                get {
-                    return this.eventRow;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataRowAction Action {
-                get {
-                    return this.eventAction;
-                }
-            }
-        }
-        
-        /// <summary>
-        ///Row event argument class
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public class _PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPERowChangeEvent : global::System.EventArgs {
             
             private _PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPERow eventRow;
@@ -14203,6 +14213,40 @@ namespace carepoint {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public VW_PRESCRIPTIONSRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent : global::System.EventArgs {
+            
+            private _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRowChangeEvent(_PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public _PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -21560,201 +21604,6 @@ FROM
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
-        
-        private global::Oracle.ManagedDataAccess.Client.OracleConnection _connection;
-        
-        private global::Oracle.ManagedDataAccess.Client.OracleTransaction _transaction;
-        
-        private global::Oracle.ManagedDataAccess.Client.OracleCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected internal global::Oracle.ManagedDataAccess.Client.OracleDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::Oracle.ManagedDataAccess.Client.OracleConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        internal global::Oracle.ManagedDataAccess.Client.OracleTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected global::Oracle.ManagedDataAccess.Client.OracleCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC";
-            tableMapping.ColumnMappings.Add("DT", "DT");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection();
-            this._connection.ConnectionString = global::carepoint.Properties.Settings.Default.ConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
-            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "USR_DATA.PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "\"ReturnValue\"";
-            param.DbType = global::System.Data.DbType.Object;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.RefCursor;
-            param.Direction = global::System.Data.ParameterDirection.ReturnValue;
-            param.IsNullable = true;
-            param.SourceColumn = null;
-            this._commandCollection[0].Parameters.Add(param);
-            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
-            param.ParameterName = "I_DOC_ID";
-            param.DbType = global::System.Data.DbType.Decimal;
-            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
-            param.Size = 22;
-            param.IsNullable = true;
-            param.SourceColumn = null;
-            this._commandCollection[0].Parameters.Add(param);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(USR_DATA_DATASET._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable dataTable, global::System.Nullable<decimal> I_DOC_ID) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((I_DOC_ID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(I_DOC_ID.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual USR_DATA_DATASET._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable GetData(global::System.Nullable<decimal> I_DOC_ID) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((I_DOC_ID.HasValue == true)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(I_DOC_ID.Value));
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            USR_DATA_DATASET._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable dataTable = new USR_DATA_DATASET._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPETableAdapter : global::System.ComponentModel.Component {
         
         private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
@@ -24222,6 +24071,202 @@ WHERE (APP.APP_ID = :id)";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleConnection _connection;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleTransaction _transaction;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::Oracle.ManagedDataAccess.Client.OracleDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::Oracle.ManagedDataAccess.Client.OracleCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC";
+            tableMapping.ColumnMappings.Add("AVAILABILITY_DATE", "AVAILABILITY_DATE");
+            tableMapping.ColumnMappings.Add("WORK_HOUR", "WORK_HOUR");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection();
+            this._connection.ConnectionString = global::carepoint.Properties.Settings.Default.ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "USR_DATA.PKG_CAREPOINT.GETNEXTAVAILABILITYFORDOC";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "\"ReturnValue\"";
+            param.DbType = global::System.Data.DbType.Object;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.RefCursor;
+            param.Direction = global::System.Data.ParameterDirection.ReturnValue;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            this._commandCollection[0].Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = "I_DOC_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = null;
+            this._commandCollection[0].Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(USR_DATA_DATASET._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable dataTable, global::System.Nullable<decimal> I_DOC_ID) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((I_DOC_ID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(I_DOC_ID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual USR_DATA_DATASET._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable GetData(global::System.Nullable<decimal> I_DOC_ID) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((I_DOC_ID.HasValue == true)) {
+                this.Adapter.SelectCommand.Parameters[1].Value = ((decimal)(I_DOC_ID.Value));
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            USR_DATA_DATASET._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable dataTable = new USR_DATA_DATASET._PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class QueriesTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.IDbCommand[] _commandCollection;
@@ -24717,21 +24762,21 @@ WHERE (APP.APP_ID = :id)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cRP_SPECIALTYTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CRP_SPECIALTY.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cRP_SPECIALTYTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             if ((this._cRP_PERSONTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.CRP_PERSON.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
                     result = (result + this._cRP_PERSONTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._cRP_SPECIALTYTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CRP_SPECIALTY.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cRP_SPECIALTYTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -24771,39 +24816,12 @@ WHERE (APP.APP_ID = :id)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cRP_WEEKDAYTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CRP_WEEKDAY.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cRP_INSURANCETableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CRP_INSURANCE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._cRP_WEEKDAYTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._cRP_APPOINTMENTTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CRP_APPOINTMENT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cRP_APPOINTMENTTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._cRP_SERVICETableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CRP_SERVICE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cRP_SERVICETableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._cRP_PERIODOFDAYTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CRP_PERIODOFDAY.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cRP_PERIODOFDAYTableAdapter.Update(updatedRows));
+                    result = (result + this._cRP_INSURANCETableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -24816,12 +24834,39 @@ WHERE (APP.APP_ID = :id)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cRP_INSURANCETableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CRP_INSURANCE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cRP_PERIODOFDAYTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CRP_PERIODOFDAY.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._cRP_INSURANCETableAdapter.Update(updatedRows));
+                    result = (result + this._cRP_PERIODOFDAYTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._cRP_SERVICETableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CRP_SERVICE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cRP_SERVICETableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._cRP_APPOINTMENTTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CRP_APPOINTMENT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cRP_APPOINTMENTTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._cRP_WEEKDAYTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CRP_WEEKDAY.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cRP_WEEKDAYTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -24870,19 +24915,19 @@ WHERE (APP.APP_ID = :id)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cRP_SPECIALTYTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CRP_SPECIALTY.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cRP_SPECIALTYTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             if ((this._cRP_PERSONTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.CRP_PERSON.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
                     result = (result + this._cRP_PERSONTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._cRP_SPECIALTYTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CRP_SPECIALTY.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cRP_SPECIALTYTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -24918,35 +24963,11 @@ WHERE (APP.APP_ID = :id)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cRP_WEEKDAYTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CRP_WEEKDAY.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cRP_INSURANCETableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CRP_INSURANCE.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._cRP_WEEKDAYTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._cRP_APPOINTMENTTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CRP_APPOINTMENT.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cRP_APPOINTMENTTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._cRP_SERVICETableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CRP_SERVICE.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cRP_SERVICETableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._cRP_PERIODOFDAYTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CRP_PERIODOFDAY.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cRP_PERIODOFDAYTableAdapter.Update(addedRows));
+                    result = (result + this._cRP_INSURANCETableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -24958,11 +24979,35 @@ WHERE (APP.APP_ID = :id)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cRP_INSURANCETableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CRP_INSURANCE.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cRP_PERIODOFDAYTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CRP_PERIODOFDAY.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._cRP_INSURANCETableAdapter.Update(addedRows));
+                    result = (result + this._cRP_PERIODOFDAYTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._cRP_SERVICETableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CRP_SERVICE.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cRP_SERVICETableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._cRP_APPOINTMENTTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CRP_APPOINTMENT.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cRP_APPOINTMENTTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._cRP_WEEKDAYTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CRP_WEEKDAY.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cRP_WEEKDAYTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -25024,35 +25069,11 @@ WHERE (APP.APP_ID = :id)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._cRP_INSURANCETableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CRP_INSURANCE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._cRP_WEEKDAYTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CRP_WEEKDAY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._cRP_INSURANCETableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._cRP_MEDICATIONTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CRP_MEDICATION.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cRP_MEDICATIONTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._cRP_PERIODOFDAYTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CRP_PERIODOFDAY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cRP_PERIODOFDAYTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._cRP_SERVICETableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CRP_SERVICE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cRP_SERVICETableAdapter.Update(deletedRows));
+                    result = (result + this._cRP_WEEKDAYTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -25064,11 +25085,35 @@ WHERE (APP.APP_ID = :id)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._cRP_WEEKDAYTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CRP_WEEKDAY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._cRP_SERVICETableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CRP_SERVICE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._cRP_WEEKDAYTableAdapter.Update(deletedRows));
+                    result = (result + this._cRP_SERVICETableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._cRP_PERIODOFDAYTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CRP_PERIODOFDAY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cRP_PERIODOFDAYTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._cRP_MEDICATIONTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CRP_MEDICATION.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cRP_MEDICATIONTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._cRP_INSURANCETableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CRP_INSURANCE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cRP_INSURANCETableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -25104,19 +25149,19 @@ WHERE (APP.APP_ID = :id)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._cRP_PERSONTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CRP_PERSON.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cRP_PERSONTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._cRP_SPECIALTYTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.CRP_SPECIALTY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._cRP_SPECIALTYTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._cRP_PERSONTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CRP_PERSON.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cRP_PERSONTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

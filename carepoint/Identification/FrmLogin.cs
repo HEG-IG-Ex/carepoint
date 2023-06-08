@@ -53,7 +53,7 @@ namespace carepoint
                 //Get the user role
                 USR_DATA_DATASETTableAdapters.CRP_PERSONTableAdapter personTableAdapter = new USR_DATA_DATASETTableAdapters.CRP_PERSONTableAdapter();
                 //DataTable table = personTableAdapter.GetByAuthenticate(usrname, hash);
-                DataTable table = personTableAdapter.GetByAuthenticate("emilie.schmid", "1f0160076c9f42a157f0a8f0dcc68e02ff69045b");
+                DataTable table = personTableAdapter.GetByAuthenticate("julia.miller", "b1b0b8de8a6228f6501c0560365d3a7d74ffcd8e");
                 
             //DataTable table = personTableAdapter.GetByAuthenticate("julia.miller", "b1b0b8de8a6228f6501c0560365d3a7d74ffcd8e");
                 //"admin", "86ff11bd7933c00a2aaa8efafa4e5266c45b26b0"
