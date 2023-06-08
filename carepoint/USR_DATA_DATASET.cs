@@ -4,6 +4,10 @@
 
     partial class USR_DATA_DATASET
     {
+        partial class CRP_APPOINTMENTDataTable
+        {
+        }
+
         partial class VW_DOCTORS_APPDataTable
         {
         }

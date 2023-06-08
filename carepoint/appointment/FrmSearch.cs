@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using carepoint.domain;
 using carepoint.factory;
+using carepoint.dao;
 
 namespace carepoint.PatientSide
 {
@@ -47,24 +48,31 @@ namespace carepoint.PatientSide
         {       
             if(dgvNextAvailabilities.DataSource != null && dgvNextAvailabilities.SelectedRows.Count > 0 && rdoDoctor.Checked)
             {
-                DataRowView vrow = (DataRowView)cboCriteriaList.SelectedItem;
-                DataRow row = vrow.Row;
+               
+                FrmAppointment frmAppointment = new FrmAppointment(convertResearchIntoAppointmentToCreate(), actionTypes.Create);
+                frmAppointment.ShowDialog();
 
-                Doctor doc = PersonFactory.getInstance.createDoctor(row);
-
-                DataGridViewRow dgvRow = dgvNextAvailabilities.SelectedRows[0];
-                DateTime dt = Convert.ToDateTime(dgvRow.Cells[0].Value);
-
-                FrmAppointment appointment = new FrmAppointment(dt, doc, true);
-                appointment.ShowDialog();
-
-                if (appointment.DialogResult == DialogResult.OK) 
+                if (frmAppointment.DialogResult == DialogResult.OK) 
                 {
                     this.DialogResult = DialogResult.OK;
                     this.Close();
+                    
                 }
             }
 
+        }
+
+        private Appointment convertResearchIntoAppointmentToCreate()
+        {
+            DataRowView vrow = (DataRowView)cboCriteriaList.SelectedItem;
+            DataRow row = vrow.Row;
+
+            Doctor doc = PersonFactory.getInstance.createDoctor(row);
+
+            DataGridViewRow dgvRow = dgvNextAvailabilities.SelectedRows[0];
+            DateTime dt = Convert.ToDateTime(dgvRow.Cells[0].Value);
+
+            return new Appointment(dt, (Patient)Program.CurrentUser, doc);
         }
 
         private void rdoDoctor_CheckedChanged(object sender, EventArgs e)
@@ -98,10 +106,7 @@ namespace carepoint.PatientSide
 
         private void loadDoctorsList()
         {
-            USR_DATA_DATASETTableAdapters.VW_DOCTORSTableAdapter docTableAdapter = new USR_DATA_DATASETTableAdapters.VW_DOCTORSTableAdapter();
-            //USR_DATA_DATASETTableAdapters.CRP_DOCTableAdapter docTableAdapter = new USR_DATA_DATASETTableAdapters.CRP_DOCTableAdapter();
-            DataTable table = docTableAdapter.GetDocAsCriteriaList();
-            cboCriteriaList.DataSource = table;
+            cboCriteriaList.DataSource = DataAccessLayer.getInstance.getDoctorsAsCriteriaList();
             cboCriteriaList.DisplayMember = "fullname";
             cboCriteriaList.ValueMember = "PER_ID";
             cboCriteriaList.SelectedIndex = -1;
@@ -110,9 +115,8 @@ namespace carepoint.PatientSide
 
         private void loadSpecialty()
         {
-            USR_DATA_DATASETTableAdapters.CRP_SPECIALTYTableAdapter speTableAdapter = new USR_DATA_DATASETTableAdapters.CRP_SPECIALTYTableAdapter();
-            DataTable table = speTableAdapter.GetData();
-            cboCriteriaList.DataSource = table;
+
+            cboCriteriaList.DataSource = DataAccessLayer.getInstance.getSpecialtyAsCriteriaList();
             cboCriteriaList.DisplayMember = "SPE_NAME";
             cboCriteriaList.ValueMember = "SPE_ID";
             cboCriteriaList.SelectedIndex = -1;
@@ -124,22 +128,11 @@ namespace carepoint.PatientSide
 
             // Retrieve the selected value
             object selectedValue = comboBox.SelectedValue;
-            // Check if the selected value is not null and can be converted to an integer
-            if (selectedValue != null && int.TryParse(selectedValue.ToString(), out int intValue))
-            {
-                DataTable table = null;
-                if (rdoDoctor.Checked)
-                {
-                    USR_DATA_DATASETTableAdapters.PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCTableAdapter q = new USR_DATA_DATASETTableAdapters.PKG_CAREPOINT_GETNEXTAVAILABILITYFORDOCTableAdapter();
-                    table = q.GetData(intValue);
-                }
-                else if (rdoSpecialty.Checked)
-                {
-                    USR_DATA_DATASETTableAdapters.PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPETableAdapter q = new USR_DATA_DATASETTableAdapters.PKG_CAREPOINT_GETNEXTAVAILABILITYFORSPETableAdapter();
-                    table = q.GetData(intValue);
-                }
 
-                dgvNextAvailabilities.DataSource = table;
+            // Check if the selected value is not null and can be converted to an integer
+            if (selectedValue != null && int.TryParse(selectedValue.ToString(), out int id))
+            {
+                dgvNextAvailabilities.DataSource = DataAccessLayer.getInstance.getNextAvailabilities(rdoDoctor.Checked, id);
                 dgvNextAvailabilities.BackgroundColor = Color.White;
                 dgvNextAvailabilities.RowHeadersVisible = false;
             }

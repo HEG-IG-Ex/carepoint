@@ -74,5 +74,18 @@ namespace carepoint.factory
             Specialty specialty = new Specialty(specialtyId, specialtyName);
             return new Doctor(id, username, firstName, lastName, tel, email, feePerConsult, startWorkDate, specialty);
         }
+
+        public Patient createPatient(DataRow row)
+        {
+
+            int id = Convert.ToInt32(row["PER_ID"]);
+            string username = row["PER_USERNAME"].ToString();
+            string firstName = row["PER_FIRSTNAME"].ToString();
+            string lastName = row["PER_LASTNAME"].ToString();
+            string tel = row["PER_TEL"].ToString();
+            string email = row["PER_MAIL"].ToString();
+
+            return new Patient(id, username, firstName, lastName, tel, email, new Insurance(Convert.ToInt32(row["PAT_INS_ID"]), row["INS_NAME"].ToString()));
+        }
     }
 }

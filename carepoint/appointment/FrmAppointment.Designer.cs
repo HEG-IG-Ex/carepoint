@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAppointment));
             this.lblAppOf = new System.Windows.Forms.Label();
             this.lblDate = new System.Windows.Forms.Label();
@@ -41,6 +42,8 @@
             this.lblDivider = new System.Windows.Forms.Label();
             this.lblDescription = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
+            this.cmsServices = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCancel = new System.Windows.Forms.ToolStripMenuItem();
             this.lblServices = new System.Windows.Forms.Label();
             this.lblMedications = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
@@ -48,8 +51,6 @@
             this.btnConfirm = new System.Windows.Forms.Button();
             this.lblServiceDivider = new System.Windows.Forms.Label();
             this.lblMedDivider = new System.Windows.Forms.Label();
-            this.lsbServices = new System.Windows.Forms.ListBox();
-            this.lsbMedications = new System.Windows.Forms.ListBox();
             this.cboServices = new System.Windows.Forms.ComboBox();
             this.cboMedications = new System.Windows.Forms.ComboBox();
             this.picSearchMedication = new System.Windows.Forms.PictureBox();
@@ -60,6 +61,11 @@
             this.picInvoice = new System.Windows.Forms.PictureBox();
             this.picCancelled = new System.Windows.Forms.PictureBox();
             this.picClosed = new System.Windows.Forms.PictureBox();
+            this.dgvServices = new System.Windows.Forms.DataGridView();
+            this.dgvMedications = new System.Windows.Forms.DataGridView();
+            this.cmsPrescriptions = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiCancelPresc = new System.Windows.Forms.ToolStripMenuItem();
+            this.cmsServices.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSearchMedication)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearchService)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAddMed)).BeginInit();
@@ -68,6 +74,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCancelled)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClosed)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedications)).BeginInit();
+            this.cmsPrescriptions.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblAppOf
@@ -205,6 +214,7 @@
             // 
             // txtDescription
             // 
+            this.txtDescription.ContextMenuStrip = this.cmsServices;
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
             this.txtDescription.Location = new System.Drawing.Point(16, 160);
@@ -214,12 +224,26 @@
             this.txtDescription.Size = new System.Drawing.Size(596, 101);
             this.txtDescription.TabIndex = 13;
             // 
+            // cmsServices
+            // 
+            this.cmsServices.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCancel});
+            this.cmsServices.Name = "contextMenuStrip1";
+            this.cmsServices.Size = new System.Drawing.Size(111, 26);
+            // 
+            // tsmiCancel
+            // 
+            this.tsmiCancel.Name = "tsmiCancel";
+            this.tsmiCancel.Size = new System.Drawing.Size(110, 22);
+            this.tsmiCancel.Text = "Cancel";
+            this.tsmiCancel.Click += new System.EventHandler(this.tsmiCancel_Click);
+            // 
             // lblServices
             // 
             this.lblServices.AutoSize = true;
             this.lblServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblServices.Location = new System.Drawing.Point(24, 308);
+            this.lblServices.Location = new System.Drawing.Point(24, 292);
             this.lblServices.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblServices.Name = "lblServices";
             this.lblServices.Size = new System.Drawing.Size(61, 15);
@@ -231,7 +255,7 @@
             this.lblMedications.AutoSize = true;
             this.lblMedications.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMedications.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblMedications.Location = new System.Drawing.Point(336, 308);
+            this.lblMedications.Location = new System.Drawing.Point(24, 500);
             this.lblMedications.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMedications.Name = "lblMedications";
             this.lblMedications.Size = new System.Drawing.Size(85, 15);
@@ -246,7 +270,7 @@
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.White;
-            this.btnBack.Location = new System.Drawing.Point(96, 496);
+            this.btnBack.Location = new System.Drawing.Point(96, 712);
             this.btnBack.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(139, 28);
@@ -279,7 +303,7 @@
             this.btnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirm.Font = new System.Drawing.Font("Bauhaus 93", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(395, 496);
+            this.btnConfirm.Location = new System.Drawing.Point(395, 712);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(139, 28);
@@ -291,63 +315,41 @@
             // lblServiceDivider
             // 
             this.lblServiceDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblServiceDivider.Location = new System.Drawing.Point(24, 361);
+            this.lblServiceDivider.Location = new System.Drawing.Point(24, 345);
             this.lblServiceDivider.Name = "lblServiceDivider";
-            this.lblServiceDivider.Size = new System.Drawing.Size(280, 2);
+            this.lblServiceDivider.Size = new System.Drawing.Size(584, 2);
             this.lblServiceDivider.TabIndex = 16;
             this.lblServiceDivider.Text = "label10";
             // 
             // lblMedDivider
             // 
             this.lblMedDivider.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(182)))), ((int)(((byte)(195)))));
-            this.lblMedDivider.Location = new System.Drawing.Point(335, 361);
+            this.lblMedDivider.Location = new System.Drawing.Point(23, 553);
             this.lblMedDivider.Name = "lblMedDivider";
-            this.lblMedDivider.Size = new System.Drawing.Size(280, 2);
+            this.lblMedDivider.Size = new System.Drawing.Size(584, 2);
             this.lblMedDivider.TabIndex = 20;
             this.lblMedDivider.Text = "label10";
-            // 
-            // lsbServices
-            // 
-            this.lsbServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsbServices.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
-            this.lsbServices.FormattingEnabled = true;
-            this.lsbServices.ItemHeight = 15;
-            this.lsbServices.Location = new System.Drawing.Point(24, 372);
-            this.lsbServices.Name = "lsbServices";
-            this.lsbServices.Size = new System.Drawing.Size(280, 94);
-            this.lsbServices.TabIndex = 17;
-            // 
-            // lsbMedications
-            // 
-            this.lsbMedications.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lsbMedications.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(3)))), ((int)(((byte)(3)))), ((int)(((byte)(3)))));
-            this.lsbMedications.FormattingEnabled = true;
-            this.lsbMedications.ItemHeight = 15;
-            this.lsbMedications.Location = new System.Drawing.Point(336, 372);
-            this.lsbMedications.Name = "lsbMedications";
-            this.lsbMedications.Size = new System.Drawing.Size(280, 94);
-            this.lsbMedications.TabIndex = 21;
             // 
             // cboServices
             // 
             this.cboServices.FormattingEnabled = true;
-            this.cboServices.Location = new System.Drawing.Point(24, 332);
+            this.cboServices.Location = new System.Drawing.Point(24, 316);
             this.cboServices.Name = "cboServices";
-            this.cboServices.Size = new System.Drawing.Size(224, 23);
+            this.cboServices.Size = new System.Drawing.Size(528, 23);
             this.cboServices.TabIndex = 15;
             // 
             // cboMedications
             // 
             this.cboMedications.FormattingEnabled = true;
-            this.cboMedications.Location = new System.Drawing.Point(336, 332);
+            this.cboMedications.Location = new System.Drawing.Point(24, 524);
             this.cboMedications.Name = "cboMedications";
-            this.cboMedications.Size = new System.Drawing.Size(224, 23);
+            this.cboMedications.Size = new System.Drawing.Size(528, 23);
             this.cboMedications.TabIndex = 19;
             // 
             // picSearchMedication
             // 
             this.picSearchMedication.Image = global::carepoint.Properties.Resources.magnifying_glass;
-            this.picSearchMedication.Location = new System.Drawing.Point(592, 336);
+            this.picSearchMedication.Location = new System.Drawing.Point(584, 528);
             this.picSearchMedication.Name = "picSearchMedication";
             this.picSearchMedication.Size = new System.Drawing.Size(18, 18);
             this.picSearchMedication.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -357,7 +359,7 @@
             // picSearchService
             // 
             this.picSearchService.Image = global::carepoint.Properties.Resources.magnifying_glass;
-            this.picSearchService.Location = new System.Drawing.Point(280, 336);
+            this.picSearchService.Location = new System.Drawing.Point(584, 320);
             this.picSearchService.Name = "picSearchService";
             this.picSearchService.Size = new System.Drawing.Size(18, 18);
             this.picSearchService.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -367,27 +369,29 @@
             // picAddMed
             // 
             this.picAddMed.Image = global::carepoint.Properties.Resources.add;
-            this.picAddMed.Location = new System.Drawing.Point(568, 336);
+            this.picAddMed.Location = new System.Drawing.Point(560, 528);
             this.picAddMed.Name = "picAddMed";
             this.picAddMed.Size = new System.Drawing.Size(18, 18);
             this.picAddMed.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAddMed.TabIndex = 33;
             this.picAddMed.TabStop = false;
+            this.picAddMed.Click += new System.EventHandler(this.picAddMed_Click);
             // 
             // picAddService
             // 
             this.picAddService.Image = global::carepoint.Properties.Resources.add;
-            this.picAddService.Location = new System.Drawing.Point(256, 336);
+            this.picAddService.Location = new System.Drawing.Point(560, 320);
             this.picAddService.Name = "picAddService";
             this.picAddService.Size = new System.Drawing.Size(18, 18);
             this.picAddService.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picAddService.TabIndex = 31;
             this.picAddService.TabStop = false;
+            this.picAddService.Click += new System.EventHandler(this.picAddService_Click);
             // 
             // picPrescription
             // 
             this.picPrescription.Image = global::carepoint.Properties.Resources.prescription;
-            this.picPrescription.Location = new System.Drawing.Point(576, 292);
+            this.picPrescription.Location = new System.Drawing.Point(568, 484);
             this.picPrescription.Name = "picPrescription";
             this.picPrescription.Size = new System.Drawing.Size(40, 40);
             this.picPrescription.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -398,7 +402,7 @@
             // picInvoice
             // 
             this.picInvoice.Image = global::carepoint.Properties.Resources.invoice;
-            this.picInvoice.Location = new System.Drawing.Point(264, 292);
+            this.picInvoice.Location = new System.Drawing.Point(568, 276);
             this.picInvoice.Name = "picInvoice";
             this.picInvoice.Size = new System.Drawing.Size(40, 40);
             this.picInvoice.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -428,6 +432,46 @@
             this.picClosed.TabStop = false;
             this.picClosed.Click += new System.EventHandler(this.picClosed_Click);
             // 
+            // dgvServices
+            // 
+            this.dgvServices.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvServices.ContextMenuStrip = this.cmsServices;
+            this.dgvServices.Location = new System.Drawing.Point(24, 360);
+            this.dgvServices.Name = "dgvServices";
+            this.dgvServices.ReadOnly = true;
+            this.dgvServices.RowHeadersVisible = false;
+            this.dgvServices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvServices.Size = new System.Drawing.Size(584, 112);
+            this.dgvServices.TabIndex = 41;
+            // 
+            // dgvMedications
+            // 
+            this.dgvMedications.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMedications.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedications.ContextMenuStrip = this.cmsPrescriptions;
+            this.dgvMedications.Location = new System.Drawing.Point(24, 568);
+            this.dgvMedications.Name = "dgvMedications";
+            this.dgvMedications.ReadOnly = true;
+            this.dgvMedications.RowHeadersVisible = false;
+            this.dgvMedications.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvMedications.Size = new System.Drawing.Size(584, 112);
+            this.dgvMedications.TabIndex = 42;
+            // 
+            // cmsPrescriptions
+            // 
+            this.cmsPrescriptions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiCancelPresc});
+            this.cmsPrescriptions.Name = "cmsPrescriptions";
+            this.cmsPrescriptions.Size = new System.Drawing.Size(111, 26);
+            // 
+            // tsmiCancelPresc
+            // 
+            this.tsmiCancelPresc.Name = "tsmiCancelPresc";
+            this.tsmiCancelPresc.Size = new System.Drawing.Size(110, 22);
+            this.tsmiCancelPresc.Text = "Cancel";
+            this.tsmiCancelPresc.Click += new System.EventHandler(this.tsmiCancelPresc_Click);
+            // 
             // FrmAppointment
             // 
             this.AcceptButton = this.btnConfirm;
@@ -435,13 +479,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnBack;
-            this.ClientSize = new System.Drawing.Size(640, 530);
+            this.ClientSize = new System.Drawing.Size(660, 749);
+            this.Controls.Add(this.dgvMedications);
+            this.Controls.Add(this.dgvServices);
             this.Controls.Add(this.picSearchMedication);
             this.Controls.Add(this.picSearchService);
             this.Controls.Add(this.cboMedications);
             this.Controls.Add(this.cboServices);
-            this.Controls.Add(this.lsbMedications);
-            this.Controls.Add(this.lsbServices);
             this.Controls.Add(this.picAddMed);
             this.Controls.Add(this.picAddService);
             this.Controls.Add(this.picPrescription);
@@ -476,6 +520,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmAppointment";
             this.Text = "Appointment Details";
+            this.cmsServices.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picSearchMedication)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSearchService)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picAddMed)).EndInit();
@@ -484,6 +529,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picInvoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picCancelled)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClosed)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvServices)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedications)).EndInit();
+            this.cmsPrescriptions.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -516,11 +564,15 @@
         private System.Windows.Forms.PictureBox picPrescription;
         private System.Windows.Forms.PictureBox picAddService;
         private System.Windows.Forms.PictureBox picAddMed;
-        private System.Windows.Forms.ListBox lsbServices;
-        private System.Windows.Forms.ListBox lsbMedications;
         private System.Windows.Forms.ComboBox cboServices;
         private System.Windows.Forms.ComboBox cboMedications;
         private System.Windows.Forms.PictureBox picSearchMedication;
         private System.Windows.Forms.PictureBox picSearchService;
+        private System.Windows.Forms.DataGridView dgvServices;
+        private System.Windows.Forms.DataGridView dgvMedications;
+        private System.Windows.Forms.ContextMenuStrip cmsServices;
+        private System.Windows.Forms.ToolStripMenuItem tsmiCancel;
+        private System.Windows.Forms.ContextMenuStrip cmsPrescriptions;
+        private System.Windows.Forms.ToolStripMenuItem tsmiCancelPresc;
     }
 }

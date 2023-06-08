@@ -72,6 +72,12 @@ namespace carepoint {
         
         private CRP_APPOINTMENTDataTable tableCRP_APPOINTMENT;
         
+        private CompleteAppointmentDataTable tableCompleteAppointment;
+        
+        private VW_SERVICES_PROVIDEDDataTable tableVW_SERVICES_PROVIDED;
+        
+        private VW_PRESCRIPTIONSDataTable tableVW_PRESCRIPTIONS;
+        
         private global::System.Data.DataRelation relationFK_CRP_AVAILABILITY_CRP_DOC;
         
         private global::System.Data.DataRelation relationFK_CRP_AVAILABILITY_CRP_PERIOD;
@@ -103,6 +109,14 @@ namespace carepoint {
         private global::System.Data.DataRelation relationFK_CRP_APPOINTMENT_CRP_DOC;
         
         private global::System.Data.DataRelation relationFK_CRP_APPOINTMENT_CRP_PATIENT;
+        
+        private global::System.Data.DataRelation relationFK_CRP_PRESCRIPTION_CRP_APPOIN1;
+        
+        private global::System.Data.DataRelation relationFK_CRP_SERVICE_PROVIDED_CRP_AP1;
+        
+        private global::System.Data.DataRelation relationFK_CRP_APPOINTMENT_CRP_DOC1;
+        
+        private global::System.Data.DataRelation relationFK_CRP_APPOINTMENT_CRP_PATIENT1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -203,6 +217,15 @@ namespace carepoint {
                 }
                 if ((ds.Tables["CRP_APPOINTMENT"] != null)) {
                     base.Tables.Add(new CRP_APPOINTMENTDataTable(ds.Tables["CRP_APPOINTMENT"]));
+                }
+                if ((ds.Tables["CompleteAppointment"] != null)) {
+                    base.Tables.Add(new CompleteAppointmentDataTable(ds.Tables["CompleteAppointment"]));
+                }
+                if ((ds.Tables["VW_SERVICES_PROVIDED"] != null)) {
+                    base.Tables.Add(new VW_SERVICES_PROVIDEDDataTable(ds.Tables["VW_SERVICES_PROVIDED"]));
+                }
+                if ((ds.Tables["VW_PRESCRIPTIONS"] != null)) {
+                    base.Tables.Add(new VW_PRESCRIPTIONSDataTable(ds.Tables["VW_PRESCRIPTIONS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -464,6 +487,36 @@ namespace carepoint {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public CompleteAppointmentDataTable CompleteAppointment {
+            get {
+                return this.tableCompleteAppointment;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public VW_SERVICES_PROVIDEDDataTable VW_SERVICES_PROVIDED {
+            get {
+                return this.tableVW_SERVICES_PROVIDED;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public VW_PRESCRIPTIONSDataTable VW_PRESCRIPTIONS {
+            get {
+                return this.tableVW_PRESCRIPTIONS;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.BrowsableAttribute(true)]
         [global::System.ComponentModel.DesignerSerializationVisibilityAttribute(global::System.ComponentModel.DesignerSerializationVisibility.Visible)]
         public override global::System.Data.SchemaSerializationMode SchemaSerializationMode {
@@ -600,6 +653,15 @@ namespace carepoint {
                 }
                 if ((ds.Tables["CRP_APPOINTMENT"] != null)) {
                     base.Tables.Add(new CRP_APPOINTMENTDataTable(ds.Tables["CRP_APPOINTMENT"]));
+                }
+                if ((ds.Tables["CompleteAppointment"] != null)) {
+                    base.Tables.Add(new CompleteAppointmentDataTable(ds.Tables["CompleteAppointment"]));
+                }
+                if ((ds.Tables["VW_SERVICES_PROVIDED"] != null)) {
+                    base.Tables.Add(new VW_SERVICES_PROVIDEDDataTable(ds.Tables["VW_SERVICES_PROVIDED"]));
+                }
+                if ((ds.Tables["VW_PRESCRIPTIONS"] != null)) {
+                    base.Tables.Add(new VW_PRESCRIPTIONSDataTable(ds.Tables["VW_PRESCRIPTIONS"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -778,6 +840,24 @@ namespace carepoint {
                     this.tableCRP_APPOINTMENT.InitVars();
                 }
             }
+            this.tableCompleteAppointment = ((CompleteAppointmentDataTable)(base.Tables["CompleteAppointment"]));
+            if ((initTable == true)) {
+                if ((this.tableCompleteAppointment != null)) {
+                    this.tableCompleteAppointment.InitVars();
+                }
+            }
+            this.tableVW_SERVICES_PROVIDED = ((VW_SERVICES_PROVIDEDDataTable)(base.Tables["VW_SERVICES_PROVIDED"]));
+            if ((initTable == true)) {
+                if ((this.tableVW_SERVICES_PROVIDED != null)) {
+                    this.tableVW_SERVICES_PROVIDED.InitVars();
+                }
+            }
+            this.tableVW_PRESCRIPTIONS = ((VW_PRESCRIPTIONSDataTable)(base.Tables["VW_PRESCRIPTIONS"]));
+            if ((initTable == true)) {
+                if ((this.tableVW_PRESCRIPTIONS != null)) {
+                    this.tableVW_PRESCRIPTIONS.InitVars();
+                }
+            }
             this.relationFK_CRP_AVAILABILITY_CRP_DOC = this.Relations["FK_CRP_AVAILABILITY_CRP_DOC"];
             this.relationFK_CRP_AVAILABILITY_CRP_PERIOD = this.Relations["FK_CRP_AVAILABILITY_CRP_PERIOD"];
             this.relationFK_CRP_AVAILABILITY_CRP_WEEKDA = this.Relations["FK_CRP_AVAILABILITY_CRP_WEEKDA"];
@@ -794,6 +874,10 @@ namespace carepoint {
             this.relationFK_CRP_SERVICE_PROVIDED_CRP_AP = this.Relations["FK_CRP_SERVICE_PROVIDED_CRP_AP"];
             this.relationFK_CRP_APPOINTMENT_CRP_DOC = this.Relations["FK_CRP_APPOINTMENT_CRP_DOC"];
             this.relationFK_CRP_APPOINTMENT_CRP_PATIENT = this.Relations["FK_CRP_APPOINTMENT_CRP_PATIENT"];
+            this.relationFK_CRP_PRESCRIPTION_CRP_APPOIN1 = this.Relations["FK_CRP_PRESCRIPTION_CRP_APPOIN1"];
+            this.relationFK_CRP_SERVICE_PROVIDED_CRP_AP1 = this.Relations["FK_CRP_SERVICE_PROVIDED_CRP_AP1"];
+            this.relationFK_CRP_APPOINTMENT_CRP_DOC1 = this.Relations["FK_CRP_APPOINTMENT_CRP_DOC1"];
+            this.relationFK_CRP_APPOINTMENT_CRP_PATIENT1 = this.Relations["FK_CRP_APPOINTMENT_CRP_PATIENT1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -852,6 +936,12 @@ namespace carepoint {
             base.Tables.Add(this.tableVW_DOCTORS);
             this.tableCRP_APPOINTMENT = new CRP_APPOINTMENTDataTable();
             base.Tables.Add(this.tableCRP_APPOINTMENT);
+            this.tableCompleteAppointment = new CompleteAppointmentDataTable();
+            base.Tables.Add(this.tableCompleteAppointment);
+            this.tableVW_SERVICES_PROVIDED = new VW_SERVICES_PROVIDEDDataTable();
+            base.Tables.Add(this.tableVW_SERVICES_PROVIDED);
+            this.tableVW_PRESCRIPTIONS = new VW_PRESCRIPTIONSDataTable();
+            base.Tables.Add(this.tableVW_PRESCRIPTIONS);
             this.relationFK_CRP_AVAILABILITY_CRP_DOC = new global::System.Data.DataRelation("FK_CRP_AVAILABILITY_CRP_DOC", new global::System.Data.DataColumn[] {
                         this.tableCRP_DOC.DOC_PER_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableCRP_AVAILABILITY.AVL_PER_IDColumn}, false);
@@ -916,6 +1006,22 @@ namespace carepoint {
                         this.tableCRP_PATIENT.PAT_PER_IDColumn}, new global::System.Data.DataColumn[] {
                         this.tableCRP_APPOINTMENT.APP_PAT_IDColumn}, false);
             this.Relations.Add(this.relationFK_CRP_APPOINTMENT_CRP_PATIENT);
+            this.relationFK_CRP_PRESCRIPTION_CRP_APPOIN1 = new global::System.Data.DataRelation("FK_CRP_PRESCRIPTION_CRP_APPOIN1", new global::System.Data.DataColumn[] {
+                        this.tableCompleteAppointment.APP_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCRP_PRESCRIPTION.PRE_APP_IDColumn}, false);
+            this.Relations.Add(this.relationFK_CRP_PRESCRIPTION_CRP_APPOIN1);
+            this.relationFK_CRP_SERVICE_PROVIDED_CRP_AP1 = new global::System.Data.DataRelation("FK_CRP_SERVICE_PROVIDED_CRP_AP1", new global::System.Data.DataColumn[] {
+                        this.tableCompleteAppointment.APP_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCRP_SERVICE_PROVIDED.SPR_APP_IDColumn}, false);
+            this.Relations.Add(this.relationFK_CRP_SERVICE_PROVIDED_CRP_AP1);
+            this.relationFK_CRP_APPOINTMENT_CRP_DOC1 = new global::System.Data.DataRelation("FK_CRP_APPOINTMENT_CRP_DOC1", new global::System.Data.DataColumn[] {
+                        this.tableCRP_DOC.DOC_PER_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCompleteAppointment.APP_DOC_IDColumn}, false);
+            this.Relations.Add(this.relationFK_CRP_APPOINTMENT_CRP_DOC1);
+            this.relationFK_CRP_APPOINTMENT_CRP_PATIENT1 = new global::System.Data.DataRelation("FK_CRP_APPOINTMENT_CRP_PATIENT1", new global::System.Data.DataColumn[] {
+                        this.tableCRP_PATIENT.PAT_PER_IDColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCompleteAppointment.APP_PAT_IDColumn}, false);
+            this.Relations.Add(this.relationFK_CRP_APPOINTMENT_CRP_PATIENT1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1064,6 +1170,24 @@ namespace carepoint {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeCompleteAppointment() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeVW_SERVICES_PROVIDED() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private bool ShouldSerializeVW_PRESCRIPTIONS() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void SchemaChanged(object sender, global::System.ComponentModel.CollectionChangeEventArgs e) {
             if ((e.Action == global::System.ComponentModel.CollectionChangeAction.Remove)) {
                 this.InitVars();
@@ -1188,6 +1312,15 @@ namespace carepoint {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public delegate void CRP_APPOINTMENTRowChangeEventHandler(object sender, CRP_APPOINTMENTRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void CompleteAppointmentRowChangeEventHandler(object sender, CompleteAppointmentRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void VW_SERVICES_PROVIDEDRowChangeEventHandler(object sender, VW_SERVICES_PROVIDEDRowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public delegate void VW_PRESCRIPTIONSRowChangeEventHandler(object sender, VW_PRESCRIPTIONSRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -8518,6 +8651,1334 @@ namespace carepoint {
         }
         
         /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class CompleteAppointmentDataTable : global::System.Data.TypedTableBase<CompleteAppointmentRow> {
+            
+            private global::System.Data.DataColumn columnAPP_ID;
+            
+            private global::System.Data.DataColumn columnAPP_PAT_ID;
+            
+            private global::System.Data.DataColumn columnAPP_DOC_ID;
+            
+            private global::System.Data.DataColumn columnAPP_CREATED_DATE;
+            
+            private global::System.Data.DataColumn columnAPP_APTN_DATE;
+            
+            private global::System.Data.DataColumn columnAPP_CNL_DATE;
+            
+            private global::System.Data.DataColumn columnAPP_CNL_REASON;
+            
+            private global::System.Data.DataColumn columnAPP_IS_INVOICED;
+            
+            private global::System.Data.DataColumn columnAPP_DESC;
+            
+            private global::System.Data.DataColumn columnPER_ID;
+            
+            private global::System.Data.DataColumn columnPER_USERNAME;
+            
+            private global::System.Data.DataColumn columnPER_PSW;
+            
+            private global::System.Data.DataColumn columnPER_FIRSTNAME;
+            
+            private global::System.Data.DataColumn columnPER_LASTNAME;
+            
+            private global::System.Data.DataColumn columnPER_TEL;
+            
+            private global::System.Data.DataColumn columnPER_MAIL;
+            
+            private global::System.Data.DataColumn columnDOC_FEE_PER_CONSULT;
+            
+            private global::System.Data.DataColumn columnDOC_START_WORK_DATE;
+            
+            private global::System.Data.DataColumn columnDOC_SPE_ID;
+            
+            private global::System.Data.DataColumn columnSPE_NAME;
+            
+            private global::System.Data.DataColumn columnPAT_ID;
+            
+            private global::System.Data.DataColumn columnPAT_USERNAME;
+            
+            private global::System.Data.DataColumn columnPAT_PSW;
+            
+            private global::System.Data.DataColumn columnPAT_FIRSTNAME;
+            
+            private global::System.Data.DataColumn columnPAT_LASTNAME;
+            
+            private global::System.Data.DataColumn columnPAT_TEL;
+            
+            private global::System.Data.DataColumn columnPAT_MAIL;
+            
+            private global::System.Data.DataColumn columnPAT_INS_ID;
+            
+            private global::System.Data.DataColumn columnINS_NAME;
+            
+            private global::System.Data.DataColumn columnINS_ADDRESS;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CompleteAppointmentDataTable() {
+                this.TableName = "CompleteAppointment";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal CompleteAppointmentDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected CompleteAppointmentDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn APP_IDColumn {
+                get {
+                    return this.columnAPP_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn APP_PAT_IDColumn {
+                get {
+                    return this.columnAPP_PAT_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn APP_DOC_IDColumn {
+                get {
+                    return this.columnAPP_DOC_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn APP_CREATED_DATEColumn {
+                get {
+                    return this.columnAPP_CREATED_DATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn APP_APTN_DATEColumn {
+                get {
+                    return this.columnAPP_APTN_DATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn APP_CNL_DATEColumn {
+                get {
+                    return this.columnAPP_CNL_DATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn APP_CNL_REASONColumn {
+                get {
+                    return this.columnAPP_CNL_REASON;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn APP_IS_INVOICEDColumn {
+                get {
+                    return this.columnAPP_IS_INVOICED;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn APP_DESCColumn {
+                get {
+                    return this.columnAPP_DESC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PER_IDColumn {
+                get {
+                    return this.columnPER_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PER_USERNAMEColumn {
+                get {
+                    return this.columnPER_USERNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PER_PSWColumn {
+                get {
+                    return this.columnPER_PSW;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PER_FIRSTNAMEColumn {
+                get {
+                    return this.columnPER_FIRSTNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PER_LASTNAMEColumn {
+                get {
+                    return this.columnPER_LASTNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PER_TELColumn {
+                get {
+                    return this.columnPER_TEL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PER_MAILColumn {
+                get {
+                    return this.columnPER_MAIL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DOC_FEE_PER_CONSULTColumn {
+                get {
+                    return this.columnDOC_FEE_PER_CONSULT;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DOC_START_WORK_DATEColumn {
+                get {
+                    return this.columnDOC_START_WORK_DATE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DOC_SPE_IDColumn {
+                get {
+                    return this.columnDOC_SPE_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn SPE_NAMEColumn {
+                get {
+                    return this.columnSPE_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PAT_IDColumn {
+                get {
+                    return this.columnPAT_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PAT_USERNAMEColumn {
+                get {
+                    return this.columnPAT_USERNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PAT_PSWColumn {
+                get {
+                    return this.columnPAT_PSW;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PAT_FIRSTNAMEColumn {
+                get {
+                    return this.columnPAT_FIRSTNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PAT_LASTNAMEColumn {
+                get {
+                    return this.columnPAT_LASTNAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PAT_TELColumn {
+                get {
+                    return this.columnPAT_TEL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PAT_MAILColumn {
+                get {
+                    return this.columnPAT_MAIL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PAT_INS_IDColumn {
+                get {
+                    return this.columnPAT_INS_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn INS_NAMEColumn {
+                get {
+                    return this.columnINS_NAME;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn INS_ADDRESSColumn {
+                get {
+                    return this.columnINS_ADDRESS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CompleteAppointmentRow this[int index] {
+                get {
+                    return ((CompleteAppointmentRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CompleteAppointmentRowChangeEventHandler CompleteAppointmentRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CompleteAppointmentRowChangeEventHandler CompleteAppointmentRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CompleteAppointmentRowChangeEventHandler CompleteAppointmentRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event CompleteAppointmentRowChangeEventHandler CompleteAppointmentRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddCompleteAppointmentRow(CompleteAppointmentRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CompleteAppointmentRow AddCompleteAppointmentRow(
+                        short APP_ID, 
+                        CRP_PATIENTRow parentCRP_PATIENTRowByFK_CRP_APPOINTMENT_CRP_PATIENT1, 
+                        CRP_DOCRow parentCRP_DOCRowByFK_CRP_APPOINTMENT_CRP_DOC1, 
+                        System.DateTime APP_CREATED_DATE, 
+                        System.DateTime APP_APTN_DATE, 
+                        System.DateTime APP_CNL_DATE, 
+                        string APP_CNL_REASON, 
+                        short APP_IS_INVOICED, 
+                        string APP_DESC, 
+                        short PER_ID, 
+                        string PER_USERNAME, 
+                        string PER_PSW, 
+                        string PER_FIRSTNAME, 
+                        string PER_LASTNAME, 
+                        string PER_TEL, 
+                        string PER_MAIL, 
+                        short DOC_FEE_PER_CONSULT, 
+                        System.DateTime DOC_START_WORK_DATE, 
+                        short DOC_SPE_ID, 
+                        string SPE_NAME, 
+                        short PAT_ID, 
+                        string PAT_USERNAME, 
+                        string PAT_PSW, 
+                        string PAT_FIRSTNAME, 
+                        string PAT_LASTNAME, 
+                        string PAT_TEL, 
+                        string PAT_MAIL, 
+                        short PAT_INS_ID, 
+                        string INS_NAME, 
+                        string INS_ADDRESS) {
+                CompleteAppointmentRow rowCompleteAppointmentRow = ((CompleteAppointmentRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        APP_ID,
+                        null,
+                        null,
+                        APP_CREATED_DATE,
+                        APP_APTN_DATE,
+                        APP_CNL_DATE,
+                        APP_CNL_REASON,
+                        APP_IS_INVOICED,
+                        APP_DESC,
+                        PER_ID,
+                        PER_USERNAME,
+                        PER_PSW,
+                        PER_FIRSTNAME,
+                        PER_LASTNAME,
+                        PER_TEL,
+                        PER_MAIL,
+                        DOC_FEE_PER_CONSULT,
+                        DOC_START_WORK_DATE,
+                        DOC_SPE_ID,
+                        SPE_NAME,
+                        PAT_ID,
+                        PAT_USERNAME,
+                        PAT_PSW,
+                        PAT_FIRSTNAME,
+                        PAT_LASTNAME,
+                        PAT_TEL,
+                        PAT_MAIL,
+                        PAT_INS_ID,
+                        INS_NAME,
+                        INS_ADDRESS};
+                if ((parentCRP_PATIENTRowByFK_CRP_APPOINTMENT_CRP_PATIENT1 != null)) {
+                    columnValuesArray[1] = parentCRP_PATIENTRowByFK_CRP_APPOINTMENT_CRP_PATIENT1[0];
+                }
+                if ((parentCRP_DOCRowByFK_CRP_APPOINTMENT_CRP_DOC1 != null)) {
+                    columnValuesArray[2] = parentCRP_DOCRowByFK_CRP_APPOINTMENT_CRP_DOC1[0];
+                }
+                rowCompleteAppointmentRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCompleteAppointmentRow);
+                return rowCompleteAppointmentRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                CompleteAppointmentDataTable cln = ((CompleteAppointmentDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new CompleteAppointmentDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnAPP_ID = base.Columns["APP_ID"];
+                this.columnAPP_PAT_ID = base.Columns["APP_PAT_ID"];
+                this.columnAPP_DOC_ID = base.Columns["APP_DOC_ID"];
+                this.columnAPP_CREATED_DATE = base.Columns["APP_CREATED_DATE"];
+                this.columnAPP_APTN_DATE = base.Columns["APP_APTN_DATE"];
+                this.columnAPP_CNL_DATE = base.Columns["APP_CNL_DATE"];
+                this.columnAPP_CNL_REASON = base.Columns["APP_CNL_REASON"];
+                this.columnAPP_IS_INVOICED = base.Columns["APP_IS_INVOICED"];
+                this.columnAPP_DESC = base.Columns["APP_DESC"];
+                this.columnPER_ID = base.Columns["PER_ID"];
+                this.columnPER_USERNAME = base.Columns["PER_USERNAME"];
+                this.columnPER_PSW = base.Columns["PER_PSW"];
+                this.columnPER_FIRSTNAME = base.Columns["PER_FIRSTNAME"];
+                this.columnPER_LASTNAME = base.Columns["PER_LASTNAME"];
+                this.columnPER_TEL = base.Columns["PER_TEL"];
+                this.columnPER_MAIL = base.Columns["PER_MAIL"];
+                this.columnDOC_FEE_PER_CONSULT = base.Columns["DOC_FEE_PER_CONSULT"];
+                this.columnDOC_START_WORK_DATE = base.Columns["DOC_START_WORK_DATE"];
+                this.columnDOC_SPE_ID = base.Columns["DOC_SPE_ID"];
+                this.columnSPE_NAME = base.Columns["SPE_NAME"];
+                this.columnPAT_ID = base.Columns["PAT_ID"];
+                this.columnPAT_USERNAME = base.Columns["PAT_USERNAME"];
+                this.columnPAT_PSW = base.Columns["PAT_PSW"];
+                this.columnPAT_FIRSTNAME = base.Columns["PAT_FIRSTNAME"];
+                this.columnPAT_LASTNAME = base.Columns["PAT_LASTNAME"];
+                this.columnPAT_TEL = base.Columns["PAT_TEL"];
+                this.columnPAT_MAIL = base.Columns["PAT_MAIL"];
+                this.columnPAT_INS_ID = base.Columns["PAT_INS_ID"];
+                this.columnINS_NAME = base.Columns["INS_NAME"];
+                this.columnINS_ADDRESS = base.Columns["INS_ADDRESS"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnAPP_ID = new global::System.Data.DataColumn("APP_ID", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAPP_ID);
+                this.columnAPP_PAT_ID = new global::System.Data.DataColumn("APP_PAT_ID", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAPP_PAT_ID);
+                this.columnAPP_DOC_ID = new global::System.Data.DataColumn("APP_DOC_ID", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAPP_DOC_ID);
+                this.columnAPP_CREATED_DATE = new global::System.Data.DataColumn("APP_CREATED_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAPP_CREATED_DATE);
+                this.columnAPP_APTN_DATE = new global::System.Data.DataColumn("APP_APTN_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAPP_APTN_DATE);
+                this.columnAPP_CNL_DATE = new global::System.Data.DataColumn("APP_CNL_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAPP_CNL_DATE);
+                this.columnAPP_CNL_REASON = new global::System.Data.DataColumn("APP_CNL_REASON", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAPP_CNL_REASON);
+                this.columnAPP_IS_INVOICED = new global::System.Data.DataColumn("APP_IS_INVOICED", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAPP_IS_INVOICED);
+                this.columnAPP_DESC = new global::System.Data.DataColumn("APP_DESC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAPP_DESC);
+                this.columnPER_ID = new global::System.Data.DataColumn("PER_ID", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPER_ID);
+                this.columnPER_USERNAME = new global::System.Data.DataColumn("PER_USERNAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPER_USERNAME);
+                this.columnPER_PSW = new global::System.Data.DataColumn("PER_PSW", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPER_PSW);
+                this.columnPER_FIRSTNAME = new global::System.Data.DataColumn("PER_FIRSTNAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPER_FIRSTNAME);
+                this.columnPER_LASTNAME = new global::System.Data.DataColumn("PER_LASTNAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPER_LASTNAME);
+                this.columnPER_TEL = new global::System.Data.DataColumn("PER_TEL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPER_TEL);
+                this.columnPER_MAIL = new global::System.Data.DataColumn("PER_MAIL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPER_MAIL);
+                this.columnDOC_FEE_PER_CONSULT = new global::System.Data.DataColumn("DOC_FEE_PER_CONSULT", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDOC_FEE_PER_CONSULT);
+                this.columnDOC_START_WORK_DATE = new global::System.Data.DataColumn("DOC_START_WORK_DATE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDOC_START_WORK_DATE);
+                this.columnDOC_SPE_ID = new global::System.Data.DataColumn("DOC_SPE_ID", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDOC_SPE_ID);
+                this.columnSPE_NAME = new global::System.Data.DataColumn("SPE_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSPE_NAME);
+                this.columnPAT_ID = new global::System.Data.DataColumn("PAT_ID", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAT_ID);
+                this.columnPAT_USERNAME = new global::System.Data.DataColumn("PAT_USERNAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAT_USERNAME);
+                this.columnPAT_PSW = new global::System.Data.DataColumn("PAT_PSW", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAT_PSW);
+                this.columnPAT_FIRSTNAME = new global::System.Data.DataColumn("PAT_FIRSTNAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAT_FIRSTNAME);
+                this.columnPAT_LASTNAME = new global::System.Data.DataColumn("PAT_LASTNAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAT_LASTNAME);
+                this.columnPAT_TEL = new global::System.Data.DataColumn("PAT_TEL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAT_TEL);
+                this.columnPAT_MAIL = new global::System.Data.DataColumn("PAT_MAIL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAT_MAIL);
+                this.columnPAT_INS_ID = new global::System.Data.DataColumn("PAT_INS_ID", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPAT_INS_ID);
+                this.columnINS_NAME = new global::System.Data.DataColumn("INS_NAME", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINS_NAME);
+                this.columnINS_ADDRESS = new global::System.Data.DataColumn("INS_ADDRESS", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnINS_ADDRESS);
+                this.columnAPP_ID.AllowDBNull = false;
+                this.columnAPP_PAT_ID.AllowDBNull = false;
+                this.columnAPP_DOC_ID.AllowDBNull = false;
+                this.columnAPP_CREATED_DATE.AllowDBNull = false;
+                this.columnAPP_APTN_DATE.AllowDBNull = false;
+                this.columnAPP_CNL_REASON.MaxLength = 128;
+                this.columnAPP_IS_INVOICED.AllowDBNull = false;
+                this.columnAPP_DESC.AllowDBNull = false;
+                this.columnAPP_DESC.MaxLength = 128;
+                this.columnPER_ID.AllowDBNull = false;
+                this.columnPER_USERNAME.AllowDBNull = false;
+                this.columnPER_USERNAME.MaxLength = 128;
+                this.columnPER_PSW.AllowDBNull = false;
+                this.columnPER_PSW.MaxLength = 128;
+                this.columnPER_FIRSTNAME.AllowDBNull = false;
+                this.columnPER_FIRSTNAME.MaxLength = 128;
+                this.columnPER_LASTNAME.AllowDBNull = false;
+                this.columnPER_LASTNAME.MaxLength = 128;
+                this.columnPER_TEL.MaxLength = 128;
+                this.columnPER_MAIL.MaxLength = 128;
+                this.columnDOC_FEE_PER_CONSULT.AllowDBNull = false;
+                this.columnDOC_SPE_ID.AllowDBNull = false;
+                this.columnSPE_NAME.MaxLength = 128;
+                this.columnPAT_ID.AllowDBNull = false;
+                this.columnPAT_USERNAME.AllowDBNull = false;
+                this.columnPAT_USERNAME.MaxLength = 128;
+                this.columnPAT_PSW.AllowDBNull = false;
+                this.columnPAT_PSW.MaxLength = 128;
+                this.columnPAT_FIRSTNAME.AllowDBNull = false;
+                this.columnPAT_FIRSTNAME.MaxLength = 128;
+                this.columnPAT_LASTNAME.AllowDBNull = false;
+                this.columnPAT_LASTNAME.MaxLength = 128;
+                this.columnPAT_TEL.MaxLength = 128;
+                this.columnPAT_MAIL.MaxLength = 128;
+                this.columnINS_NAME.MaxLength = 128;
+                this.columnINS_ADDRESS.MaxLength = 128;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CompleteAppointmentRow NewCompleteAppointmentRow() {
+                return ((CompleteAppointmentRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new CompleteAppointmentRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(CompleteAppointmentRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.CompleteAppointmentRowChanged != null)) {
+                    this.CompleteAppointmentRowChanged(this, new CompleteAppointmentRowChangeEvent(((CompleteAppointmentRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.CompleteAppointmentRowChanging != null)) {
+                    this.CompleteAppointmentRowChanging(this, new CompleteAppointmentRowChangeEvent(((CompleteAppointmentRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.CompleteAppointmentRowDeleted != null)) {
+                    this.CompleteAppointmentRowDeleted(this, new CompleteAppointmentRowChangeEvent(((CompleteAppointmentRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.CompleteAppointmentRowDeleting != null)) {
+                    this.CompleteAppointmentRowDeleting(this, new CompleteAppointmentRowChangeEvent(((CompleteAppointmentRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveCompleteAppointmentRow(CompleteAppointmentRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                USR_DATA_DATASET ds = new USR_DATA_DATASET();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "CompleteAppointmentDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class VW_SERVICES_PROVIDEDDataTable : global::System.Data.TypedTableBase<VW_SERVICES_PROVIDEDRow> {
+            
+            private global::System.Data.DataColumn columnAPP_ID;
+            
+            private global::System.Data.DataColumn columnCode;
+            
+            private global::System.Data.DataColumn columnService;
+            
+            private global::System.Data.DataColumn columnDuration;
+            
+            private global::System.Data.DataColumn columnInvoice_Price;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_SERVICES_PROVIDEDDataTable() {
+                this.TableName = "VW_SERVICES_PROVIDED";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal VW_SERVICES_PROVIDEDDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected VW_SERVICES_PROVIDEDDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn APP_IDColumn {
+                get {
+                    return this.columnAPP_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn CodeColumn {
+                get {
+                    return this.columnCode;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn ServiceColumn {
+                get {
+                    return this.columnService;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn DurationColumn {
+                get {
+                    return this.columnDuration;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn Invoice_PriceColumn {
+                get {
+                    return this.columnInvoice_Price;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_SERVICES_PROVIDEDRow this[int index] {
+                get {
+                    return ((VW_SERVICES_PROVIDEDRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VW_SERVICES_PROVIDEDRowChangeEventHandler VW_SERVICES_PROVIDEDRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VW_SERVICES_PROVIDEDRowChangeEventHandler VW_SERVICES_PROVIDEDRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VW_SERVICES_PROVIDEDRowChangeEventHandler VW_SERVICES_PROVIDEDRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VW_SERVICES_PROVIDEDRowChangeEventHandler VW_SERVICES_PROVIDEDRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddVW_SERVICES_PROVIDEDRow(VW_SERVICES_PROVIDEDRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_SERVICES_PROVIDEDRow AddVW_SERVICES_PROVIDEDRow(short APP_ID, string Code, string Service, short Duration, decimal Invoice_Price) {
+                VW_SERVICES_PROVIDEDRow rowVW_SERVICES_PROVIDEDRow = ((VW_SERVICES_PROVIDEDRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        APP_ID,
+                        Code,
+                        Service,
+                        Duration,
+                        Invoice_Price};
+                rowVW_SERVICES_PROVIDEDRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVW_SERVICES_PROVIDEDRow);
+                return rowVW_SERVICES_PROVIDEDRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                VW_SERVICES_PROVIDEDDataTable cln = ((VW_SERVICES_PROVIDEDDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new VW_SERVICES_PROVIDEDDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnAPP_ID = base.Columns["APP_ID"];
+                this.columnCode = base.Columns["Code"];
+                this.columnService = base.Columns["Service"];
+                this.columnDuration = base.Columns["Duration"];
+                this.columnInvoice_Price = base.Columns["Invoice Price"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnAPP_ID = new global::System.Data.DataColumn("APP_ID", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAPP_ID);
+                this.columnCode = new global::System.Data.DataColumn("Code", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCode);
+                this.columnService = new global::System.Data.DataColumn("Service", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnService);
+                this.columnDuration = new global::System.Data.DataColumn("Duration", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDuration);
+                this.columnInvoice_Price = new global::System.Data.DataColumn("Invoice Price", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnInvoice_Price);
+                this.columnAPP_ID.AllowDBNull = false;
+                this.columnCode.AllowDBNull = false;
+                this.columnCode.MaxLength = 128;
+                this.columnService.AllowDBNull = false;
+                this.columnService.MaxLength = 300;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_SERVICES_PROVIDEDRow NewVW_SERVICES_PROVIDEDRow() {
+                return ((VW_SERVICES_PROVIDEDRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new VW_SERVICES_PROVIDEDRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(VW_SERVICES_PROVIDEDRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.VW_SERVICES_PROVIDEDRowChanged != null)) {
+                    this.VW_SERVICES_PROVIDEDRowChanged(this, new VW_SERVICES_PROVIDEDRowChangeEvent(((VW_SERVICES_PROVIDEDRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.VW_SERVICES_PROVIDEDRowChanging != null)) {
+                    this.VW_SERVICES_PROVIDEDRowChanging(this, new VW_SERVICES_PROVIDEDRowChangeEvent(((VW_SERVICES_PROVIDEDRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.VW_SERVICES_PROVIDEDRowDeleted != null)) {
+                    this.VW_SERVICES_PROVIDEDRowDeleted(this, new VW_SERVICES_PROVIDEDRowChangeEvent(((VW_SERVICES_PROVIDEDRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.VW_SERVICES_PROVIDEDRowDeleting != null)) {
+                    this.VW_SERVICES_PROVIDEDRowDeleting(this, new VW_SERVICES_PROVIDEDRowChangeEvent(((VW_SERVICES_PROVIDEDRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveVW_SERVICES_PROVIDEDRow(VW_SERVICES_PROVIDEDRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                USR_DATA_DATASET ds = new USR_DATA_DATASET();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "VW_SERVICES_PROVIDEDDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class VW_PRESCRIPTIONSDataTable : global::System.Data.TypedTableBase<VW_PRESCRIPTIONSRow> {
+            
+            private global::System.Data.DataColumn columnPRE_APP_ID;
+            
+            private global::System.Data.DataColumn columnPRE_MED_ID;
+            
+            private global::System.Data.DataColumn columnMedicine;
+            
+            private global::System.Data.DataColumn columnPrescription;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_PRESCRIPTIONSDataTable() {
+                this.TableName = "VW_PRESCRIPTIONS";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal VW_PRESCRIPTIONSDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected VW_PRESCRIPTIONSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PRE_APP_IDColumn {
+                get {
+                    return this.columnPRE_APP_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PRE_MED_IDColumn {
+                get {
+                    return this.columnPRE_MED_ID;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MedicineColumn {
+                get {
+                    return this.columnMedicine;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn PrescriptionColumn {
+                get {
+                    return this.columnPrescription;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_PRESCRIPTIONSRow this[int index] {
+                get {
+                    return ((VW_PRESCRIPTIONSRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VW_PRESCRIPTIONSRowChangeEventHandler VW_PRESCRIPTIONSRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VW_PRESCRIPTIONSRowChangeEventHandler VW_PRESCRIPTIONSRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VW_PRESCRIPTIONSRowChangeEventHandler VW_PRESCRIPTIONSRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public event VW_PRESCRIPTIONSRowChangeEventHandler VW_PRESCRIPTIONSRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void AddVW_PRESCRIPTIONSRow(VW_PRESCRIPTIONSRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_PRESCRIPTIONSRow AddVW_PRESCRIPTIONSRow(short PRE_APP_ID, short PRE_MED_ID, string Medicine, string Prescription) {
+                VW_PRESCRIPTIONSRow rowVW_PRESCRIPTIONSRow = ((VW_PRESCRIPTIONSRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        PRE_APP_ID,
+                        PRE_MED_ID,
+                        Medicine,
+                        Prescription};
+                rowVW_PRESCRIPTIONSRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowVW_PRESCRIPTIONSRow);
+                return rowVW_PRESCRIPTIONSRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                VW_PRESCRIPTIONSDataTable cln = ((VW_PRESCRIPTIONSDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new VW_PRESCRIPTIONSDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal void InitVars() {
+                this.columnPRE_APP_ID = base.Columns["PRE_APP_ID"];
+                this.columnPRE_MED_ID = base.Columns["PRE_MED_ID"];
+                this.columnMedicine = base.Columns["Medicine"];
+                this.columnPrescription = base.Columns["Prescription"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            private void InitClass() {
+                this.columnPRE_APP_ID = new global::System.Data.DataColumn("PRE_APP_ID", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRE_APP_ID);
+                this.columnPRE_MED_ID = new global::System.Data.DataColumn("PRE_MED_ID", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRE_MED_ID);
+                this.columnMedicine = new global::System.Data.DataColumn("Medicine", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMedicine);
+                this.columnPrescription = new global::System.Data.DataColumn("Prescription", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPrescription);
+                this.columnPRE_APP_ID.AllowDBNull = false;
+                this.columnPRE_MED_ID.AllowDBNull = false;
+                this.columnMedicine.AllowDBNull = false;
+                this.columnMedicine.MaxLength = 128;
+                this.columnPrescription.AllowDBNull = false;
+                this.columnPrescription.MaxLength = 255;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_PRESCRIPTIONSRow NewVW_PRESCRIPTIONSRow() {
+                return ((VW_PRESCRIPTIONSRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new VW_PRESCRIPTIONSRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(VW_PRESCRIPTIONSRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.VW_PRESCRIPTIONSRowChanged != null)) {
+                    this.VW_PRESCRIPTIONSRowChanged(this, new VW_PRESCRIPTIONSRowChangeEvent(((VW_PRESCRIPTIONSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.VW_PRESCRIPTIONSRowChanging != null)) {
+                    this.VW_PRESCRIPTIONSRowChanging(this, new VW_PRESCRIPTIONSRowChangeEvent(((VW_PRESCRIPTIONSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.VW_PRESCRIPTIONSRowDeleted != null)) {
+                    this.VW_PRESCRIPTIONSRowDeleted(this, new VW_PRESCRIPTIONSRowChangeEvent(((VW_PRESCRIPTIONSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.VW_PRESCRIPTIONSRowDeleting != null)) {
+                    this.VW_PRESCRIPTIONSRowDeleting(this, new VW_PRESCRIPTIONSRowChangeEvent(((VW_PRESCRIPTIONSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void RemoveVW_PRESCRIPTIONSRow(VW_PRESCRIPTIONSRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                USR_DATA_DATASET ds = new USR_DATA_DATASET();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "VW_PRESCRIPTIONSDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
         public partial class CRP_AVAILABILITYRow : global::System.Data.DataRow {
@@ -8754,6 +10215,17 @@ namespace carepoint {
                 }
                 else {
                     return ((CRP_APPOINTMENTRow[])(base.GetChildRows(this.Table.ChildRelations["FK_CRP_APPOINTMENT_CRP_DOC"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CompleteAppointmentRow[] GetCompleteAppointmentRows() {
+                if ((this.Table.ChildRelations["FK_CRP_APPOINTMENT_CRP_DOC1"] == null)) {
+                    return new CompleteAppointmentRow[0];
+                }
+                else {
+                    return ((CompleteAppointmentRow[])(base.GetChildRows(this.Table.ChildRelations["FK_CRP_APPOINTMENT_CRP_DOC1"])));
                 }
             }
         }
@@ -9056,6 +10528,17 @@ namespace carepoint {
                     return ((CRP_APPOINTMENTRow[])(base.GetChildRows(this.Table.ChildRelations["FK_CRP_APPOINTMENT_CRP_PATIENT"])));
                 }
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CompleteAppointmentRow[] GetCompleteAppointmentRows() {
+                if ((this.Table.ChildRelations["FK_CRP_APPOINTMENT_CRP_PATIENT1"] == null)) {
+                    return new CompleteAppointmentRow[0];
+                }
+                else {
+                    return ((CompleteAppointmentRow[])(base.GetChildRows(this.Table.ChildRelations["FK_CRP_APPOINTMENT_CRP_PATIENT1"])));
+                }
+            }
         }
         
         /// <summary>
@@ -9242,6 +10725,17 @@ namespace carepoint {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_CRP_PRESCRIPTION_CRP_APPOIN"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CompleteAppointmentRow CompleteAppointmentRow {
+                get {
+                    return ((CompleteAppointmentRow)(this.GetParentRow(this.Table.ParentRelations["FK_CRP_PRESCRIPTION_CRP_APPOIN1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_CRP_PRESCRIPTION_CRP_APPOIN1"]);
                 }
             }
         }
@@ -9486,6 +10980,17 @@ namespace carepoint {
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_CRP_SERVICE_PROVIDED_CRP_AP"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CompleteAppointmentRow CompleteAppointmentRow {
+                get {
+                    return ((CompleteAppointmentRow)(this.GetParentRow(this.Table.ParentRelations["FK_CRP_SERVICE_PROVIDED_CRP_AP1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_CRP_SERVICE_PROVIDED_CRP_AP1"]);
                 }
             }
             
@@ -11043,6 +12548,758 @@ namespace carepoint {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class CompleteAppointmentRow : global::System.Data.DataRow {
+            
+            private CompleteAppointmentDataTable tableCompleteAppointment;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal CompleteAppointmentRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableCompleteAppointment = ((CompleteAppointmentDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short APP_ID {
+                get {
+                    return ((short)(this[this.tableCompleteAppointment.APP_IDColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.APP_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short APP_PAT_ID {
+                get {
+                    return ((short)(this[this.tableCompleteAppointment.APP_PAT_IDColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.APP_PAT_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short APP_DOC_ID {
+                get {
+                    return ((short)(this[this.tableCompleteAppointment.APP_DOC_IDColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.APP_DOC_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime APP_CREATED_DATE {
+                get {
+                    return ((global::System.DateTime)(this[this.tableCompleteAppointment.APP_CREATED_DATEColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.APP_CREATED_DATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime APP_APTN_DATE {
+                get {
+                    return ((global::System.DateTime)(this[this.tableCompleteAppointment.APP_APTN_DATEColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.APP_APTN_DATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime APP_CNL_DATE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableCompleteAppointment.APP_CNL_DATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'APP_CNL_DATE\' dans la table \'CompleteAppointment\' est " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCompleteAppointment.APP_CNL_DATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string APP_CNL_REASON {
+                get {
+                    try {
+                        return ((string)(this[this.tableCompleteAppointment.APP_CNL_REASONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'APP_CNL_REASON\' dans la table \'CompleteAppointment\' es" +
+                                "t DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCompleteAppointment.APP_CNL_REASONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short APP_IS_INVOICED {
+                get {
+                    return ((short)(this[this.tableCompleteAppointment.APP_IS_INVOICEDColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.APP_IS_INVOICEDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string APP_DESC {
+                get {
+                    return ((string)(this[this.tableCompleteAppointment.APP_DESCColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.APP_DESCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short PER_ID {
+                get {
+                    return ((short)(this[this.tableCompleteAppointment.PER_IDColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.PER_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PER_USERNAME {
+                get {
+                    return ((string)(this[this.tableCompleteAppointment.PER_USERNAMEColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.PER_USERNAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PER_PSW {
+                get {
+                    return ((string)(this[this.tableCompleteAppointment.PER_PSWColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.PER_PSWColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PER_FIRSTNAME {
+                get {
+                    return ((string)(this[this.tableCompleteAppointment.PER_FIRSTNAMEColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.PER_FIRSTNAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PER_LASTNAME {
+                get {
+                    return ((string)(this[this.tableCompleteAppointment.PER_LASTNAMEColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.PER_LASTNAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PER_TEL {
+                get {
+                    try {
+                        return ((string)(this[this.tableCompleteAppointment.PER_TELColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'PER_TEL\' dans la table \'CompleteAppointment\' est DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableCompleteAppointment.PER_TELColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PER_MAIL {
+                get {
+                    try {
+                        return ((string)(this[this.tableCompleteAppointment.PER_MAILColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'PER_MAIL\' dans la table \'CompleteAppointment\' est DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableCompleteAppointment.PER_MAILColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short DOC_FEE_PER_CONSULT {
+                get {
+                    return ((short)(this[this.tableCompleteAppointment.DOC_FEE_PER_CONSULTColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.DOC_FEE_PER_CONSULTColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public System.DateTime DOC_START_WORK_DATE {
+                get {
+                    try {
+                        return ((global::System.DateTime)(this[this.tableCompleteAppointment.DOC_START_WORK_DATEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'DOC_START_WORK_DATE\' dans la table \'CompleteAppointmen" +
+                                "t\' est DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCompleteAppointment.DOC_START_WORK_DATEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short DOC_SPE_ID {
+                get {
+                    return ((short)(this[this.tableCompleteAppointment.DOC_SPE_IDColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.DOC_SPE_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string SPE_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableCompleteAppointment.SPE_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'SPE_NAME\' dans la table \'CompleteAppointment\' est DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableCompleteAppointment.SPE_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short PAT_ID {
+                get {
+                    return ((short)(this[this.tableCompleteAppointment.PAT_IDColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.PAT_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PAT_USERNAME {
+                get {
+                    return ((string)(this[this.tableCompleteAppointment.PAT_USERNAMEColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.PAT_USERNAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PAT_PSW {
+                get {
+                    return ((string)(this[this.tableCompleteAppointment.PAT_PSWColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.PAT_PSWColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PAT_FIRSTNAME {
+                get {
+                    return ((string)(this[this.tableCompleteAppointment.PAT_FIRSTNAMEColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.PAT_FIRSTNAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PAT_LASTNAME {
+                get {
+                    return ((string)(this[this.tableCompleteAppointment.PAT_LASTNAMEColumn]));
+                }
+                set {
+                    this[this.tableCompleteAppointment.PAT_LASTNAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PAT_TEL {
+                get {
+                    try {
+                        return ((string)(this[this.tableCompleteAppointment.PAT_TELColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'PAT_TEL\' dans la table \'CompleteAppointment\' est DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tableCompleteAppointment.PAT_TELColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string PAT_MAIL {
+                get {
+                    try {
+                        return ((string)(this[this.tableCompleteAppointment.PAT_MAILColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'PAT_MAIL\' dans la table \'CompleteAppointment\' est DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableCompleteAppointment.PAT_MAILColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short PAT_INS_ID {
+                get {
+                    try {
+                        return ((short)(this[this.tableCompleteAppointment.PAT_INS_IDColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'PAT_INS_ID\' dans la table \'CompleteAppointment\' est DB" +
+                                "Null.", e);
+                    }
+                }
+                set {
+                    this[this.tableCompleteAppointment.PAT_INS_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string INS_NAME {
+                get {
+                    try {
+                        return ((string)(this[this.tableCompleteAppointment.INS_NAMEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'INS_NAME\' dans la table \'CompleteAppointment\' est DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableCompleteAppointment.INS_NAMEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string INS_ADDRESS {
+                get {
+                    try {
+                        return ((string)(this[this.tableCompleteAppointment.INS_ADDRESSColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'INS_ADDRESS\' dans la table \'CompleteAppointment\' est D" +
+                                "BNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableCompleteAppointment.INS_ADDRESSColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CRP_DOCRow CRP_DOCRow {
+                get {
+                    return ((CRP_DOCRow)(this.GetParentRow(this.Table.ParentRelations["FK_CRP_APPOINTMENT_CRP_DOC1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_CRP_APPOINTMENT_CRP_DOC1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CRP_PATIENTRow CRP_PATIENTRow {
+                get {
+                    return ((CRP_PATIENTRow)(this.GetParentRow(this.Table.ParentRelations["FK_CRP_APPOINTMENT_CRP_PATIENT1"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_CRP_APPOINTMENT_CRP_PATIENT1"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAPP_CNL_DATENull() {
+                return this.IsNull(this.tableCompleteAppointment.APP_CNL_DATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAPP_CNL_DATENull() {
+                this[this.tableCompleteAppointment.APP_CNL_DATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsAPP_CNL_REASONNull() {
+                return this.IsNull(this.tableCompleteAppointment.APP_CNL_REASONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetAPP_CNL_REASONNull() {
+                this[this.tableCompleteAppointment.APP_CNL_REASONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPER_TELNull() {
+                return this.IsNull(this.tableCompleteAppointment.PER_TELColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPER_TELNull() {
+                this[this.tableCompleteAppointment.PER_TELColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPER_MAILNull() {
+                return this.IsNull(this.tableCompleteAppointment.PER_MAILColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPER_MAILNull() {
+                this[this.tableCompleteAppointment.PER_MAILColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDOC_START_WORK_DATENull() {
+                return this.IsNull(this.tableCompleteAppointment.DOC_START_WORK_DATEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDOC_START_WORK_DATENull() {
+                this[this.tableCompleteAppointment.DOC_START_WORK_DATEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsSPE_NAMENull() {
+                return this.IsNull(this.tableCompleteAppointment.SPE_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetSPE_NAMENull() {
+                this[this.tableCompleteAppointment.SPE_NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPAT_TELNull() {
+                return this.IsNull(this.tableCompleteAppointment.PAT_TELColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPAT_TELNull() {
+                this[this.tableCompleteAppointment.PAT_TELColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPAT_MAILNull() {
+                return this.IsNull(this.tableCompleteAppointment.PAT_MAILColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPAT_MAILNull() {
+                this[this.tableCompleteAppointment.PAT_MAILColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsPAT_INS_IDNull() {
+                return this.IsNull(this.tableCompleteAppointment.PAT_INS_IDColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetPAT_INS_IDNull() {
+                this[this.tableCompleteAppointment.PAT_INS_IDColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsINS_NAMENull() {
+                return this.IsNull(this.tableCompleteAppointment.INS_NAMEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetINS_NAMENull() {
+                this[this.tableCompleteAppointment.INS_NAMEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsINS_ADDRESSNull() {
+                return this.IsNull(this.tableCompleteAppointment.INS_ADDRESSColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetINS_ADDRESSNull() {
+                this[this.tableCompleteAppointment.INS_ADDRESSColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CRP_PRESCRIPTIONRow[] GetCRP_PRESCRIPTIONRows() {
+                if ((this.Table.ChildRelations["FK_CRP_PRESCRIPTION_CRP_APPOIN1"] == null)) {
+                    return new CRP_PRESCRIPTIONRow[0];
+                }
+                else {
+                    return ((CRP_PRESCRIPTIONRow[])(base.GetChildRows(this.Table.ChildRelations["FK_CRP_PRESCRIPTION_CRP_APPOIN1"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CRP_SERVICE_PROVIDEDRow[] GetCRP_SERVICE_PROVIDEDRows() {
+                if ((this.Table.ChildRelations["FK_CRP_SERVICE_PROVIDED_CRP_AP1"] == null)) {
+                    return new CRP_SERVICE_PROVIDEDRow[0];
+                }
+                else {
+                    return ((CRP_SERVICE_PROVIDEDRow[])(base.GetChildRows(this.Table.ChildRelations["FK_CRP_SERVICE_PROVIDED_CRP_AP1"])));
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class VW_SERVICES_PROVIDEDRow : global::System.Data.DataRow {
+            
+            private VW_SERVICES_PROVIDEDDataTable tableVW_SERVICES_PROVIDED;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal VW_SERVICES_PROVIDEDRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableVW_SERVICES_PROVIDED = ((VW_SERVICES_PROVIDEDDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short APP_ID {
+                get {
+                    return ((short)(this[this.tableVW_SERVICES_PROVIDED.APP_IDColumn]));
+                }
+                set {
+                    this[this.tableVW_SERVICES_PROVIDED.APP_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Code {
+                get {
+                    return ((string)(this[this.tableVW_SERVICES_PROVIDED.CodeColumn]));
+                }
+                set {
+                    this[this.tableVW_SERVICES_PROVIDED.CodeColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Service {
+                get {
+                    return ((string)(this[this.tableVW_SERVICES_PROVIDED.ServiceColumn]));
+                }
+                set {
+                    this[this.tableVW_SERVICES_PROVIDED.ServiceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short Duration {
+                get {
+                    try {
+                        return ((short)(this[this.tableVW_SERVICES_PROVIDED.DurationColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'Duration\' dans la table \'VW_SERVICES_PROVIDED\' est DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_SERVICES_PROVIDED.DurationColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public decimal Invoice_Price {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableVW_SERVICES_PROVIDED.Invoice_PriceColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("La valeur pour la colonne \'Invoice Price\' dans la table \'VW_SERVICES_PROVIDED\' es" +
+                                "t DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableVW_SERVICES_PROVIDED.Invoice_PriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsDurationNull() {
+                return this.IsNull(this.tableVW_SERVICES_PROVIDED.DurationColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetDurationNull() {
+                this[this.tableVW_SERVICES_PROVIDED.DurationColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsInvoice_PriceNull() {
+                return this.IsNull(this.tableVW_SERVICES_PROVIDED.Invoice_PriceColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetInvoice_PriceNull() {
+                this[this.tableVW_SERVICES_PROVIDED.Invoice_PriceColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class VW_PRESCRIPTIONSRow : global::System.Data.DataRow {
+            
+            private VW_PRESCRIPTIONSDataTable tableVW_PRESCRIPTIONS;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            internal VW_PRESCRIPTIONSRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tableVW_PRESCRIPTIONS = ((VW_PRESCRIPTIONSDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short PRE_APP_ID {
+                get {
+                    return ((short)(this[this.tableVW_PRESCRIPTIONS.PRE_APP_IDColumn]));
+                }
+                set {
+                    this[this.tableVW_PRESCRIPTIONS.PRE_APP_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public short PRE_MED_ID {
+                get {
+                    return ((short)(this[this.tableVW_PRESCRIPTIONS.PRE_MED_IDColumn]));
+                }
+                set {
+                    this[this.tableVW_PRESCRIPTIONS.PRE_MED_IDColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Medicine {
+                get {
+                    return ((string)(this[this.tableVW_PRESCRIPTIONS.MedicineColumn]));
+                }
+                set {
+                    this[this.tableVW_PRESCRIPTIONS.MedicineColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Prescription {
+                get {
+                    return ((string)(this[this.tableVW_PRESCRIPTIONS.PrescriptionColumn]));
+                }
+                set {
+                    this[this.tableVW_PRESCRIPTIONS.PrescriptionColumn] = value;
+                }
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -11844,6 +14101,108 @@ namespace carepoint {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public CRP_APPOINTMENTRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class CompleteAppointmentRowChangeEvent : global::System.EventArgs {
+            
+            private CompleteAppointmentRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CompleteAppointmentRowChangeEvent(CompleteAppointmentRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public CompleteAppointmentRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class VW_SERVICES_PROVIDEDRowChangeEvent : global::System.EventArgs {
+            
+            private VW_SERVICES_PROVIDEDRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_SERVICES_PROVIDEDRowChangeEvent(VW_SERVICES_PROVIDEDRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_SERVICES_PROVIDEDRow Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public class VW_PRESCRIPTIONSRowChangeEvent : global::System.EventArgs {
+            
+            private VW_PRESCRIPTIONSRow eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_PRESCRIPTIONSRowChangeEvent(VW_PRESCRIPTIONSRow row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public VW_PRESCRIPTIONSRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -15621,7 +17980,7 @@ FROM
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "Original_PRE_DESCRIPTION";
             param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 128;
+            param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "PRE_DESCRIPTION";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -15650,7 +18009,7 @@ FROM
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "PRE_DESCRIPTION";
             param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 128;
+            param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "PRE_DESCRIPTION";
             this._adapter.InsertCommand.Parameters.Add(param);
@@ -15677,7 +18036,7 @@ FROM
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "PRE_DESCRIPTION";
             param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 128;
+            param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "PRE_DESCRIPTION";
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -15702,7 +18061,7 @@ FROM
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = "Original_PRE_DESCRIPTION";
             param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
-            param.Size = 128;
+            param.Size = 255;
             param.IsNullable = true;
             param.SourceColumn = "PRE_DESCRIPTION";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
@@ -15719,11 +18078,62 @@ FROM
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[3];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT PRE_APP_ID, PRE_MED_ID, PRE_DESCRIPTION FROM USR_DATA.CRP_PRESCRIPTION";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "INSERT INTO \"USR_DATA\".\"CRP_PRESCRIPTION\" (\"PRE_APP_ID\", \"PRE_MED_ID\", \"PRE_DESCR" +
+                "IPTION\") VALUES (:PRE_APP_ID, :PRE_MED_ID, :PRE_DESCRIPTION)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":PRE_APP_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "PRE_APP_ID";
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":PRE_MED_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "PRE_MED_ID";
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":PRE_DESCRIPTION";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 255;
+            param.IsNullable = true;
+            param.SourceColumn = "PRE_DESCRIPTION";
+            this._commandCollection[1].Parameters.Add(param);
+            this._commandCollection[2] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "DELETE FROM \"USR_DATA\".\"CRP_PRESCRIPTION\" WHERE PRE_APP_ID = :id and PRE_MED_ID =" +
+                " :med";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":id";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "PRE_APP_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._commandCollection[2].Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":med";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "PRE_MED_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._commandCollection[2].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -15880,6 +18290,62 @@ FROM
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(string PRE_DESCRIPTION, short Original_PRE_APP_ID, short Original_PRE_MED_ID, string Original_PRE_DESCRIPTION) {
             return this.Update(Original_PRE_APP_ID, Original_PRE_MED_ID, PRE_DESCRIPTION, Original_PRE_APP_ID, Original_PRE_MED_ID, Original_PRE_DESCRIPTION);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int add(decimal PRE_APP_ID, decimal PRE_MED_ID, string PRE_DESCRIPTION) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((decimal)(PRE_APP_ID));
+            command.Parameters[1].Value = ((decimal)(PRE_MED_ID));
+            if ((PRE_DESCRIPTION == null)) {
+                throw new global::System.ArgumentNullException("PRE_DESCRIPTION");
+            }
+            else {
+                command.Parameters[2].Value = ((string)(PRE_DESCRIPTION));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int delete(decimal id, decimal med) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = this.CommandCollection[2];
+            command.Parameters[0].Value = ((decimal)(id));
+            command.Parameters[1].Value = ((decimal)(med));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
@@ -17081,11 +19547,61 @@ FROM
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[3];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT SPR_APP_ID, SPR_SER_CODE, SPR_DURATION FROM USR_DATA.CRP_SERVICE_PROVIDED";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "INSERT INTO \"USR_DATA\".\"CRP_SERVICE_PROVIDED\" (\"SPR_APP_ID\", \"SPR_SER_CODE\", \"SPR" +
+                "_DURATION\") VALUES (:id, :code, :duration)";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":id";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "SPR_APP_ID";
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":code";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 128;
+            param.IsNullable = true;
+            param.SourceColumn = "SPR_SER_CODE";
+            this._commandCollection[1].Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":duration";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "SPR_DURATION";
+            this._commandCollection[1].Parameters.Add(param);
+            this._commandCollection[2] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[2].Connection = this.Connection;
+            this._commandCollection[2].CommandText = "DELETE FROM \"USR_DATA\".\"CRP_SERVICE_PROVIDED\" WHERE (\"SPR_APP_ID\" = :id) AND (\"SP" +
+                "R_SER_CODE\" = :code)";
+            this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":id";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "SPR_APP_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._commandCollection[2].Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":code";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 128;
+            param.IsNullable = true;
+            param.SourceColumn = "SPR_SER_CODE";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._commandCollection[2].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -17266,6 +19782,72 @@ FROM
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
         public virtual int Update(global::System.Nullable<short> SPR_DURATION, short Original_SPR_APP_ID, string Original_SPR_SER_CODE, global::System.Nullable<short> Original_SPR_DURATION) {
             return this.Update(Original_SPR_APP_ID, Original_SPR_SER_CODE, SPR_DURATION, Original_SPR_APP_ID, Original_SPR_SER_CODE, Original_SPR_DURATION);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
+        public virtual int add(decimal id, string code, global::System.Nullable<decimal> duration) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = this.CommandCollection[1];
+            command.Parameters[0].Value = ((decimal)(id));
+            if ((code == null)) {
+                throw new global::System.ArgumentNullException("code");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(code));
+            }
+            if ((duration.HasValue == true)) {
+                command.Parameters[2].Value = ((decimal)(duration.Value));
+            }
+            else {
+                command.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, false)]
+        public virtual int delete(decimal id, string code) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = this.CommandCollection[2];
+            command.Parameters[0].Value = ((decimal)(id));
+            if ((code == null)) {
+                throw new global::System.ArgumentNullException("code");
+            }
+            else {
+                command.Parameters[1].Value = ((string)(code));
+            }
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
         }
     }
     
@@ -19502,10 +22084,9 @@ FROM
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[2];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT APP_ID, \"Appointment Date\", \"Cancellation Date\", \"Cancellation Reason\", \"P" +
-                "atient Fullname\", \"Description\"\r\nFROM  USR_DATA.VW_DOCTORS_APP\r\nWHERE (APP_DOC_I" +
-                "D = :id) AND ((\"Appointment Date\" <= SYSDATE) OR (\"Cancellation Date\" IS NOT NUL" +
-                "L))";
+            this._commandCollection[0].CommandText = @"SELECT APP_ID, ""Appointment Date"", ""Cancellation Date"", ""Cancellation Reason"", ""Patient Fullname"", ""Description""
+FROM  USR_DATA.VW_DOCTORS_APP
+WHERE (APP_DOC_ID = :id) AND ((""Appointment Date"" <= SYSDATE) OR (""Cancellation Date"" IS NOT NULL) OR APP_IS_INVOICED = 1)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = ":id";
@@ -19517,9 +22098,7 @@ FROM
             this._commandCollection[0].Parameters.Add(param);
             this._commandCollection[1] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT APP_ID, \"Appointment Date\", \"Cancellation Date\", \"Cancellation Reason\", \"D" +
-                "escription\", \"Patient Fullname\" FROM USR_DATA.VW_DOCTORS_APP WHERE (APP_DOC_ID =" +
-                " :id) AND (\"Cancellation Date\" IS NULL) AND (\"Appointment Date\" > SYSDATE)";
+            this._commandCollection[1].CommandText = @"SELECT APP_ID, ""Appointment Date"", ""Cancellation Date"", ""Cancellation Reason"", ""Description"", ""Patient Fullname"" FROM USR_DATA.VW_DOCTORS_APP WHERE (APP_DOC_ID = :id) AND (""Cancellation Date"" IS NULL) AND (""Appointment Date"" > SYSDATE) AND (APP_IS_INVOICED = 0)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = ":id";
@@ -19727,9 +22306,9 @@ FROM
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[2];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT APP_ID, \"Appointment Date\", \"Cancellation Date\", \"Cancellation Reason\", \"D" +
-                "octor\", \"Description\"\r\nFROM  USR_DATA.VW_PATIENTS_APP\r\nWHERE (APP_PAT_ID = :id) " +
-                "AND ((\"Appointment Date\" < SYSDATE) OR (\"Cancellation Date\" IS NOT NULL))";
+            this._commandCollection[0].CommandText = @"SELECT APP_ID, ""Appointment Date"", ""Cancellation Date"", ""Cancellation Reason"", ""Doctor"", ""Description""
+FROM  USR_DATA.VW_PATIENTS_APP
+WHERE (APP_PAT_ID = :id) AND ((""Appointment Date"" < SYSDATE) OR (""Cancellation Date"" IS NOT NULL) OR APP_IS_INVOICED = 1)";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = ":id";
@@ -19743,7 +22322,8 @@ FROM
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT APP_ID, \"Appointment Date\", \"Cancellation Date\", \"Cancellation Reason\", \"D" +
                 "escription\", \"Doctor\" FROM USR_DATA.VW_PATIENTS_APP WHERE (APP_PAT_ID = :id) AND" +
-                " (\"Cancellation Date\" IS NULL) AND (\"Appointment Date\" >= SYSDATE)";
+                " (\"Cancellation Date\" IS NULL) AND (\"Appointment Date\" >= SYSDATE) AND (APP_IS_I" +
+                "NVOICED = 0)";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = ":id";
@@ -20550,7 +23130,7 @@ WHERE (PER_ID IS NOT NULL)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[3];
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[5];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT APP_ID, APP_PAT_ID, APP_DOC_ID, APP_CREATED_DATE, APP_APTN_DATE, APP_CNL_D" +
@@ -20579,10 +23159,24 @@ WHERE (PER_ID IS NOT NULL)";
             this._commandCollection[1].Parameters.Add(param);
             this._commandCollection[2] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[2].Connection = this.Connection;
-            this._commandCollection[2].CommandText = "INSERT INTO \"USR_DATA\".\"CRP_APPOINTMENT\" ( \"APP_PAT_ID\", \"APP_DOC_ID\", \"APP_CREAT" +
-                "ED_DATE\", \"APP_APTN_DATE\", \"APP_DESC\") VALUES (:APP_PAT_ID, :APP_DOC_ID, SYSDATE" +
-                ", :APP_APTN_DATE, :APP_DESC)";
+            this._commandCollection[2].CommandText = "UPDATE \"USR_DATA\".\"CRP_APPOINTMENT\" SET \"APP_IS_INVOICED\" = 1 WHERE \"APP_ID\" = :A" +
+                "PP_ID";
             this._commandCollection[2].CommandType = global::System.Data.CommandType.Text;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":APP_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "APP_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[3].Connection = this.Connection;
+            this._commandCollection[3].CommandText = "INSERT INTO \"USR_DATA\".\"CRP_APPOINTMENT\" ( \"APP_PAT_ID\", \"APP_DOC_ID\", \"APP_CREAT" +
+                "ED_DATE\", \"APP_APTN_DATE\", \"APP_DESC\") VALUES (:APP_PAT_ID, :APP_DOC_ID, SYSDATE" +
+                ", :APP_APTN_DATE, :APP_DESC)\r\n";
+            this._commandCollection[3].CommandType = global::System.Data.CommandType.Text;
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = ":APP_PAT_ID";
             param.DbType = global::System.Data.DbType.Decimal;
@@ -20590,7 +23184,7 @@ WHERE (PER_ID IS NOT NULL)";
             param.Size = 22;
             param.IsNullable = true;
             param.SourceColumn = "APP_PAT_ID";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = ":APP_DOC_ID";
             param.DbType = global::System.Data.DbType.Decimal;
@@ -20598,7 +23192,7 @@ WHERE (PER_ID IS NOT NULL)";
             param.Size = 22;
             param.IsNullable = true;
             param.SourceColumn = "APP_DOC_ID";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = ":APP_APTN_DATE";
             param.DbType = global::System.Data.DbType.Date;
@@ -20606,14 +23200,35 @@ WHERE (PER_ID IS NOT NULL)";
             param.Size = 7;
             param.IsNullable = true;
             param.SourceColumn = "APP_APTN_DATE";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
             param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
             param.ParameterName = ":APP_DESC";
             param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
             param.Size = 128;
             param.IsNullable = true;
             param.SourceColumn = "APP_DESC";
-            this._commandCollection[2].Parameters.Add(param);
+            this._commandCollection[3].Parameters.Add(param);
+            this._commandCollection[4] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[4].Connection = this.Connection;
+            this._commandCollection[4].CommandText = "UPDATE \"USR_DATA\".\"CRP_APPOINTMENT\" SET \"APP_DESC\" = :APP_DESC WHERE \"APP_ID\" = :" +
+                "APP_ID";
+            this._commandCollection[4].CommandType = global::System.Data.CommandType.Text;
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":APP_DESC";
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Varchar2;
+            param.Size = 128;
+            param.IsNullable = true;
+            param.SourceColumn = "APP_DESC";
+            this._commandCollection[4].Parameters.Add(param);
+            param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":APP_ID";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "APP_ID";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._commandCollection[4].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -20912,9 +23527,33 @@ WHERE (PER_ID IS NOT NULL)";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int close(decimal APP_ID) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = this.CommandCollection[2];
+            command.Parameters[0].Value = ((decimal)(APP_ID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, false)]
         public virtual int create(decimal APP_PAT_ID, decimal APP_DOC_ID, System.DateTime APP_APTN_DATE, string APP_DESC) {
-            global::Oracle.ManagedDataAccess.Client.OracleCommand command = this.CommandCollection[2];
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = this.CommandCollection[3];
             command.Parameters[0].Value = ((decimal)(APP_PAT_ID));
             command.Parameters[1].Value = ((decimal)(APP_DOC_ID));
             command.Parameters[2].Value = ((System.DateTime)(APP_APTN_DATE));
@@ -20939,6 +23578,638 @@ WHERE (PER_ID IS NOT NULL)";
                 }
             }
             return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, false)]
+        public virtual int updateDesc(string APP_DESC, decimal APP_ID) {
+            global::Oracle.ManagedDataAccess.Client.OracleCommand command = this.CommandCollection[4];
+            if ((APP_DESC == null)) {
+                throw new global::System.ArgumentNullException("APP_DESC");
+            }
+            else {
+                command.Parameters[0].Value = ((string)(APP_DESC));
+            }
+            command.Parameters[1].Value = ((decimal)(APP_ID));
+            global::System.Data.ConnectionState previousConnectionState = command.Connection.State;
+            if (((command.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                command.Connection.Open();
+            }
+            int returnValue;
+            try {
+                returnValue = command.ExecuteNonQuery();
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    command.Connection.Close();
+                }
+            }
+            return returnValue;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class CompleteAppointmentTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleConnection _connection;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleTransaction _transaction;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public CompleteAppointmentTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::Oracle.ManagedDataAccess.Client.OracleDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::Oracle.ManagedDataAccess.Client.OracleCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "CompleteAppointment";
+            tableMapping.ColumnMappings.Add("APP_ID", "APP_ID");
+            tableMapping.ColumnMappings.Add("APP_PAT_ID", "APP_PAT_ID");
+            tableMapping.ColumnMappings.Add("APP_DOC_ID", "APP_DOC_ID");
+            tableMapping.ColumnMappings.Add("APP_CREATED_DATE", "APP_CREATED_DATE");
+            tableMapping.ColumnMappings.Add("APP_APTN_DATE", "APP_APTN_DATE");
+            tableMapping.ColumnMappings.Add("APP_CNL_DATE", "APP_CNL_DATE");
+            tableMapping.ColumnMappings.Add("APP_CNL_REASON", "APP_CNL_REASON");
+            tableMapping.ColumnMappings.Add("APP_IS_INVOICED", "APP_IS_INVOICED");
+            tableMapping.ColumnMappings.Add("APP_DESC", "APP_DESC");
+            tableMapping.ColumnMappings.Add("PER_ID", "PER_ID");
+            tableMapping.ColumnMappings.Add("PER_USERNAME", "PER_USERNAME");
+            tableMapping.ColumnMappings.Add("PER_PSW", "PER_PSW");
+            tableMapping.ColumnMappings.Add("PER_FIRSTNAME", "PER_FIRSTNAME");
+            tableMapping.ColumnMappings.Add("PER_LASTNAME", "PER_LASTNAME");
+            tableMapping.ColumnMappings.Add("PER_TEL", "PER_TEL");
+            tableMapping.ColumnMappings.Add("PER_MAIL", "PER_MAIL");
+            tableMapping.ColumnMappings.Add("DOC_FEE_PER_CONSULT", "DOC_FEE_PER_CONSULT");
+            tableMapping.ColumnMappings.Add("DOC_START_WORK_DATE", "DOC_START_WORK_DATE");
+            tableMapping.ColumnMappings.Add("DOC_SPE_ID", "DOC_SPE_ID");
+            tableMapping.ColumnMappings.Add("SPE_NAME", "SPE_NAME");
+            tableMapping.ColumnMappings.Add("PAT_ID", "PAT_ID");
+            tableMapping.ColumnMappings.Add("PAT_USERNAME", "PAT_USERNAME");
+            tableMapping.ColumnMappings.Add("PAT_PSW", "PAT_PSW");
+            tableMapping.ColumnMappings.Add("PAT_FIRSTNAME", "PAT_FIRSTNAME");
+            tableMapping.ColumnMappings.Add("PAT_LASTNAME", "PAT_LASTNAME");
+            tableMapping.ColumnMappings.Add("PAT_TEL", "PAT_TEL");
+            tableMapping.ColumnMappings.Add("PAT_MAIL", "PAT_MAIL");
+            tableMapping.ColumnMappings.Add("PAT_INS_ID", "PAT_INS_ID");
+            tableMapping.ColumnMappings.Add("INS_NAME", "INS_NAME");
+            tableMapping.ColumnMappings.Add("INS_ADDRESS", "INS_ADDRESS");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection();
+            this._connection.ConnectionString = global::carepoint.Properties.Settings.Default.ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = @"SELECT APP.APP_ID, APP.APP_PAT_ID, APP.APP_DOC_ID, APP.APP_CREATED_DATE, APP.APP_APTN_DATE, APP.APP_CNL_DATE, APP.APP_CNL_REASON, APP.APP_IS_INVOICED, APP.APP_DESC, DOC.PER_ID, DOC.PER_USERNAME, DOC.PER_PSW, DOC.PER_FIRSTNAME, DOC.PER_LASTNAME, DOC.PER_TEL, DOC.PER_MAIL, DOC.DOC_FEE_PER_CONSULT, 
+         DOC.DOC_START_WORK_DATE, DOC.DOC_SPE_ID, DOC.SPE_NAME, PAT.PER_ID AS PAT_ID, PAT.PER_USERNAME AS PAT_USERNAME, PAT.PER_PSW AS PAT_PSW, PAT.PER_FIRSTNAME AS PAT_FIRSTNAME, PAT.PER_LASTNAME AS PAT_LASTNAME, PAT.PER_TEL AS PAT_TEL, PAT.PER_MAIL AS PAT_MAIL, PAT.PAT_INS_ID, PAT.INS_NAME, PAT.INS_ADDRESS
+FROM  USR_DATA.CRP_APPOINTMENT APP INNER JOIN
+         USR_DATA.VW_DOCTORS DOC ON APP.APP_DOC_ID = DOC.PER_ID INNER JOIN
+         USR_DATA.VW_PATIENTS PAT ON APP.APP_PAT_ID = PAT.PER_ID
+WHERE (APP.APP_ID = :id)";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":id";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "APP_ID";
+            this._commandCollection[0].Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int FillById(USR_DATA_DATASET.CompleteAppointmentDataTable dataTable, decimal id) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(id));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual USR_DATA_DATASET.CompleteAppointmentDataTable GetById(decimal id) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(id));
+            USR_DATA_DATASET.CompleteAppointmentDataTable dataTable = new USR_DATA_DATASET.CompleteAppointmentDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class VW_SERVICES_PROVIDEDTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleConnection _connection;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleTransaction _transaction;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public VW_SERVICES_PROVIDEDTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::Oracle.ManagedDataAccess.Client.OracleDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::Oracle.ManagedDataAccess.Client.OracleCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "VW_SERVICES_PROVIDED";
+            tableMapping.ColumnMappings.Add("APP_ID", "APP_ID");
+            tableMapping.ColumnMappings.Add("Code", "Code");
+            tableMapping.ColumnMappings.Add("Service", "Service");
+            tableMapping.ColumnMappings.Add("Duration", "Duration");
+            tableMapping.ColumnMappings.Add("Invoice Price", "Invoice Price");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection();
+            this._connection.ConnectionString = global::carepoint.Properties.Settings.Default.ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT * FROM USR_DATA.VW_SERVICES_PROVIDED WHERE APP_ID = :id";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":id";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "APP_ID";
+            this._commandCollection[0].Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int FillById(USR_DATA_DATASET.VW_SERVICES_PROVIDEDDataTable dataTable, decimal id) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(id));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual USR_DATA_DATASET.VW_SERVICES_PROVIDEDDataTable GetDataById(decimal id) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(id));
+            USR_DATA_DATASET.VW_SERVICES_PROVIDEDDataTable dataTable = new USR_DATA_DATASET.VW_SERVICES_PROVIDEDDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class VW_PRESCRIPTIONSTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleConnection _connection;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleTransaction _transaction;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public VW_PRESCRIPTIONSTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected internal global::Oracle.ManagedDataAccess.Client.OracleDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        protected global::Oracle.ManagedDataAccess.Client.OracleCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "VW_PRESCRIPTIONS";
+            tableMapping.ColumnMappings.Add("PRE_APP_ID", "PRE_APP_ID");
+            tableMapping.ColumnMappings.Add("PRE_MED_ID", "PRE_MED_ID");
+            tableMapping.ColumnMappings.Add("Medicine", "Medicine");
+            tableMapping.ColumnMappings.Add("Prescription", "Prescription");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection();
+            this._connection.ConnectionString = global::carepoint.Properties.Settings.Default.ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[2];
+            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT PRE_APP_ID, PRE_MED_ID, \"Medicine\", \"Prescription\" FROM USR_DATA.VW_PRESCR" +
+                "IPTIONS";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT PRE_APP_ID, PRE_MED_ID, \"Medicine\", \"Prescription\" FROM USR_DATA.VW_PRESCR" +
+                "IPTIONS WHERE PRE_APP_ID = :id ";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::Oracle.ManagedDataAccess.Client.OracleParameter param = new global::Oracle.ManagedDataAccess.Client.OracleParameter();
+            param.ParameterName = ":id";
+            param.DbType = global::System.Data.DbType.Decimal;
+            param.OracleDbTypeEx = global::Oracle.ManagedDataAccess.Client.OracleDbType.Decimal;
+            param.Size = 22;
+            param.IsNullable = true;
+            param.SourceColumn = "PRE_APP_ID";
+            this._commandCollection[1].Parameters.Add(param);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(USR_DATA_DATASET.VW_PRESCRIPTIONSDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual USR_DATA_DATASET.VW_PRESCRIPTIONSDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            USR_DATA_DATASET.VW_PRESCRIPTIONSDataTable dataTable = new USR_DATA_DATASET.VW_PRESCRIPTIONSDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillById(USR_DATA_DATASET.VW_PRESCRIPTIONSDataTable dataTable, decimal id) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(id));
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual USR_DATA_DATASET.VW_PRESCRIPTIONSDataTable GetDataById(decimal id) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((decimal)(id));
+            USR_DATA_DATASET.VW_PRESCRIPTIONSDataTable dataTable = new USR_DATA_DATASET.VW_PRESCRIPTIONSDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
         }
     }
     
@@ -21446,6 +24717,15 @@ WHERE (PER_ID IS NOT NULL)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
+            if ((this._cRP_SPECIALTYTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CRP_SPECIALTY.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cRP_SPECIALTYTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
             if ((this._cRP_PERSONTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.CRP_PERSON.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
@@ -21455,12 +24735,12 @@ WHERE (PER_ID IS NOT NULL)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cRP_SPECIALTYTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CRP_SPECIALTY.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cRP_TIME_UNITTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CRP_TIME_UNIT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._cRP_SPECIALTYTableAdapter.Update(updatedRows));
+                    result = (result + this._cRP_TIME_UNITTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21491,12 +24771,12 @@ WHERE (PER_ID IS NOT NULL)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cRP_TIME_UNITTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CRP_TIME_UNIT.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cRP_WEEKDAYTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CRP_WEEKDAY.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._cRP_TIME_UNITTableAdapter.Update(updatedRows));
+                    result = (result + this._cRP_WEEKDAYTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21509,21 +24789,12 @@ WHERE (PER_ID IS NOT NULL)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cRP_INSURANCETableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CRP_INSURANCE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cRP_SERVICETableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CRP_SERVICE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._cRP_INSURANCETableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._cRP_MEDICATIONTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CRP_MEDICATION.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cRP_MEDICATIONTableAdapter.Update(updatedRows));
+                    result = (result + this._cRP_SERVICETableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21536,21 +24807,30 @@ WHERE (PER_ID IS NOT NULL)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cRP_WEEKDAYTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CRP_WEEKDAY.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cRP_MEDICATIONTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CRP_MEDICATION.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._cRP_WEEKDAYTableAdapter.Update(updatedRows));
+                    result = (result + this._cRP_MEDICATIONTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cRP_SERVICETableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CRP_SERVICE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cRP_INSURANCETableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CRP_INSURANCE.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._cRP_SERVICETableAdapter.Update(updatedRows));
+                    result = (result + this._cRP_INSURANCETableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._cRP_AVAILABILITYTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CRP_AVAILABILITY.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cRP_AVAILABILITYTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -21572,15 +24852,6 @@ WHERE (PER_ID IS NOT NULL)";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cRP_AVAILABILITYTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CRP_AVAILABILITY.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._cRP_AVAILABILITYTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
             return result;
         }
         
@@ -21599,6 +24870,14 @@ WHERE (PER_ID IS NOT NULL)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
+            if ((this._cRP_SPECIALTYTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CRP_SPECIALTY.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cRP_SPECIALTYTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
             if ((this._cRP_PERSONTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.CRP_PERSON.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
@@ -21607,11 +24886,11 @@ WHERE (PER_ID IS NOT NULL)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cRP_SPECIALTYTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CRP_SPECIALTY.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cRP_TIME_UNITTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CRP_TIME_UNIT.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._cRP_SPECIALTYTableAdapter.Update(addedRows));
+                    result = (result + this._cRP_TIME_UNITTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21639,11 +24918,11 @@ WHERE (PER_ID IS NOT NULL)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cRP_TIME_UNITTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CRP_TIME_UNIT.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cRP_WEEKDAYTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CRP_WEEKDAY.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._cRP_TIME_UNITTableAdapter.Update(addedRows));
+                    result = (result + this._cRP_WEEKDAYTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21655,19 +24934,11 @@ WHERE (PER_ID IS NOT NULL)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cRP_INSURANCETableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CRP_INSURANCE.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cRP_SERVICETableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CRP_SERVICE.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._cRP_INSURANCETableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._cRP_MEDICATIONTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CRP_MEDICATION.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cRP_MEDICATIONTableAdapter.Update(addedRows));
+                    result = (result + this._cRP_SERVICETableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21679,19 +24950,27 @@ WHERE (PER_ID IS NOT NULL)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cRP_WEEKDAYTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CRP_WEEKDAY.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cRP_MEDICATIONTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CRP_MEDICATION.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._cRP_WEEKDAYTableAdapter.Update(addedRows));
+                    result = (result + this._cRP_MEDICATIONTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cRP_SERVICETableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CRP_SERVICE.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cRP_INSURANCETableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CRP_INSURANCE.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._cRP_SERVICETableAdapter.Update(addedRows));
+                    result = (result + this._cRP_INSURANCETableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._cRP_AVAILABILITYTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CRP_AVAILABILITY.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cRP_AVAILABILITYTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -21711,14 +24990,6 @@ WHERE (PER_ID IS NOT NULL)";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cRP_AVAILABILITYTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CRP_AVAILABILITY.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._cRP_AVAILABILITYTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
             return result;
         }
         
@@ -21729,14 +25000,6 @@ WHERE (PER_ID IS NOT NULL)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private int UpdateDeletedRows(USR_DATA_DATASET dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._cRP_AVAILABILITYTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CRP_AVAILABILITY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cRP_AVAILABILITYTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
             if ((this._cRP_PRESCRIPTIONTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.CRP_PRESCRIPTION.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -21753,35 +25016,11 @@ WHERE (PER_ID IS NOT NULL)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._cRP_SERVICETableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CRP_SERVICE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._cRP_AVAILABILITYTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CRP_AVAILABILITY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._cRP_SERVICETableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._cRP_WEEKDAYTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CRP_WEEKDAY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cRP_WEEKDAYTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._cRP_PERIODOFDAYTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CRP_PERIODOFDAY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cRP_PERIODOFDAYTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._cRP_MEDICATIONTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CRP_MEDICATION.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._cRP_MEDICATIONTableAdapter.Update(deletedRows));
+                    result = (result + this._cRP_AVAILABILITYTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21793,6 +25032,30 @@ WHERE (PER_ID IS NOT NULL)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
+            if ((this._cRP_MEDICATIONTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CRP_MEDICATION.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cRP_MEDICATIONTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._cRP_PERIODOFDAYTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CRP_PERIODOFDAY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cRP_PERIODOFDAYTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._cRP_SERVICETableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CRP_SERVICE.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cRP_SERVICETableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
             if ((this._cRP_APPOINTMENTTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.CRP_APPOINTMENT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
@@ -21801,11 +25064,11 @@ WHERE (PER_ID IS NOT NULL)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._cRP_TIME_UNITTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CRP_TIME_UNIT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._cRP_WEEKDAYTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CRP_WEEKDAY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._cRP_TIME_UNITTableAdapter.Update(deletedRows));
+                    result = (result + this._cRP_WEEKDAYTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21833,11 +25096,11 @@ WHERE (PER_ID IS NOT NULL)";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._cRP_SPECIALTYTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CRP_SPECIALTY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._cRP_TIME_UNITTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CRP_TIME_UNIT.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._cRP_SPECIALTYTableAdapter.Update(deletedRows));
+                    result = (result + this._cRP_TIME_UNITTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -21846,6 +25109,14 @@ WHERE (PER_ID IS NOT NULL)";
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
                     result = (result + this._cRP_PERSONTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._cRP_SPECIALTYTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CRP_SPECIALTY.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._cRP_SPECIALTYTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
